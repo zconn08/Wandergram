@@ -1,0 +1,65 @@
+// Place all the styles related to the api/images controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.upload-image-panel {
+  font-size: 18px;
+}
+.gutter-image img {
+  height: 100%;
+  width: 100%;
+  border: 1px solid gray;
+}
+
+.gutter-image.col-md-2 {
+  padding: 0px;
+}
+
+.uploaded-image-main img {
+  height: 100%;
+  width: 100%;
+  border: 5px solid black;
+  margin-left: 50px;
+}
+
+.thumbnail-images.row {
+  width: 400px;
+  margin: 10px 0px;
+}
+
+.active-image {
+  width: 300px;
+  height: 300px;
+}
+
+.uploaded-image-main.row {
+  margin: 0 auto;
+}
+.upload-form {
+  margin-top: 20px;
+}
+
+.upload-form input {
+  width: 100%;
+}
+
+input.btn-success {
+  float: left;
+  background-color: rgb(102, 189, 43);
+  border: none;
+  width: 70%;
+  margin-top: 10px;
+  height: 40px;
+}
+
+.upload-form .btn-success {
+  margin-left: 10%;
+}
+
+button.btn-danger {
+  float: left;
+  border: none;
+  width: 20%;
+  height: 40px;
+  margin-top: 10px;
+}

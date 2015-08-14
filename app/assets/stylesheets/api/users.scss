@@ -1,0 +1,62 @@
+// Place all the styles related to the api/users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.prof-pic-show {
+  height: 152px;
+  width: 152px;
+  border-radius: 50%;
+}
+
+.prof-pic-wrapper {
+  height: 152px;
+  width: 152px;
+  float: left;
+}
+
+.user-info {
+  float: left;
+  margin-left: 20px;
+}
+
+.profile-stats {
+  list-style-type: none;
+  padding: 0px;
+}
+.profile-stat {
+  float: left;
+  margin-right: 5px;
+}
+
+.prof-page-header {
+  width: 640px;
+  height: 200px;
+}
+.large-panel {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.grid-photo.col-md-4 {
+  padding: 0px;
+}
+
+a.thumbnail {
+  border: none;
+  margin-bottom: 0px;
+}
+
+span.username {
+  font-size: 36px;
+  float: left;
+}
+
+button.btn-success {
+  float: left;
+  background-color: rgb(102, 189, 43);
+  border: none;
+  height: 30px;
+  width: 105px;
+  margin-top: 10px;
+  margin-left: 20px;
+}

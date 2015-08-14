@@ -1,0 +1,78 @@
+// Place all the styles related to the api/posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.time {
+  float: right;
+}
+.name-location, .comment-form, .like-button {
+  float: left;
+}
+
+.panel-heading .prof-pic {
+  float: left;
+  margin-top: 5px;
+  margin-right: 15px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%
+}
+
+.clear-fix {
+  height: 1px;
+  clear: both;
+}
+
+.post-image {
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.post-image img{
+  width: 100%;
+  height: 100%;
+}
+
+.image-wrapper {
+  height: 640px;
+  width: 640px;
+}
+
+.like-button {
+  width: 44px;
+  height: 44px;
+  background-color: white;
+  border: none;
+  float: left;
+}
+
+.like-button:focus {
+  outline: 0;
+}
+
+.heart-image {
+  width: 29px;
+  height: 26px;
+  background-repeat: no-repeat;
+}
+
+.mid-panel {
+  width: 640px;
+  margin: 0 auto;
+}
+
+.like-comments {
+  margin-top: 10px;
+  background-color: white;
+}
+.comment-text {
+  float: left;
+  width: 560px;
+  height: 44px;
+  border: none;
+}
+
+.comment-text:focus {
+  outline: 0;
+}

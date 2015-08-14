@@ -1,0 +1,53 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.log-in {
+  border: 1px solid gray;
+  background-color: white;
+  height: 320px;
+}
+
+.page-container {
+  background-color: whitesmoke;
+  height: 100%;
+}
+
+.small-panel {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.form-header {
+  text-align: center;
+  font-size: 26px;
+  background: lightblue;
+  font-family: pacifco;
+  height: 50px;
+  width: 400px;
+}
+
+.log-in-footer {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.form-body {
+  padding: 15px;
+}
+.login-submit {
+  width: 200px;
+}
+
+.form-body input {
+  width: 100%;
+}
+
+.form-body .btn-success {
+  background-color: rgb(102, 189, 43);
+  border: none;
+}
+
+.form-header-image img {
+  margin: 0 auto;
+}

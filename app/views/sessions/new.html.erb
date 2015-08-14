@@ -1,0 +1,32 @@
+<div class="page-container">
+  <div class="small-panel">
+    <div class="log-in">
+      <div class="form-header">
+        <div class="form-header-image">
+          <img src="/assets/Wandergram-logo.png" alt="" />
+        </div>
+      </div>
+      <div class="form-body">
+        <form action="<%= session_url %>" method="post">
+          <%= auth_token %>
+          <label for="user_username">Username</label><br>
+          <input type="text" name="user[username]" id="user_username">
+          <br><br>
+          <label for="user_password">Password</label><br>
+          <input type="password" name="user[password]" id="user_password">
+          <br><br>
+          <input type="submit" class="btn-success" value="Log In">
+
+          </form>
+
+      </div>
+
+    </div>
+      <div class="log-in-footer">
+        <div class="form-footer-text">
+          Already have an account? <br>
+          <a href="<%= new_session_url %>">Click here to log in</a>
+        </div>
+      </div>
+  </div>
+</div>

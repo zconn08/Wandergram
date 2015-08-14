@@ -1,0 +1,29 @@
+<div class="prof-pic-wrapper">
+  <% if (user.escape("profile_picture_url")) { %>
+   <div class="prof-pic-show" style="background-image: url(assets/<%= user.escape("profile_picture_url") %>)">
+  <% } %>
+  </div>
+</div>
+<div class="user-info">
+  <div class="name-and-button-wrapper group">
+    <span class="username"> <%= user.escape("username") %> </span>
+    <% if( user.escape("id") === CURRENT_USER_ID) {%>
+      <button type="button" class="btn btn-default" id="edit-btn">Edit Profile</button>
+    <% } else { %>
+
+      <% if (user.isFollowed()) { %>
+        <button type="button" class="btn btn-success following-btn">Following</button>
+      <%} else {%>
+        <button type="button" class="btn btn-default following-btn">Follow</button>
+      <% } %>
+    <% } %>
+  </div>
+  <div class="user-bio">
+    <%= user.escape("bio") %>
+  </div>
+  <ul class="profile-stats">
+    <li class="profile-stat"><strong><%= user.escape("num_posts") %></strong> Posts</li>
+    <li class="profile-stat"><strong>X</strong> Followers</li>
+    <li class="profile-stat"><strong>X</strong> Following</li>
+  </ul>
+</div>

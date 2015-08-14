@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wandergram</title>
+  <%= stylesheet_link_tag    'application', media: 'all'%>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+  <script src="http://widget.cloudinary.com/global/all.js" type="text/javascript" charset="utf-8"></script>
+  <script>
+    window.CLOUDINARY_OPTIONS = {
+      cloud_name: "<%= ENV['CLOUD_NAME'] %>",
+      upload_preset: "<%= ENV['UPLOAD_PRESET'] %>"
+    }
+    <% if current_user %>
+      window.CURRENT_USER_NAME = "<%= current_user.username %>"
+      window.CURRENT_USER_ID = "<%= current_user.id %>"
+    <% end %>
+  </script>
+</head>
+<body>
+
+  <%= render "shared/errors" %>
+  <%= render "shared/messages" %>
+<%= yield %>
+
+</body>
+</html>

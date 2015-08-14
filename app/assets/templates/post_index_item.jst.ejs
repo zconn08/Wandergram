@@ -1,0 +1,56 @@
+<% if(typeof post.get("user") !== "undefined"){ %>
+  <div class="panel panel-default">
+    <div class="panel-heading group">
+      <div class="prof-pic" style="background-image: url(assets/<%= post.get("user").profile_picture_url%> )">
+      </div>
+      <div class="name-location">
+        <a href="#users/<%= post.get("user").id %>"><%= post.get("user").username %></a><br>
+        <%= post.escape("location") %>
+      </div>
+      <div class="time">
+        <%= post.escape("time_ago") %>
+      </div>
+    </div>
+
+
+    <div class="image-wrapper">
+      <div class="post-image">
+        <img src="<%= post.escape("image_url") %>" alt="" />
+      </div>
+    </div>
+
+
+
+  <div class="panel-footer">
+    <div class="num-likes">
+      <% if(parseInt(post.escape("num_likes")) === 1) { %>
+        <%= likeString %> likes this
+      <% } else if(parseInt(post.escape("num_likes")) > 1 &&
+            parseInt(post.escape("num_likes")) < 5) { %>
+        <%= likeString %> like this
+      <% } else if(parseInt(post.escape("num_likes")) > 5) {%>
+        <%= post.escape("num_likes") %> likes
+      <% } %>
+    </div>
+    <div class="caption">
+      <% if(post.escape("caption")) { %>
+        <a href="#/users/<%= post.get("user").id %>"><%= post.get("user").username %></a> <%= post.escape("caption") %>
+        <% }%>
+    </div>
+    <div class="comments-container">
+    </div>
+    <div class="like-comments group">
+      <button class="like-button" data-post-id="<%= post.get("id") %>">
+        <% if(post.isLiked()){ %>
+          <div class="heart-image" style="background-image: url(assets/red-outline-heart.png)"></div>
+        <% } else { %>
+          <div class="heart-image" style="background-image: url(assets/grey-outline-heart.png)"></div>
+        <% } %>
+      </button>
+      <form class="new-comment-form">
+        <input type="text" class="comment-text" name="body" placeholder="Add a comment...">
+      </form>
+    </div>
+  </div>
+</div>
+<% } %>
