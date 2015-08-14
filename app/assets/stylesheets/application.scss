@@ -23,8 +23,16 @@ body, html { height:100% }
   width: 640px;
 }
 
+.navbar {
+  margin-bottom: 0px;
+}
+
 li.inactive {
   display: none;
+}
+
+.post-index {
+  margin-top: 20px;
 }
 
 .container-fluid.show {

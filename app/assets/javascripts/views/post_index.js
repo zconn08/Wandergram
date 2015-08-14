@@ -6,16 +6,19 @@ Wandergram.Views.PostIndex = Backbone.CompositeView.extend({
   },
 
   initialize: function(){
-    this.listenTo(this.collection, "sync", this.render);
+    // this.listenTo(this.collection, "sync", this.render);
     this.listenTo(this.collection, "add", this.addPostIndexItemView);
     this.listenTo(this.collection, "remove", this.removePostIndexItemView);
     this.collection.each(this.addPostIndexItemView.bind(this));
-    
+
   },
 
   render: function(){
     this.$el.html(this.template({posts: this.collection}));
     this.attachSubviews();
+    this.mapView = new Wandergram.Views.MapShow();
+    this.addSubview("#map-container", this.mapView);
+    this.mapView.initMap();
     return this;
   },
 

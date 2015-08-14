@@ -12,7 +12,6 @@ LATER:
 __________________
 - Liking
   - Make it so you can't like while it is running the process (e.g., ajax twitter)
-  - check edge case of liking from names to number
 - handle image cropping
 - Write User Edit File
 - prevent anyone from editing a user profile by going to the url (e.g., redirect unless logged in)
@@ -45,6 +44,7 @@ Remove store images on rails
 Add below to set-up/readme
 Fix links on readme
 - add validation that user can only like a post one time at model level?
+  - check edge case of liking from names to number
 
 _______________
 To add to set-up
