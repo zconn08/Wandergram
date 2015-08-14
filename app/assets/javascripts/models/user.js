@@ -6,9 +6,9 @@ Wandergram.Models.User = Backbone.Model.extend({
       this.posts().set(payload.posts, { parse: true });
       delete payload.posts;
     }
-    if (payload.isFollowed){
-      this.follow().set({id: payload.isFollowed}, { parse: true });
-      delete payload.isFollowed;
+    if (payload.following){
+      this.follow().set(payload.following);
+      delete payload.following;
     }
     return payload;
   },

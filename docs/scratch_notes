@@ -1,13 +1,10 @@
-Todos:
-
-
-
 HIGH PRIORITY:
 __________________
-- Fix 404 error when you unfollow
 - should remove 'name likes this' when unliking, and add when liking
 - Refactor some code in post_index_item.jst.ejs - big check around it is no good - prob multiple views
-  - move grid photos into into a grid photo index view
+- move grid photos into into a grid photo index view
+- Maps
+- Modal
 
 LATER:
 __________________
@@ -17,7 +14,6 @@ gravatar - prof pics
   - Make it so you can't like while it is running the process (e.g., ajax twitter)
   - check edge case of liking from names to number
 - handle image cropping
-- potenitally add validation to image.rb
 - Write User Edit File
 - prevent anyone from editing a user profile by going to the url (e.g., redirect unless logged in)
 - add delete button for your comments
@@ -28,6 +24,8 @@ gravatar - prof pics
 ASK ABOUT:
 __________________
 - Getting images to post without reload the page
+- Click on home loses everything
+
 - Being able to update the likestring when liking. Somehow need to set this.models.get("likes")
 - Caching info so it doesn't have to query for every comment, username
 - Help with getting heroku working
@@ -40,6 +38,7 @@ __________________
 
 Clean up
 __________________
+- potenitally add validation to image.rb
 Make schema.md reflect actual database
 Clean up routes file
 files to delete that may be making folder overweight

@@ -1,11 +1,29 @@
 <div class="page-container">
-  <div class="small-panel log-in">
-    <div class="form-header">
-      <div class="form-header-text">Wandergram</div>
-    </div>
-    <div class="form-body">
-      Hello
-
+  <div class="small-panel">
+    <div class="log-in">
+      <div class="form-header">
+        <div class="form-header-image">
+          <img src="/assets/Wandergram-logo.png" alt="" />
+        </div>
+      </div>
+      <div class="form-body">
+        <form action="" method="post">
+          <%= auth_token %>
+          <label for="user_username">Username</label><br>
+          <input type="text" name="user[username]" id="user_username" value="<%=current_user.username%>">
+          <br><br>
+          <label for="user_bio">Bio</label><br>
+          <textarea name="user[bio]" id="user_bio"><%=current_user.bio%></textarea>
+          <br><br>
+          <label for="profile_picture">Profile Picture</label><br>
+          Show prof pic here. Link to add new one.
+          <br><br>
+          <label for="user_password">Change Password</label><br>
+          <input type="password" name="user[password]" id="user_password">
+          <br><br>
+          <a href="#"></a><button type="button" name="cancel" class="btn-danger">Cancel</button>
+          <input type="submit" value="Make Changes" class="btn-success">
+      </div>
     </div>
   </div>
 </div>

@@ -3,7 +3,6 @@ Wandergram.Views.UserHeader = Backbone.View.extend({
 
   events: {
     "click .following-btn": "toggleFollow",
-    "click #edit-btn": "editProfile",
   },
 
   initialize: function(){
@@ -13,10 +12,6 @@ Wandergram.Views.UserHeader = Backbone.View.extend({
   render: function(){
     this.$el.html(this.template({user: this.model}));
     return this;
-  },
-
-  editProfile: function(){
-    Backbone.history.navigate("users/" + this.model.get("id") + "/edit", {trigger: true} );
   },
 
   toggleFollow: function(){

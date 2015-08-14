@@ -24,11 +24,13 @@ class User < ActiveRecord::Base
   belongs_to :image
 
   has_many :liked_posts, through: :likes, source: :post
-  has_many :follower_ids, foreign_key: :followee_id, class_name: 'Following'
-  has_many :followee_ids, foreign_key: :follower_id, class_name: 'Following'
+  # join table for people we are following
+  has_many :outgoing_followings, foreign_key: :followee_id, class_name: 'Following'
+  # join table for those following us
+  has_many :incoming_followings, foreign_key: :follower_id, class_name: 'Following'
 
-  has_many :followers, through: :follower_ids, source: :follower
-  has_many :followees, through: :followee_ids, source: :followee
+  has_many :followers, through: :outgoing_followings, source: :follower
+  has_many :followees, through: :incoming_followings, source: :followee
 
   attr_reader :password
 
