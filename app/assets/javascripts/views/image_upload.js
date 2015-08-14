@@ -44,20 +44,25 @@ Wandergram.Views.ImageUpload = Backbone.View.extend({
   shareImage: function(e){
     e.preventDefault();
     var formData = this.$("form").serializeJSON();
-    formData.image_url = this.$(".active-image img").attr("src");
+    var url = this.$(".active-image img").attr("src");
 
-    var newPost = new Wandergram.Models.Post();
-    newPost.save(formData, {
+    //Save Image
+    var image = new Wandergram.Models.Image();
+    image.save({url: url, thumbnail_url: url}, {
       success: function(model){
-        this.collection.add(newPost)
-      }.bind(this),
-      error: function(){
-      }
-    });
-    Backbone.history.navigate("", {trigger: true});
+        Wandergram.Collections.images.add(image);
+        formData.image_id = image.id;
 
-    //Make sure homepage rerenders
-    //gives the message image url can't be blank - what is that?
+        //Save Post
+        var newPost = new Wandergram.Models.Post();
+        newPost.save(formData, {
+          success: function(model){
+            this.collection.add(newPost)
+            Backbone.history.navigate("", {trigger: true});
+          }.bind(this)
+        });
+      }.bind(this)
+    });
   }
 
 });

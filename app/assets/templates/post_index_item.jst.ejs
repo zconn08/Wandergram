@@ -1,10 +1,10 @@
-<% if(typeof post.get("user") !== "undefined"){ %>
-  <div class="panel panel-default">
+<div class="panel panel-default">
     <div class="panel-heading group">
-      <div class="prof-pic" style="background-image: url(assets/<%= post.get("user").profile_picture_url%> )">
+      <div class="prof-pic">
+          <img src="<%= post.user().get("image").url %>" alt="Profile Picture" />
       </div>
       <div class="name-location">
-        <a href="#users/<%= post.get("user").id %>"><%= post.get("user").username %></a><br>
+        <a href="#users/<%= post.user().escape("id") %>"><%= post.user().escape("username") %></a><br>
         <%= post.escape("location") %>
       </div>
       <div class="time">
@@ -12,14 +12,11 @@
       </div>
     </div>
 
-
     <div class="image-wrapper">
       <div class="post-image">
-        <img src="<%= post.escape("image_url") %>" alt="" />
+        <img src="<%= post.get("image").url %>" alt="" />
       </div>
     </div>
-
-
 
   <div class="panel-footer">
     <div class="num-likes">
@@ -34,7 +31,7 @@
     </div>
     <div class="caption">
       <% if(post.escape("caption")) { %>
-        <a href="#/users/<%= post.get("user").id %>"><%= post.get("user").username %></a> <%= post.escape("caption") %>
+        <a href="#/users/<%= post.user().escape("id") %>"><%= post.user().escape("username") %></a> <%= post.escape("caption") %>
         <% }%>
     </div>
     <div class="comments-container">
@@ -53,4 +50,3 @@
     </div>
   </div>
 </div>
-<% } %>

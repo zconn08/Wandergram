@@ -1,16 +1,16 @@
 HIGH PRIORITY:
 __________________
-- should remove 'name likes this' when unliking, and add when liking
-- Refactor some code in post_index_item.jst.ejs - big check around it is no good - prob multiple views
+- Refactor some code in post_index_item.jst.ejs - prob multiple views
 - move grid photos into into a grid photo index view
 - Maps
 - Modal
 
+-Read up on geocoder
+
+
 LATER:
 __________________
-gravatar - prof pics
 - Liking
-  - add validation that user can only like a post one time
   - Make it so you can't like while it is running the process (e.g., ajax twitter)
   - check edge case of liking from names to number
 - handle image cropping
@@ -19,14 +19,12 @@ gravatar - prof pics
 - add delete button for your comments
 - potentially remove current user id from window
 - When you go to a route (e.g., upload, make it active on nav)
-
+- Make feed only for people you are subscribed to?
 
 ASK ABOUT:
 __________________
-- Getting images to post without reload the page
-- Click on home loses everything
+- Maps
 
-- Being able to update the likestring when liking. Somehow need to set this.models.get("likes")
 - Caching info so it doesn't have to query for every comment, username
 - Help with getting heroku working
 
@@ -46,6 +44,7 @@ Remove login details
 Remove store images on rails
 Add below to set-up/readme
 Fix links on readme
+- add validation that user can only like a post one time at model level?
 
 _______________
 To add to set-up

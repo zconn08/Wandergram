@@ -1,7 +1,6 @@
 <div class="prof-pic-wrapper">
-  <% if (user.escape("profile_picture_url")) { %>
-   <div class="prof-pic-show" style="background-image: url(assets/<%= user.escape("profile_picture_url") %>)">
-  <% } %>
+   <div class="prof-pic-show">
+     <img src="<%= user.get("image").url %>" alt="Profile Picture" />
   </div>
 </div>
 <div class="user-info">
@@ -23,7 +22,7 @@
   </div>
   <ul class="profile-stats">
     <li class="profile-stat"><strong><%= user.escape("num_posts") %></strong> Posts</li>
-    <li class="profile-stat"><strong>X</strong> Followers</li>
-    <li class="profile-stat"><strong>X</strong> Following</li>
+    <li class="profile-stat"><strong><%= user.escape("numFollowers") %></strong> Followers</li>
+    <li class="profile-stat"><strong><%= user.escape("numFollowees") %></strong> Following</li>
   </ul>
 </div>

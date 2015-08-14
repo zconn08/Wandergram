@@ -18,6 +18,7 @@ Wandergram.Views.PostIndexItem = Backbone.CompositeView.extend({
     this.listenTo(comments, "add", this.addCommentView);
     this.listenTo(this.model.like(), "change", this.render);
     this.listenTo(comments, "remove", this.removeCommentView);
+    this.listenTo(this.model, "change:num_likes", this.render);
   },
 
   render: function(){
@@ -44,22 +45,19 @@ Wandergram.Views.PostIndexItem = Backbone.CompositeView.extend({
   composeLikeString: function(){
     var arrayOfUsers = [];
     var likes = this.model.get("likes");
-    if(likes){
-      var numLikes = likes.length;
-    } else {
-      var numLikes = 0;
-    }
+
+    var numLikes = likes ? likes.length : 0
 
     _(likes).each(function(like, idx){
-      var html_string = "<a href='#/users/" + like.id + "'>" + like.username + "</a>";
+      var htmlString = "<a href='#/users/" + like.id + "'>" + like.username + "</a>";
 
       if (idx < (numLikes - 2)) {
-        html_string += ", "
+        htmlString += ", "
       } else if (idx === (numLikes - 2)) {
-        html_string += " and "
+        htmlString += " and "
       }
 
-      arrayOfUsers.push(html_string);
+      arrayOfUsers.push(htmlString);
     });
 
     return arrayOfUsers.join("");
@@ -69,7 +67,7 @@ Wandergram.Views.PostIndexItem = Backbone.CompositeView.extend({
     e.preventDefault();
     var $input = this.$('.comment-text');
     var comment = $input.val();
-    if (comment != "") {
+    if (comment !== "") {
       var newComment = new Wandergram.Models.Comment();
       newComment.save({ body: comment, post_id: this.model.id }, {
         success: function(model){
@@ -86,12 +84,27 @@ Wandergram.Views.PostIndexItem = Backbone.CompositeView.extend({
     if (!this.model.isLiked()) {
       this.model.like().save({post_id: this.model.id}, {
         success: function(model){
-          this.model.set({numLikes: this.model.get('numLikes') + 1});
+          var newLikes = this.model.get('likes').concat({id: CURRENT_USER_ID, username: CURRENT_USER_NAME});
+          this.model.set({
+            num_likes: this.model.get('num_likes') + 1,
+            likes: newLikes
+          });
         }.bind(this)
       });
     } else {
       this.model.like().destroy();
-      this.model.set({numLikes: this.model.get('numLikes') - 1});
+      var oldLikes = this.model.get('likes');
+      var posOfMe = _.findIndex(oldLikes, function (el) {
+        return JSON.stringify(el) === JSON.stringify({
+          id: "" + CURRENT_USER_ID,
+          username: CURRENT_USER_NAME
+        });
+      });
+      oldLikes.splice(posOfMe, 1);
+      this.model.set({
+        num_likes: this.model.get('num_likes') - 1,
+        likes: oldLikes
+      });
       this.model.like().clear();
     }
   }

@@ -9,20 +9,20 @@ Wandergram is a photo sharing app for travelers that allows users to display bea
 
 - [X] Create accounts
 - [X] Create sessions (log in)
-- [ ] Follow other users
+- [X] Follow other users
 - [X] View a feed of subscribed posts
 - [X] View a profile
-- [ ] Clicking on a post on profile zooms in
-- [ ] Like posts
+- [X] Like posts
 - [X] Comment on posts
-- [ ] Comment on posts from user modal
-- [ ] Create posts / Upload images
+- [ ] Clicking on a post creates modal
+- [ ] Comment/Like on posts from user modal
+- [X] Create posts / Upload images
 - [ ] Read notifications
-- [ ] Add filters to images
+- [X] Add filters to images
 - [ ] Edit their profile
 - [ ] Tag locations of their pictures
 - [ ] Have a map with all pictures with tagged locations
-- [ ] Have profile pictures
+- [X] Have profile pictures
 - [ ] Be introduced to features on site
 - [ ] Do infinite scroll
 
