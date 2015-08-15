@@ -4,7 +4,6 @@ __________________
 - move grid photos into into a grid photo index view
 - Maps
 - Modal
-- figure out how to style text on hover on user show to center
 -Read up on geocoder
 
 LATER:
@@ -27,7 +26,7 @@ __________________
   - Zombie maps?
 - Caching info so it doesn't have to query for every comment, username
 - CSS on the form page for users/new - how to get form to space off top
-
+- cleaner center on grid photo hover
 
 Clean up
 __________________

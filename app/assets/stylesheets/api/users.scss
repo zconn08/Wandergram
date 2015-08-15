@@ -22,8 +22,8 @@
 .icons {
   position: absolute;
   left: 50%;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 45%;
+  transform: translateX(-50%);
 }
 
 .image-detail {
@@ -39,6 +39,10 @@
 
 .grid-photo:hover .image-detail {
   display: block;
+}
+
+.grid-photo .thumbnail {
+  padding: 0;
 }
 
 .profile-stats {
