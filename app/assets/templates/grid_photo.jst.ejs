@@ -1,8 +1,11 @@
 <div class="grid-photo col-xs-6 col-md-4">
-      <a href="#" class="thumbnail">
-        <img src="<%=post.get("image").url%>">
-      </a>
-</div>
-<div class="image-detail">
-
+  <a href="#" class="thumbnail">
+    <div class="image-detail">
+      <div class="icons">
+        <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> <%= post.escape("num_likes") %>
+          <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> <%= post.escape("num_comments") %>
+      </div>
+    </div>
+    <img src="<%=post.get("image").url%>">
+  </a>
 </div>
