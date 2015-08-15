@@ -8,7 +8,6 @@ Wandergram.Views.PostIndexItem = Backbone.CompositeView.extend({
 
   initialize: function(){
     this.listenTo(this.model, "sync", this.render);
-
     var comments = this.model.comments();
 
     comments.each(function(comment){
@@ -72,7 +71,11 @@ Wandergram.Views.PostIndexItem = Backbone.CompositeView.extend({
       newComment.save({ body: comment, post_id: this.model.id }, {
         success: function(model){
           this.model.comments().add(newComment);
-          Backbone.history.navigate("", {trigger: true});
+          if ($('.name-and-button-wrapper').length > 0) {
+            Backbone.history.navigate("#/users/1", {trigger: true});
+          } else {
+            Backbone.history.navigate("", {trigger: true});
+          }
         }.bind(this)
       });
 

@@ -1,8 +1,12 @@
 Wandergram.Views.PostIndex = Backbone.CompositeView.extend({
   template: JST["post_index"],
 
+  className: "post-index-container",
+
   events: {
-    "click .like-button": "like"
+    "click .like-button": "like",
+    "mouseenter .post-image": "panToPost",
+    "mouseleave .post-image": "removePostDetail",
   },
 
   initialize: function(){
@@ -10,13 +14,14 @@ Wandergram.Views.PostIndex = Backbone.CompositeView.extend({
     this.listenTo(this.collection, "add", this.addPostIndexItemView);
     this.listenTo(this.collection, "remove", this.removePostIndexItemView);
     this.collection.each(this.addPostIndexItemView.bind(this));
+    this.mapView = new Wandergram.Views.MapShow({collection: this.collection});
 
+    this._info_window = null;
   },
 
   render: function(){
     this.$el.html(this.template({posts: this.collection}));
     this.attachSubviews();
-    this.mapView = new Wandergram.Views.MapShow();
     this.addSubview("#map-container", this.mapView);
     this.mapView.initMap();
     return this;
@@ -33,7 +38,28 @@ Wandergram.Views.PostIndex = Backbone.CompositeView.extend({
    this.removeModelSubview('.posts-container', postIndexItem);
  },
 
- like: function(e){
-   var postId = $(e.currentTarget).data("post-id");
+ panToPost: function (e) {
+   var listingId = $(e.currentTarget).data('post-id');
+   var marker = this.mapView._markers[listingId];
+   if(marker !== undefined){
+     var contentString = '<div class="info-window-container">' +
+                         '<img src="' + marker.img_url + '">' +
+                         '<br>'+ marker.caption +
+                         "</div>";
+     this.mapView._map.panTo(marker.getPosition());
+     this._infoWindow = new google.maps.InfoWindow({
+       content: contentString
+     });
+
+     this._infoWindow.open(this.mapView._map, marker);
+    }
  },
+
+ removePostDetail: function(e){
+   if(this._infoWindow !== null && this._infoWindow !== undefined ){
+     this._infoWindow.close();
+   }
+   this._infoWindow = null;
+ }
+
 });

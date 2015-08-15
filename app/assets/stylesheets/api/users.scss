@@ -2,6 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.info-window-container {
+  height: 100px;
+  width: 100px;
+}
+
+.info-window-container img {
+  width: 80%;
+  height: 80%;
+}
+
 .prof-pic-show {
   height: 152px;
   width: 152px;
@@ -39,6 +49,10 @@
 
 .grid-photo:hover .image-detail {
   display: block;
+}
+
+.posts-grid {
+
 }
 
 .grid-photo .thumbnail {
@@ -92,4 +106,22 @@ span.username {
   height: 30px;
   width: 105px;
   margin-left: 20px;
+}
+
+.m-background {
+  background: rgba(92, 88, 88, 0.97);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.m-content {
+  z-index: 2;
+  position: absolute;
+  top: 3%;
+  left: 15%;
+  background-color: white;
 }

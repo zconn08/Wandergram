@@ -16,7 +16,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-body, html { height:100% }
+body, html, #main-content, .userShow, div.user-show-container, .post-index-container, .post-index-inner-container, { height:100% }
+
+.user-show-container .post-index {
+  height: 100%;
+}
 
 .container-fluid {
   margin: auto;
@@ -32,7 +36,7 @@ li.inactive {
 }
 
 .post-index {
-  margin-top: 20px;
+  padding-top: 20px;
 }
 
 .container-fluid.show {

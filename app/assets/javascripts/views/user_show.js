@@ -1,5 +1,6 @@
 Wandergram.Views.UserShow = Backbone.CompositeView.extend({
   template: JST["user_show"],
+  className: "userShow",
 
   initialize: function(){
     // this.listenTo(this.model, "sync", this.render);
@@ -18,12 +19,16 @@ Wandergram.Views.UserShow = Backbone.CompositeView.extend({
 
     this.listenTo(this.model, "add", this.addGridPhotoView);
     this.listenTo(this.model, "remove", this.removeGridPhotoView);
+    this.mapView = new Wandergram.Views.MapShow({
+      collection: posts
+    });
+
+    this._info_window = null;
   },
 
   render: function(){
     this.$el.html(this.template({user: this.model}));
     this.attachSubviews();
-    this.mapView = new Wandergram.Views.MapShow();
     this.addSubview("#map-container", this.mapView);
     this.mapView.initMap();
     return this;
@@ -41,13 +46,16 @@ Wandergram.Views.UserShow = Backbone.CompositeView.extend({
   },
 
   addGridPhotoView: function(post){
-    var subview = new Wandergram.Views.GridPhoto(
-      {model: post}
-    );
+    var subview = new Wandergram.Views.GridPhoto({
+      model: post,
+      map: this.mapView
+    });
     this.addSubview('.posts-grid', subview);
   },
 
   removeGridPhotoView: function(post){
     this.removeModelSubview('.posts-grid', post);
   },
+
+
 });

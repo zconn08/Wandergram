@@ -10,13 +10,13 @@ User.create(username: "zconn", password: "password", image_id: 7, bio: "Working 
 User.create(username: "barryO", password: "password", image_id: 8, bio: "just running the free world")
 User.create(username: "Elon", password: "password", image_id: 9, bio: "Elon Reeve Musk (/ˈiːlɒn ˈmʌsk/; born June 28, 1971) is a South African-born, Canadian-American business magnate,[7][8] engineer,[9] inventor[10] and investor.[11][12][13] He is the CEO and CTO of SpaceX, CEO and product architect of Tesla Motors, and chairman of SolarCity.")
 
-Post.create(user_id: 1, image_id: 1, caption: "post one", location: "Cabo San Lucas, Mexico")
-Post.create(user_id: 1, image_id: 2, caption: "post two")
-Post.create(user_id: 1, image_id: 3, caption: "post three", location: "Amazon River, Brazil")
+Post.create(user_id: 1, image_id: 1, caption: "Beach Life", location: "Cabo San Lucas, Mexico", lat: 22.883754, lng: -109.905928)
+Post.create(user_id: 1, image_id: 2, caption: "Cacti at Sunset", location: "Albuquerque, New Mexico", lat: 35.085334, lng: -106.605553)
+Post.create(user_id: 1, image_id: 3, caption: "River Living", location: "Amazon River, Brazil", lat: -2.165109, lng: -55.115513)
 Post.create(user_id: 1, image_id: 4)
 
-Post.create(user_id: 2, image_id: 5)
-Post.create(user_id: 2, image_id: 6)
+Post.create(user_id: 2, image_id: 5, location: "Koh Samui, Thailand", lat: 37.787912, lng: -122.401943)
+Post.create(user_id: 2, image_id: 6, location: "Crissy Fields, San Francisco", lat: 37.803682, lng: -122.468513)
 
 Like.create(user_id: 2, post_id: 1)
 Like.create(user_id: 3, post_id: 1)

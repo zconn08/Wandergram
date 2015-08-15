@@ -2,7 +2,7 @@ time_ago = time_ago_in_words(post.created_at)
 num_likes = post.post_likers.length
 num_comments = post.comments.length
 
-json.extract! post, :id, :user_id, :caption, :location
+json.extract! post, :id, :user_id, :caption, :location, :lat, :lng
 json.user post.user, :id, :username, :image
 json.time_ago time_ago
 json.num_likes num_likes
