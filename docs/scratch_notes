@@ -22,13 +22,16 @@ __________________
 
 ASK ABOUT:
 __________________
+- Heroku
 - Maps
+  - How to get height of map to 100% of page (e.g., scrolling doesn't include map)
+  - Zombie maps?
+- How to do popover for images (modal?)
 
 - Caching info so it doesn't have to query for every comment, username
 - Help with getting heroku working
 
 
-- Popover bootstrap (getting more detail to come up) - grid_photo.js
     - gridphoto.jst.ejs: <%= post.escape("num_likes") %>,  <%= post.escape("num_comments") %>
 - CSS on the form page for users/new - how to get form to space off top
 

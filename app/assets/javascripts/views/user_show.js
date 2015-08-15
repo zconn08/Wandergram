@@ -2,7 +2,7 @@ Wandergram.Views.UserShow = Backbone.CompositeView.extend({
   template: JST["user_show"],
 
   initialize: function(){
-    this.listenTo(this.model, "sync", this.render);
+    // this.listenTo(this.model, "sync", this.render);
     this.listenTo(this.model, "sync", this.addHeaderView.bind(this, this.model));
 
     var posts = this.model.posts();
@@ -23,6 +23,9 @@ Wandergram.Views.UserShow = Backbone.CompositeView.extend({
   render: function(){
     this.$el.html(this.template({user: this.model}));
     this.attachSubviews();
+    this.mapView = new Wandergram.Views.MapShow();
+    this.addSubview("#map-container", this.mapView);
+    this.mapView.initMap();
     return this;
   },
 

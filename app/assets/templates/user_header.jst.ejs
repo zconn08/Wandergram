@@ -1,28 +1,31 @@
-<div class="prof-pic-wrapper">
-   <div class="prof-pic-show">
-     <img src="<%= user.get("image").url %>" alt="Profile Picture" />
-  </div>
-</div>
-<div class="user-info">
-  <div class="name-and-button-wrapper group">
-    <span class="username"> <%= user.escape("username") %> </span>
-    <% if( user.escape("id") === CURRENT_USER_ID) {%>
-      <a href="users/<%= user.escape("id") %>/edit"><button href type="button" class="btn btn-default" id="edit-btn">Edit Profile</button></a>
-    <% } else { %>
+  <div class="row">
+    <div class="prof-pic-wrapper col-md-4 col-xs-4">
+       <div class="prof-pic-show vcenter">
+         <img src="<%= user.get("image").url %>" alt="Profile Picture" />
+      </div>
+    </div>
+    <div class="user-info col-md-8 col-xs-8">
+      <div class="name-and-button-wrapper group">
+        <span class="username"> <%= user.escape("username") %> </span>
+        <% if( user.escape("id") === CURRENT_USER_ID) {%>
+          <a href="users/<%= user.escape("id") %>/edit"><button href type="button" class="btn btn-default" id="edit-btn">Edit Profile</button></a>
+        <% } else { %>
 
-      <% if (user.isFollowed()) { %>
-        <button type="button" class="btn btn-success following-btn">Following</button>
-      <%} else {%>
-        <button type="button" class="btn btn-default following-btn">Follow</button>
-      <% } %>
-    <% } %>
+          <% if (user.isFollowed()) { %>
+            <button type="button" class="btn btn-success following-btn">Following</button>
+          <%} else {%>
+            <button type="button" class="btn btn-default following-btn">Follow</button>
+          <% } %>
+        <% } %>
+      </div>
+      <div class="user-bio">
+        <%= user.escape("bio") %>
+      </div>
+      <ul class="profile-stats">
+        <li class="profile-stat"><strong><%= user.escape("num_posts") %></strong> Posts</li>
+        <li class="profile-stat"><strong><%= user.escape("numFollowers") %></strong> Followers</li>
+        <li class="profile-stat"><strong><%= user.escape("numFollowees") %></strong> Following</li>
+      </ul>
+    </div>
+
   </div>
-  <div class="user-bio">
-    <%= user.escape("bio") %>
-  </div>
-  <ul class="profile-stats">
-    <li class="profile-stat"><strong><%= user.escape("num_posts") %></strong> Posts</li>
-    <li class="profile-stat"><strong><%= user.escape("numFollowers") %></strong> Followers</li>
-    <li class="profile-stat"><strong><%= user.escape("numFollowees") %></strong> Following</li>
-  </ul>
-</div>
