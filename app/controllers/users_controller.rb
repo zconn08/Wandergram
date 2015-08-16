@@ -18,14 +18,24 @@ class UsersController < ApplicationController
   end
 
   def edit
+    @user = current_user
+  end
+
+  def update
     @user = User.find(params[:id])
+    if @user.update_attributes(user_params)
+      redirect_to ("/#users/#{current_user.id}")
+    else
+      flash.now[:errors] = @user.errors.full_messages
+      render :edit
+    end
   end
 
 
   private
 
   def user_params
-      params.require(:user).permit(:username, :password)
+      params.require(:user).permit(:username, :password, :bio, :image_id)
   end
 
 end

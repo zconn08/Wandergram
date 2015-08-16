@@ -42,6 +42,7 @@ Wandergram.Views.PostIndex = Backbone.CompositeView.extend({
    var listingId = $(e.currentTarget).data('post-id');
    var marker = this.mapView._markers[listingId];
    if(marker !== undefined){
+     this.mapView._map.setZoom(13);
      var contentString = "";
      if (marker.caption !== "") {
        var contentString = '<div class="info-window-container-sm">' +
@@ -59,7 +60,9 @@ Wandergram.Views.PostIndex = Backbone.CompositeView.extend({
      });
 
      this._infoWindow.open(this.mapView._map, marker);
-    }
+   } else {
+     this.mapView._map.setZoom(3);
+   }
  },
 
  removePostDetail: function(e){

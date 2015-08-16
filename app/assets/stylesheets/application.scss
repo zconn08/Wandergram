@@ -18,6 +18,10 @@
 
 body, html, #main-content, .userShow, div.user-show-container, .post-index-container, .post-index-inner-container, { height:100% }
 
+#main-content {
+  padding-top: 50px;
+}
+
 .user-show-container .post-index {
   height: 100%;
 }
@@ -37,6 +41,8 @@ li.inactive {
 
 .post-index {
   padding-top: 20px;
+  position: absolute;
+  right: 0px;
 }
 
 .container-fluid.show {

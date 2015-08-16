@@ -10,7 +10,6 @@ Wandergram.Views.Modal = Backbone.CompositeView.extend({
     var subview = new Wandergram.Views.PostIndexItem(
       {model: this.model}
     );
-    debugger;
     this.marker = options.marker
 
     this.addSubview('.m-content', subview);

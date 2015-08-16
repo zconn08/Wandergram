@@ -6,13 +6,11 @@ __________________
 -Location Input
   -Read up on geocoder for location input
 
-Modal Cleanup
--center modal item
-
--decide what to do if hover over a picture with no location
+-Modal Background
 
 LATER:
 __________________
+- CSS on the form page for users/new - how to get form to space off top
 - Make Info Window on map better
 - Edge Cases
   - Tall Image: stretches it
@@ -31,12 +29,9 @@ __________________
 - Maps
   -markers are gone / weird behavior when navigating back to a page
   -how to make clicking a marker also pan to it (tough set up)
-  - How to fix map without screwing up CSS
   - Zombie maps?
-Modal
--commenting from modal redirects you to index - tried a fix but its not great. Need help (line 70 - 80 on post index item js)
+
 - Caching info so it doesn't have to query for every comment, username
-- CSS on the form page for users/new - how to get form to space off top
 
 Clean up
 __________________

@@ -36,6 +36,7 @@ Wandergram.Views.GridPhoto = Backbone.View.extend({
 
 
     if(marker !== undefined){
+      this.mapView._map.setZoom(13);
       var contentString = "";
       if (marker.caption !== "") {
         var contentString = '<div class="info-window-container-sm">' +
@@ -53,6 +54,8 @@ Wandergram.Views.GridPhoto = Backbone.View.extend({
       });
 
       this._infoWindow.open(this.mapView._map, marker);
+    } else {
+      this.mapView._map.setZoom(3);
     }
   },
 

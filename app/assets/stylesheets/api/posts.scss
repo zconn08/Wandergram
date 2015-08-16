@@ -17,10 +17,12 @@
   height: 30px;
 }
 
+
 #map-container {
   border-right: 2px solid gray;
   padding: 0px;
   height: 100%;
+  position: fixed;
 }
 
 #map-canvas {

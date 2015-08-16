@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'static_pages#root'
-  resources :users, only: [:new, :create, :edit]
+  resources :users, only: [:new, :create, :edit, :update]
   resource :session, only: [:new, :create, :destroy]
   namespace :api, defaults: { format: :json } do
     get "users/current_show", to: "users#current_show"

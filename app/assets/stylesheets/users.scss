@@ -5,15 +5,22 @@
 .log-in {
   border: 1px solid gray;
   background-color: white;
-  height: 320px;
 }
 
-#edit-btn, .following-btn {
-  margin-top: 8px;
-  margin-left: 10px;
+.edit-profile-picture {
+  width: 152px;
+  height: 152px;
+  border-radius: 50%;
 }
 
+.log-in textarea {
+  width: 100%;
+}
 
+.edit.btn-success {
+  width: 70%;
+  margin-left: 10%;
+}
 
 .page-container {
   background-color: whitesmoke;
