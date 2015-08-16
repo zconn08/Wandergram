@@ -5,9 +5,7 @@ Wandergram.Views.UserShow = Backbone.CompositeView.extend({
   initialize: function(){
     // this.listenTo(this.model, "sync", this.render);
     this.listenTo(this.model, "sync", this.addHeaderView.bind(this, this.model));
-
     var posts = this.model.posts();
-
     posts.each(function(post){
       this.addGridPhotoView(post);
     }.bind(this));

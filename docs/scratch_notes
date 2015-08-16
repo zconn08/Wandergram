@@ -6,17 +6,19 @@ __________________
 -Location Input
   -Read up on geocoder for location input
 
--Modal Background
+-Modal Background CSS
+-Create a home page / log in tour
+-potentially different reaction for posts without location. Not super important as all seed data will have a location
+-Set timer: someone likes your photo 10 seconds after login
+
 
 LATER:
 __________________
-- CSS on the form page for users/new - how to get form to space off top
 - Make Info Window on map better
 - Edge Cases
   - Tall Image: stretches it
   - Small Image: ?
 - handle image cropping?
-- Write User Edit File
 - prevent anyone from editing a user profile by going to the url (e.g., redirect unless logged in)
 - add delete button for your comments
 - potentially remove current user id from window
@@ -30,9 +32,10 @@ __________________
   -markers are gone / weird behavior when navigating back to a page
   -how to make clicking a marker also pan to it (tough set up)
   - Zombie maps?
-
+-Edit: how to handle cloudinary on an erb page - cant launch cloudinary?
 - Caching info so it doesn't have to query for every comment, username
-
+- Speed
+- User show - don't have any info about user when I get to template page. WAnt to show 'Add posts!' if 0 posts
 Clean up
 __________________
 - potenitally add validation to image.rb
@@ -46,6 +49,10 @@ Fix links on readme
 - add validation that user can only like a post one time at model level?
   - check edge case of liking from names to number
 - cleaner center on grid photo hover
+
+<% if(user.posts().length === 0 ) { %>
+  Add some photos by clicking the camera icon at the top of the page!
+<% } %>
 
 _______________
 To add to set-up
