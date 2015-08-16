@@ -2,14 +2,24 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.info-window-container {
+.info-window-container-lg {
   height: 100px;
   width: 100px;
 }
 
-.info-window-container img {
+.info-window-container-sm {
+  height: 100px;
+  width: 100px;
+}
+
+.info-window-container-sm img {
   width: 80%;
   height: 80%;
+}
+
+.info-window-container-lg img {
+  width: 100%;
+  height: 100%;
 }
 
 .prof-pic-show {
@@ -49,10 +59,6 @@
 
 .grid-photo:hover .image-detail {
   display: block;
-}
-
-.posts-grid {
-
 }
 
 .grid-photo .thumbnail {

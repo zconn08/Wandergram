@@ -17,6 +17,7 @@ Wandergram.Views.PostIndexItem = Backbone.CompositeView.extend({
     this.listenTo(comments, "add", this.addCommentView);
     this.listenTo(this.model.like(), "change", this.render);
     this.listenTo(comments, "remove", this.removeCommentView);
+    this.listenTo(this.model, "change:num_comments", this.render);
     this.listenTo(this.model, "change:num_likes", this.render);
   },
 
@@ -71,11 +72,9 @@ Wandergram.Views.PostIndexItem = Backbone.CompositeView.extend({
       newComment.save({ body: comment, post_id: this.model.id }, {
         success: function(model){
           this.model.comments().add(newComment);
-          if ($('.name-and-button-wrapper').length > 0) {
-            Backbone.history.navigate("#/users/1", {trigger: true});
-          } else {
-            Backbone.history.navigate("", {trigger: true});
-          }
+          this.model.set({
+            num_comments: this.model.get('num_comments') + 1
+          });
         }.bind(this)
       });
 

@@ -42,10 +42,17 @@ Wandergram.Views.PostIndex = Backbone.CompositeView.extend({
    var listingId = $(e.currentTarget).data('post-id');
    var marker = this.mapView._markers[listingId];
    if(marker !== undefined){
-     var contentString = '<div class="info-window-container">' +
-                         '<img src="' + marker.img_url + '">' +
-                         '<br>'+ marker.caption +
-                         "</div>";
+     var contentString = "";
+     if (marker.caption !== "") {
+       var contentString = '<div class="info-window-container-sm">' +
+                           '<img src="' + marker.img_url + '">' +
+                           '<br>'+ marker.caption +
+                           "</div>";
+     } else {
+       var contentString = '<div class="info-window-container-lg">' +
+                           '<img src="' + marker.img_url + '">' +
+                           "</div>";
+     }
      this.mapView._map.panTo(marker.getPosition());
      this._infoWindow = new google.maps.InfoWindow({
        content: contentString

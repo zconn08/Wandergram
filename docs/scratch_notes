@@ -1,17 +1,23 @@
 HIGH PRIORITY:
 __________________
--Read up on geocoder for location input
+-Notifications
+  -Should be created when - liking, commenting or following happens
+  -Should not happen if you like or comment on your own stuff
+-Location Input
+  -Read up on geocoder for location input
 
 Modal Cleanup
 -center modal item
 
+-decide what to do if hover over a picture with no location
+
 LATER:
 __________________
-- Work on being able to enter a location when uploading
 - Make Info Window on map better
-- Liking
-  - Make it so you can't like while it is running the process (e.g., ajax twitter)
-- handle image cropping / see what happens with wierd shaped images
+- Edge Cases
+  - Tall Image: stretches it
+  - Small Image: ?
+- handle image cropping?
 - Write User Edit File
 - prevent anyone from editing a user profile by going to the url (e.g., redirect unless logged in)
 - add delete button for your comments

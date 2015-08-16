@@ -3,14 +3,16 @@ Wandergram.Views.Modal = Backbone.CompositeView.extend({
 
   events: {
     'click .m-background': 'remove',
-    'click .close': 'removeBtn'
   },
 
-  initialize: function(){
+  initialize: function(options){
     $(document).on('keyup', this.handleKey.bind(this));
     var subview = new Wandergram.Views.PostIndexItem(
       {model: this.model}
     );
+    debugger;
+    this.marker = options.marker
+
     this.addSubview('.m-content', subview);
   },
 
@@ -22,12 +24,16 @@ Wandergram.Views.Modal = Backbone.CompositeView.extend({
 
   handleKey: function (e) {
     if (e.keyCode === 27) {
+      this.marker.setAnimation(null);
       this.remove();
     }
   },
 
-  removeBtn: function(e){
-    e.preventDefault();
-    this.remove();
-  },
+  remove: function(){
+    Backbone.View.prototype.remove.call(this);
+    this.eachSubview(function (subview) {
+      subview.remove();
+    });
+    this.marker.setAnimation(null);
+  }
 });
