@@ -8,7 +8,7 @@ Wandergram.Views.MapShow = Backbone.View.extend({
 
     this.listenTo(this.collection, 'add', this.addMarker);
     this.listenTo(this.collection, 'remove', this.removeMarker);
-    this.collection.each(this.addMarker.bind(this));
+    this._info_window = null;
   },
 
   initMap: function () {
@@ -18,6 +18,10 @@ Wandergram.Views.MapShow = Backbone.View.extend({
     };
 
     this._map = new google.maps.Map(this.el, mapOptions);
+    this.addAllMarkers();
+  },
+  addAllMarkers: function () {
+    this.collection.each(this.addMarker.bind(this));
   },
 
   addMarker: function(post) {
@@ -32,11 +36,49 @@ Wandergram.Views.MapShow = Backbone.View.extend({
           img_url: post.get("image").url
         });
 
-        // google.maps.event.addListener(marker, 'click', function (e) {
-        //   this.showMarkerInfo(e, marker);
-        // }.bind(this));
+        google.maps.event.addListener(marker, 'click', function (e) {
+          this.showMarkerInfo(e, marker);
+        }.bind(this));
 
         this._markers[post.id] = marker;
     }
   },
+
+  panToPost: function(marker){
+    if(marker !== undefined){
+      this._map.setZoom(13);
+      var contentString = "";
+      if (marker.caption !== "") {
+        var contentString = '<div class="info-window-container-sm">' +
+                            '<img src="' + marker.img_url + '">' +
+                            '<br>'+ marker.caption +
+                            "</div>";
+      } else {
+        var contentString = '<div class="info-window-container-lg">' +
+                            '<img src="' + marker.img_url + '">' +
+                            "</div>";
+      }
+      this._map.panTo(marker.getPosition());
+      this._infoWindow = new google.maps.InfoWindow({
+        content: contentString
+      });
+
+      this._infoWindow.open(this._map, marker);
+    } else {
+      this._map.setZoom(3);
+    }
+  },
+
+  removePostDetail: function(){
+    if(this._infoWindow !== null && this._infoWindow !== undefined ){
+      this._infoWindow.close();
+    }
+    this._infoWindow = null;
+  },
+
+  showMarkerInfo: function(e, marker){
+    this.panToPost(marker);
+  }
+
+
 });

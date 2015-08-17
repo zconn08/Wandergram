@@ -13,6 +13,7 @@ Wandergram.Views.ImageUpload = Backbone.View.extend({
       image: this.model,
       transformedUrls: transformedUrls,
     }));
+    $(".location-entry").geocomplete();
     return this;
   },
 
@@ -59,6 +60,9 @@ Wandergram.Views.ImageUpload = Backbone.View.extend({
           success: function(model){
             this.collection.add(newPost)
             Backbone.history.navigate("", {trigger: true});
+          }.bind(this),
+          error: function(){
+            console.log("Please enter a valid location")
           }.bind(this)
         });
       }.bind(this)

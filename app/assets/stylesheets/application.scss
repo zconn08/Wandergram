@@ -27,8 +27,27 @@ body, html, #main-content, .userShow, div.user-show-container, .post-index-conta
   width: 35px;
 }
 
-.notification-image.prof {
+.notification-container {
+  height: 60px;
+  width: 280px;
+}
+
+.notification-image.prof-img {
   border-radius: 50%;
+  float: left;
+}
+
+.notification-image.post-img {
+  float: right;
+}
+
+
+.notification-text {
+  float: left;
+  width: 150px;
+  height: 40px;
+  margin-left: 5px;
+  margin-top: 9px;
 }
 
 .user-show-container .post-index {

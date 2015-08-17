@@ -21,7 +21,7 @@ Wandergram is a photo sharing app for travelers that allows users to display bea
 - [ ] Read notifications
 - [X] Add filters to images
 - [ ] Edit their profile
-- [ ] Tag locations of their pictures
+- [X] Tag locations of their pictures
 - [X] Have a map with all pictures with tagged locations
 - [X] Have profile pictures
 - [ ] Be introduced to features on site

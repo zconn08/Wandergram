@@ -31,38 +31,11 @@ Wandergram.Views.GridPhoto = Backbone.View.extend({
 
   panToPost: function (e) {
     var listingId = $(e.currentTarget).data('post-id');
-
     var marker = this.mapView._markers[listingId];
-
-
-    if(marker !== undefined){
-      this.mapView._map.setZoom(13);
-      var contentString = "";
-      if (marker.caption !== "") {
-        var contentString = '<div class="info-window-container-sm">' +
-                            '<img src="' + marker.img_url + '">' +
-                            '<br>'+ marker.caption +
-                            "</div>";
-      } else {
-        var contentString = '<div class="info-window-container-lg">' +
-                            '<img src="' + marker.img_url + '">' +
-                            "</div>";
-      }
-      this.mapView._map.panTo(marker.getPosition());
-      this._infoWindow = new google.maps.InfoWindow({
-        content: contentString
-      });
-
-      this._infoWindow.open(this.mapView._map, marker);
-    } else {
-      this.mapView._map.setZoom(3);
-    }
+    this.mapView.panToPost(marker);
   },
 
   removePostDetail: function(e){
-    if(this._infoWindow !== null && this._infoWindow !== undefined ){
-      this._infoWindow.close();
-    }
-    this._infoWindow = null;
+    this.mapView.removePostDetail();
   },
 });

@@ -27,15 +27,19 @@
             <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
             <span class="badge" id="notifications-count"> <%= notifications.length %> </span>
           </a>
-          <ul class="dropdown-menu">
-            <% notifications.each(function(notification){ %>
-              <li><a href="#">
-                <img class="notification-image prof" src="<%= notification.get("user_prof_pic").url %>" alt="" />
-                <%= notification.get("body") %>
-                <img class="notification-image" src="<%= notification.get("post_image").url %>" alt="" />
-              </a></li>
-            <% }) %>
-          </ul>
+          <% if (notifications.length > 0) { %>
+            <ul class="dropdown-menu">
+              <% notifications.each(function(notification){ %>
+                <li class="notification-container group"><a href="#">
+                  <img class="notification-image prof-img" src="<%= notification.get("user_prof_pic").url %>" alt="" />
+                  <div class="notification-text">
+                    <%= notification.get("body") %>
+                  </div>
+                  <img class="notification-image post-img" src="<%= notification.get("post_image").url %>" alt="" />
+                </a></li>
+              <% }) %>
+            </ul>
+            <% } %>
         </li>
         <% if(typeof CURRENT_USER_NAME !== "undefined") { %>
           <li class="username-link"><a href="#/users/home" class="navbar-brand"><%= CURRENT_USER_NAME %></a></li>

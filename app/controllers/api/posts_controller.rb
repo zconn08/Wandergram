@@ -6,6 +6,8 @@ class Api::PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user = current_user
+    @post.lat = Geocoder.coordinates(params[:location])[0]
+    @post.lng = Geocoder.coordinates(params[:location])[1]
     if @post.save
       render :show
     else

@@ -1,22 +1,28 @@
 HIGH PRIORITY:
 __________________
+-Edit: make edit page backbone
 -Notifications
-  -Should be created when - liking, commenting or following happens
+  -Should be created when - liking, commenting or following happens [need to make null true for post id on following]
   -Should not happen if you like or comment on your own stuff
   -Should be limited to your last 3 notifications
   -Should be a different color if read
   -handle clicking on it - potentially make it not clickable
--Location Input
-  -Read up on geocoder for location input
+  -how to handle not creating similar notifications for the same username, body and post
+
+Notification - how to get longer text to wrap
 
 -Modal Background CSS
 -Create a home page / log in tour
 -Set timer: someone likes your photo 10 seconds after login
--Potentially just make pictures / index items slightly smaller. Goes of main page
+
+PanToPost when created
+
+Geocomplete - handle errors from that (e.g. someone puts in nonsense) - how to put in errors div
 
 LATER:
 __________________
 - Make Info Window on map better
+-Potentially allow people to turn panning off
 - Edge Cases
   - Tall Image: stretches it
   - Small Image: ?
@@ -31,16 +37,8 @@ __________________
 ASK ABOUT:
 __________________
 - Maps
-  -markers are gone / weird behavior when navigating back to a page
-  -how to make clicking a marker also pan to it (tough set up)
-  - Zombie maps?
--Edit: how to handle cloudinary on an erb page - cant launch cloudinary from edit page?
+  - can you make image clickable to scroll to it? / show modal?
 - Speed / Caching info so it doesn't have to query for every comment, username
-- User show - don't have any info about user when I get to template page. WAnt to show 'Add posts!' if 0 posts
-    <% if(user.posts().length === 0 ) { %>
-      Add some photos by clicking the camera icon at the top of the page!
-    <% } %>
-
 
 Clean up
 __________________

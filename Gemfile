@@ -17,7 +17,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'backbone-on-rails'
 gem 'serialize_json-rails'
 gem 'bootstrap-sass'
-gem 'annotate'
+gem 'geocoder'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -41,6 +41,7 @@ gem 'figaro'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'annotate'
   gem 'byebug'
   gem 'better_errors'
   gem 'binding_of_caller'

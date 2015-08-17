@@ -44,6 +44,7 @@ Wandergram.Views.UserShow = Backbone.CompositeView.extend({
   },
 
   addGridPhotoView: function(post){
+    this.$el.find(".add-photo-msg").empty();
     var subview = new Wandergram.Views.GridPhoto({
       model: post,
       map: this.mapView

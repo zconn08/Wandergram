@@ -15,7 +15,7 @@ Post.create(user_id: 1, image_id: 3, caption: "Cacti at Sunset", location: "Albu
 Post.create(user_id: 1, image_id: 4, caption: "River Living", location: "Amazon River, Brazil", lat: -2.165109, lng: -55.115513)
 Post.create(user_id: 1, image_id: 5)
 
-Post.create(user_id: 2, image_id: 6, location: "Koh Samui, Thailand", lat: 37.787912, lng: -122.401943)
+Post.create(user_id: 2, image_id: 6, location: "Mid Market", lat: 37.787912, lng: -122.401943)
 Post.create(user_id: 2, image_id: 7, location: "Crissy Fields, San Francisco", lat: 37.803682, lng: -122.468513)
 
 Like.create(user_id: 2, post_id: 1)

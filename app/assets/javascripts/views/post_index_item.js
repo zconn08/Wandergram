@@ -75,6 +75,7 @@ Wandergram.Views.PostIndexItem = Backbone.CompositeView.extend({
           this.model.set({
             num_comments: this.model.get('num_comments') + 1
           });
+          this.createNotification("commented on your photo");
         }.bind(this)
       });
 
@@ -91,6 +92,7 @@ Wandergram.Views.PostIndexItem = Backbone.CompositeView.extend({
             num_likes: this.model.get('num_likes') + 1,
             likes: newLikes
           });
+          this.createNotification("likes your photo");
         }.bind(this)
       });
     } else {
@@ -108,6 +110,24 @@ Wandergram.Views.PostIndexItem = Backbone.CompositeView.extend({
         likes: oldLikes
       });
       this.model.like().clear();
+    }
+  },
+
+  createNotification: function(string) {
+    if (this.model.user().id !== CURRENT_USER_ID) {
+      var notification = new Wandergram.Models.Notification({
+        post_id: this.model.id,
+        body: CURRENT_USER_NAME + " " + string,
+        user_id: this.model.user().id
+      });
+      notification.save({},{
+        success: function(){
+          debugger;
+        },
+        error: function(){
+          debugger;
+        }
+      });
     }
   }
 
