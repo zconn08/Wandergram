@@ -1,0 +1,73 @@
+<div class="landing-images-container">
+  <div class="landing-row group">
+    <div class="landing-image-photo">
+        <img src="http://res.cloudinary.com/dmyvxexqn/image/upload/v1439515263/gxrjv8aqyfenx5afs7bl.jpg">
+    </div>
+    <div class="landing-image-photo">
+        <img src="http://res.cloudinary.com/dmyvxexqn/image/upload/v1439515575/ino9pihxezbhu4bpna0c.jpg">
+    </div>
+    <div class="landing-image-photo">
+        <img src="http://res.cloudinary.com/dmyvxexqn/image/upload/v1439515599/vxzhyfqlkkwsooxad61o.jpg">
+    </div>
+  </div>
+  <div class="landing-row">
+    <div class="landing-image-photo">
+        <img src="http://res.cloudinary.com/dmyvxexqn/image/upload/e_sepia,w_640,h_640/v1439515630/yeyjxf95rwdn5dxyn74t.jpg">
+    </div>
+    <div class="landing-image-photo">
+        <img src="http://res.cloudinary.com/dmyvxexqn/image/upload/e_oil_paint,w_640,h_640/v1439515706/jz50ihure223pxs5zpjz.jpg">
+    </div>
+    <div class="landing-image-photo">
+        <img src="http://res.cloudinary.com/dmyvxexqn/image/upload/e_oil_paint,w_640,h_640/v1439515756/v1va7wrgmb7bamz5abio.jpg">
+    </div>
+  </div>
+  <div class="landing-row">
+    <div class="landing-image-photo">
+        <img src="http://res.cloudinary.com/dmyvxexqn/image/upload/v1439515263/gxrjv8aqyfenx5afs7bl.jpg">
+    </div>
+    <div class="landing-image-photo">
+        <img src="http://res.cloudinary.com/dmyvxexqn/image/upload/v1439515263/gxrjv8aqyfenx5afs7bl.jpg">
+    </div>
+    <div class="landing-image-photo">
+        <img src="http://res.cloudinary.com/dmyvxexqn/image/upload/v1439515263/gxrjv8aqyfenx5afs7bl.jpg">
+    </div>
+  </div>
+</div>
+<div class="landing-background">
+</div>
+<div class="landing-content">
+  <div class="landing-header">
+    <div class="welcome-logo">
+      <img src="/assets/Wandergram-logo.png" alt="" />
+      <a href="<%= new_session_url %>"><button class="btn btn-default" type="button" name="button">Sign In</button></a>
+    </div>
+  </div>
+  <div class="landing-description">
+  Share beautiful photos of your journey around the world
+  </div>
+  <div class="landing-form-container">
+    <form action="<%= session_url %>" method="post">
+      <%= auth_token %>
+      <input type="hidden" name="user[username]" value="zconn">
+      <input type="hidden" name="user[password]" value="password">
+      <input type="submit" class="btn btn-primary tour-button" value="Take a Tour">
+    </form>
+    <br>
+    Or
+    <br>
+    <div class="sign-up-form">
+      <div class="form-body">
+        <form action="<%= users_url %>" method="post">
+          <%= auth_token %>
+          <input class="landing-input" type="text" name="user[username]" id="user_username" placeholder="Username">
+          <br><br>
+          <input class="landing-input" type="password" name="user[password]" id="user_password" placeholder="Create a password">
+          <br><br>
+          <input type="submit" class="btn-success signup" value="Sign Up">
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+</div>

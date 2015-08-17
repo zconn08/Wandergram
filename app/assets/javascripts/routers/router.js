@@ -4,7 +4,8 @@ Wandergram.Routers.Router = Backbone.Router.extend({
     "users/home": "userHome",
     "users/:id": "userShow",
     "imageUpload/:id": "imageUpload",
-    "mapShow": "MapShow"
+    "mapShow": "MapShow",
+    "users/:id/edit": "userEdit"
   },
 
   initialize: function(options){
@@ -29,6 +30,12 @@ Wandergram.Routers.Router = Backbone.Router.extend({
   userShow: function(id){
     var model = this.usersCollection.getOrFetch(id);
     var view = new Wandergram.Views.UserShow({model: model});
+    this.swapView(view);
+  },
+
+  userEdit: function(id){
+    var model = this.usersCollection.getOrFetch(id);
+    var view = new Wandergram.Views.UserEdit({model: model});
     this.swapView(view);
   },
 

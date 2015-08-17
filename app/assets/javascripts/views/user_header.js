@@ -18,7 +18,7 @@ Wandergram.Views.UserHeader = Backbone.View.extend({
     if (!this.model.isFollowed()) {
       this.model.follow().save({followee_id: this.model.id}, {
         success: function(){
-          
+
         }
       });
     } else {

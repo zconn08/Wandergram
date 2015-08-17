@@ -10,8 +10,8 @@
     <div class="user-info col-md-8 col-xs-8">
       <div class="name-and-button-wrapper group">
         <span class="username"> <%= user.escape("username") %> </span>
-        <% if( user.escape("id") === CURRENT_USER_ID) {%>
-          <a href="users/<%= user.escape("id") %>/edit"><button href type="button" class="btn btn-default" id="edit-btn">Edit Profile</button></a>
+        <% if( parseInt(user.escape("id")) === CURRENT_USER_ID) {%>
+          <a href="#users/<%= user.escape("id") %>/edit"><button href type="button" class="btn btn-default" id="edit-btn">Edit Profile</button></a>
         <% } else { %>
 
           <% if (user.isFollowed()) { %>

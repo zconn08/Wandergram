@@ -3,4 +3,7 @@ class StaticPagesController < ApplicationController
 
   def root
   end
+
+  def landing_page
+  end
 end

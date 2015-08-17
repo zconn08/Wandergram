@@ -3,7 +3,8 @@ Wandergram.Views.Nav = Backbone.View.extend({
 
   events: {
     "click .upload": "upload",
-    "click .logout-link": "logOut"
+    "click .logout-link": "logOut",
+    // "click .dropdown": "markNotificationsAsRead"
   },
 
   initialize: function(options){
@@ -73,5 +74,11 @@ Wandergram.Views.Nav = Backbone.View.extend({
         });
       }
     }.bind(this));
+  },
+
+  markNotificationsAsRead: function(){
+    this.collection.each(function(notification){
+      notification.save({read: true});
+    });
   }
 });

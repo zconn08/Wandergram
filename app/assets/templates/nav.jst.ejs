@@ -29,7 +29,7 @@
           </a>
           <% if (notifications.length > 0) { %>
             <ul class="dropdown-menu">
-              <% notifications.each(function(notification){ %>
+              <% _.each(notifications.last(notifications.length).reverse(), function(notification) { %>
                 <li class="notification-container group"><a href="#">
                   <img class="notification-image prof-img" src="<%= notification.get("user_prof_pic").url %>" alt="" />
                   <div class="notification-text">

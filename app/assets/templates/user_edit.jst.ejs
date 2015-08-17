@@ -1,0 +1,34 @@
+<div class="page-container">
+  <div class="small-panel">
+    <div class="log-in">
+      <div class="form-header">
+        <div class="form-header-image">
+          <img src="/assets/Wandergram-logo.png" alt="" />
+        </div>
+      </div>
+      <div class="form-body edit">
+        <form action="/users/<%= user.id %>" method="post">
+          <input type="hidden" name="_method" value="PATCH">
+          <label for="user_username">Username</label><br>
+          <input type="text" name="user[username]" id="user_username" value="<%=user.username%>">
+          <br><br>
+          <label for="user_bio">Bio</label><br>
+          <textarea name="user[bio]" id="user_bio"><%=user.bio%></textarea>
+          <br><br>
+          <label for="profile_picture">Profile Picture</label><br>
+          <% if (user.get("image") !== undefined) { %>
+            <img class="edit-profile-picture" src="<%= user.get("image").url %>" alt="" />
+            <br>
+            <a href="#">Change Picture</a>
+          <% } else { %>
+            <a href="#">Add Picture</a>
+          <% } %>
+          <br><br>
+          <div class="group">
+            <a href="/#users/<%= user.id %>" ><button type="button" name="cancel" class="btn-danger">Cancel</button></a>
+            <input type="submit" value="Make Changes" class="btn-success edit">
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

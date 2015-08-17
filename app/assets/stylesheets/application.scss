@@ -22,6 +22,27 @@ body, html, #main-content, .userShow, div.user-show-container, .post-index-conta
   padding-top: 50px;
 }
 
+.landing-images-container {
+  height: 100%;
+  width: 100%;
+}
+
+.landing-row{
+  height: 33%;
+  width: 100%;
+}
+
+.landing-image-photo {
+  height: 100%;
+  width: 33%;
+  float: left;
+}
+
+.landing-image-photo img {
+  height: 100%;
+  width: 100%;
+}
+
 .notification-image {
   height: 35px;
   width: 35px;
@@ -48,6 +69,7 @@ body, html, #main-content, .userShow, div.user-show-container, .post-index-conta
   height: 40px;
   margin-left: 5px;
   margin-top: 9px;
+  white-space: normal;
 }
 
 .user-show-container .post-index {
@@ -100,4 +122,66 @@ li.inactive {
   content: "";
   display: block;
   clear: both;
+}
+
+.landing-background {
+  background: rgba(92, 88, 88, 0.5);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.landing-content {
+  z-index: 2;
+  position: absolute;
+  background-color: whitesmoke;
+  margin-left: auto;
+  margin-right: auto;
+  top: 25%;
+  left: 0;
+  right: 0;
+  width: 700px;
+  height: 350px;
+  border-radius: 1%;
+}
+.landing-description {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.landing-header {
+  text-align: center;
+  font-family: pacifco;
+  height: 50px;
+  width: 700px;
+}
+
+.btn-success.signup, .form-body .landing-input, .tour-button {
+  width: 100%;
+}
+
+.welcome-logo .btn-default {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.landing-form-container {
+  width: 40%;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.btn-success.signup {
+  margin-top: 0px;
+}
+
+
+.landing-input {
+  box-shadow: rgba(18, 86, 136, 0.34902) 0px 0px 6px 0px
 }

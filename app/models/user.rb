@@ -25,11 +25,14 @@ class User < ActiveRecord::Base
   belongs_to :image
   has_many :notifications
 
+
   has_many :liked_posts, through: :likes, source: :post
   # join table for people we are following
   has_many :outgoing_followings, foreign_key: :followee_id, class_name: 'Following'
   # join table for those following us
   has_many :incoming_followings, foreign_key: :follower_id, class_name: 'Following'
+
+  has_many :created_notifications, foreign_key: :creator_id, class_name: 'Notification'
 
   has_many :followers, through: :outgoing_followings, source: :follower
   has_many :followees, through: :incoming_followings, source: :followee

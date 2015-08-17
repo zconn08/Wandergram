@@ -2,22 +2,20 @@ HIGH PRIORITY:
 __________________
 -Edit: make edit page backbone
 -Notifications
-  -Should be created when - liking, commenting or following happens [need to make null true for post id on following]
-  -Should not happen if you like or comment on your own stuff
+  -Should be created when - following happens
   -Should be limited to your last 3 notifications
   -Should be a different color if read
-  -handle clicking on it - potentially make it not clickable
-  -how to handle not creating similar notifications for the same username, body and post
 
-Notification - how to get longer text to wrap
 
 -Modal Background CSS
 -Create a home page / log in tour
 -Set timer: someone likes your photo 10 seconds after login
+Geocomplete - handle errors from that (e.g. someone puts in nonsense) - how to put in errors div
 
 PanToPost when created
 
-Geocomplete - handle errors from that (e.g. someone puts in nonsense) - how to put in errors div
+fix alignment of notifications - also fix the wrong image showing up
+install bullet and get rid of extra queries
 
 LATER:
 __________________
@@ -36,9 +34,12 @@ __________________
 
 ASK ABOUT:
 __________________
+
+Notification - how to get longer text to wrap
+- Speed / Caching info so it doesn't have to query for every comment, username
+  - places where I should be using include
 - Maps
   - can you make image clickable to scroll to it? / show modal?
-- Speed / Caching info so it doesn't have to query for every comment, username
 
 Clean up
 __________________
