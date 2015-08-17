@@ -17,5 +17,6 @@ class Post < ActiveRecord::Base
   has_many :likes
   has_many :post_likers, through: :likes, source: :user
   has_many :comments
+  has_many :notifications
   belongs_to :image
 end

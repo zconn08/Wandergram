@@ -23,6 +23,7 @@ class User < ActiveRecord::Base
   has_many :likes
   has_many :comments
   belongs_to :image
+  has_many :notifications
 
   has_many :liked_posts, through: :likes, source: :post
   # join table for people we are following

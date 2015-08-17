@@ -22,6 +22,15 @@ body, html, #main-content, .userShow, div.user-show-container, .post-index-conta
   padding-top: 50px;
 }
 
+.notification-image {
+  height: 35px;
+  width: 35px;
+}
+
+.notification-image.prof {
+  border-radius: 50%;
+}
+
 .user-show-container .post-index {
   height: 100%;
 }

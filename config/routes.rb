@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     get "users/current_show", to: "users#current_show"
     resources :posts, only: [:index, :create, :show, :destroy, :update]
     resources :users, only: [:index, :show]
+    resources :notifications, only: [:index, :show]
     resources :comments, only: [:index, :create, :show, :destroy, :update]
     resources :likes, only: [:index, :create, :show, :destroy]
     resources :followings, only: [:index, :create, :show, :destroy]

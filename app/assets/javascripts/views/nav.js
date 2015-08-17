@@ -8,7 +8,10 @@ Wandergram.Views.Nav = Backbone.View.extend({
 
   initialize: function(options){
     this.router = options.router;
+    this.collection.fetch();
+    this.listenTo(this.collection, "sync", this.render);
     this.listenTo(this.router, "route", this.handleRoute);
+    this.listenTo(this.collection, "add remove", this.updateNotificationsCount);
   },
 
   logOut: function(e){
@@ -23,8 +26,14 @@ Wandergram.Views.Nav = Backbone.View.extend({
   },
 
   render: function(){
-    this.$el.html(this.template());
+    this.$el.html(this.template({
+      notifications: this.collection
+    }));
     return this;
+  },
+
+  updateNotificationsCount: function () {
+    this.$("#notifications-count").text(this.collection.length);
   },
 
   handleRoute: function(routeName, params){

@@ -3,14 +3,16 @@ __________________
 -Notifications
   -Should be created when - liking, commenting or following happens
   -Should not happen if you like or comment on your own stuff
+  -Should be limited to your last 3 notifications
+  -Should be a different color if read
+  -handle clicking on it - potentially make it not clickable
 -Location Input
   -Read up on geocoder for location input
 
 -Modal Background CSS
 -Create a home page / log in tour
--potentially different reaction for posts without location. Not super important as all seed data will have a location
 -Set timer: someone likes your photo 10 seconds after login
-
+-Potentially just make pictures / index items slightly smaller. Goes of main page
 
 LATER:
 __________________
@@ -32,10 +34,14 @@ __________________
   -markers are gone / weird behavior when navigating back to a page
   -how to make clicking a marker also pan to it (tough set up)
   - Zombie maps?
--Edit: how to handle cloudinary on an erb page - cant launch cloudinary?
-- Caching info so it doesn't have to query for every comment, username
-- Speed
+-Edit: how to handle cloudinary on an erb page - cant launch cloudinary from edit page?
+- Speed / Caching info so it doesn't have to query for every comment, username
 - User show - don't have any info about user when I get to template page. WAnt to show 'Add posts!' if 0 posts
+    <% if(user.posts().length === 0 ) { %>
+      Add some photos by clicking the camera icon at the top of the page!
+    <% } %>
+
+
 Clean up
 __________________
 - potenitally add validation to image.rb
@@ -49,10 +55,8 @@ Fix links on readme
 - add validation that user can only like a post one time at model level?
   - check edge case of liking from names to number
 - cleaner center on grid photo hover
+-potentially different reaction for posts without location. Not super important as all seed data will have a location
 
-<% if(user.posts().length === 0 ) { %>
-  Add some photos by clicking the camera icon at the top of the page!
-<% } %>
 
 _______________
 To add to set-up
