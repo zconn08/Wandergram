@@ -3,7 +3,7 @@
     <div class="log-in">
       <div class="form-header">
         <div class="form-header-image">
-          <img src="/assets/Wandergram-logo.png" alt="" />
+          <img src="Images/Wandergram-logo.png" alt="" />
         </div>
       </div>
       <div class="form-body edit">
@@ -19,7 +19,7 @@
           <% if (user.get("image") !== undefined) { %>
             <img class="edit-profile-picture" src="<%= user.get("image").url %>" alt="" />
             <br>
-            <a href="#">Change Picture</a>
+            <a href="javascript:void(0)" class="change_profile_picture">Change Picture</a>
           <% } else { %>
             <a href="#">Add Picture</a>
           <% } %>

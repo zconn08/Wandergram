@@ -2,7 +2,7 @@ Wandergram.Views.UserEdit = Backbone.View.extend({
   template: JST["user_edit"],
 
   events: {
-    "click "
+    "click .change_profile_picture" : "uploadNewProfilePicture"
   },
 
   initialize: function(){
@@ -13,5 +13,10 @@ Wandergram.Views.UserEdit = Backbone.View.extend({
     this.$el.html(this.template({user: this.model}));
     return this;
   },
+
+  uploadNewProfilePicture: function(e){
+    debugger;
+    e.preventDefault();
+  }
 
 });
