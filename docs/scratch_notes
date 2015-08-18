@@ -3,37 +3,36 @@ __________________
 -Getting stuff going in heroku
 - Maps
   - can you make image clickable to scroll to it? / show modal?
--how to put do errors from backbone - handle errors from that (e.g. someone puts in nonsense) - how to put in errors div
+- how to put do errors from backbone - handle errors from that (e.g. someone puts in nonsense) - how to put in errors div
+- handle image cropping
+
 
 HIGH PRIORITY:
 __________________
 -Notifications
-  -Add following notifications
   -Should be limited to your last 3 notifications
-  -Should be a different color if read
+  -Need to get markNotificationsAsRead to work
+- Cloudinary on edit profile
 - Use bullet to get rid of extra queries
--Getting stuff going in heroku
--Styling
+-Get Styling Going
   -better jquery on button press for following
   -Modal Background CSS
   -Rows for grid photos for user show
-
-PanToPost when created
+  -Make Info Window on map better
+- PanToPost when created
 
 LATER:
 __________________
--Set timer: someone likes your photo 10 seconds after login
-- Make Info Window on map better
--Potentially allow people to turn panning off
+- Set timer: someone likes your photo 10 seconds after login
+
+- Potentially allow people to turn panning off
 - Edge Cases
   - Tall Image: stretches it
   - Small Image: ?
-- handle image cropping?
 - prevent anyone from editing a user profile by going to the url (e.g., redirect unless logged in)
 - add delete button for your comments
 - When you go to a route (e.g., upload, make it active on nav)
 - Make feed only for people you are subscribed to?
-- Check in on Heroku
 
 
 Clean up
@@ -50,7 +49,6 @@ Fix links on readme
   - check edge case of liking from names to number
 - cleaner center on grid photo hover
 - potentially remove current user id from window
-
 
 _______________
 To add to set-up

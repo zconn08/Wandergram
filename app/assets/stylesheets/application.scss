@@ -53,6 +53,10 @@ body, html, #main-content, .userShow, div.user-show-container, .post-index-conta
   width: 280px;
 }
 
+.notification-container.unread {
+  background-color: #A0A0A0;
+}
+
 .notification-image.prof-img {
   border-radius: 50%;
   float: left;

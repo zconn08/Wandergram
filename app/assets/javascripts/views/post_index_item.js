@@ -114,6 +114,7 @@ Wandergram.Views.PostIndexItem = Backbone.CompositeView.extend({
   },
 
   createNotification: function(string) {
+    debugger;
     if (this.model.user().id !== CURRENT_USER_ID) {
       var notification = new Wandergram.Models.Notification({
         post_id: this.model.id,

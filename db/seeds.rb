@@ -6,17 +6,17 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.create(username: "zconn", password: "password", image_id: 8, bio: "Working on an instagram clone")
-User.create(username: "barryO", password: "password", image_id: 9, bio: "just running the free world")
-User.create(username: "Elon", password: "password", image_id: 10, bio: "Elon Reeve Musk (/ˈiːlɒn ˈmʌsk/; born June 28, 1971) is a South African-born, Canadian-American business magnate,[7][8] engineer,[9] inventor[10] and investor.[11][12][13] He is the CEO and CTO of SpaceX, CEO and product architect of Tesla Motors, and chairman of SolarCity.")
+User.create(username: "zconn", password: "password", image_id: 9, bio: "Working on an instagram clone")
+User.create(username: "barryO", password: "password", image_id: 10, bio: "just running the free world")
+User.create(username: "Elon", password: "password", image_id: 11, bio: "Elon Reeve Musk (/ˈiːlɒn ˈmʌsk/; born June 28, 1971) is a South African-born, Canadian-American business magnate,[7][8] engineer,[9] inventor[10] and investor.[11][12][13] He is the CEO and CTO of SpaceX, CEO and product architect of Tesla Motors, and chairman of SolarCity.")
 
-Post.create(user_id: 1, image_id: 2, caption: "Beach Life", location: "Cabo San Lucas, Mexico", lat: 22.883754, lng: -109.905928)
-Post.create(user_id: 1, image_id: 3, caption: "Cacti at Sunset", location: "Albuquerque, New Mexico", lat: 35.085334, lng: -106.605553)
-Post.create(user_id: 1, image_id: 4, caption: "River Living", location: "Amazon River, Brazil", lat: -2.165109, lng: -55.115513)
-Post.create(user_id: 1, image_id: 5)
+Post.create(user_id: 1, image_id: 3, caption: "Beach Life", location: "Cabo San Lucas, Mexico", lat: 22.883754, lng: -109.905928)
+Post.create(user_id: 1, image_id: 4, caption: "Cacti at Sunset", location: "Albuquerque, New Mexico", lat: 35.085334, lng: -106.605553)
+Post.create(user_id: 1, image_id: 5, caption: "River Living", location: "Amazon River, Brazil", lat: -2.165109, lng: -55.115513)
+Post.create(user_id: 1, image_id: 6)
 
-Post.create(user_id: 2, image_id: 6, location: "Mid Market", lat: 37.787912, lng: -122.401943)
-Post.create(user_id: 2, image_id: 7, location: "Crissy Fields, San Francisco", lat: 37.803682, lng: -122.468513)
+Post.create(user_id: 2, image_id: 7, location: "Mid Market", lat: 37.787912, lng: -122.401943)
+Post.create(user_id: 2, image_id: 8, location: "Crissy Fields, San Francisco", lat: 37.803682, lng: -122.468513)
 
 Like.create(user_id: 2, post_id: 1)
 Like.create(user_id: 3, post_id: 1)
@@ -31,8 +31,10 @@ Like.create(user_id: 1, post_id: 6)
 Following.create(follower_id: 1, followee_id: 2)
 Following.create(follower_id: 3, followee_id: 1)
 
-#Default prof pic
+#Default pics
 Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/v1439766967/nq5txlf6qyhayerx3avm.png", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/v1439766967/nq5txlf6qyhayerx3avm.png")
+Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/v1439766967/nq5txlf6qyhayerx3avm.png", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/v1439875601/oviucf9uk9mo4xy6khmx.png")
+
 #Posts
 Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/v1439515263/gxrjv8aqyfenx5afs7bl.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/v1439515263/gxrjv8aqyfenx5afs7bl.jpg")
 Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/v1439515575/ino9pihxezbhu4bpna0c.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/v1439515575/ino9pihxezbhu4bpna0c.jpg")

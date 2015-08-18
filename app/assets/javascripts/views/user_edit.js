@@ -17,6 +17,7 @@ Wandergram.Views.UserEdit = Backbone.View.extend({
   uploadNewProfilePicture: function(e){
     debugger;
     e.preventDefault();
+    
   }
 
 });
