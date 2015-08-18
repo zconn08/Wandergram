@@ -23,14 +23,21 @@
 }
 
 #edit-btn, .following-btn {
-  margin-top: 8px;
-  margin-left: 10px;
+  margin-top: 9px;
+  margin-left: 15px;
+  width: 112px;
 }
 
 .prof-pic-show {
   height: 152px;
   width: 152px;
   border-radius: 50%;
+  margin: 0 auto;
+}
+
+.user-info {
+  height: 152px;
+  margin-top: 49px;
 }
 
 .prof-pic-show img {
@@ -42,6 +49,7 @@
 .prof-pic-wrapper {
   height: 152px;
   width: 152px;
+  margin-top: 49px;
 }
 
 .icons {
@@ -70,18 +78,32 @@
   padding: 0;
 }
 
+.user-bio {
+  font-size: 17px;
+  margin-top: 7px;
+  padding-right: 40px;
+}
+
 .profile-stats {
   list-style-type: none;
   padding: 0px;
+  font-size: 17px;
+  margin-top:10px;
 }
 .profile-stat {
   float: left;
   margin-right: 5px;
 }
 
+.posts-grid {
+  padding-bottom: 20px;
+}
+
 .prof-page-header {
-  width: 700px;
-  height: 200px;
+  width: 100%;
+  height: 250px;
+  font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-weight: 300;
 }
 .large-panel {
   width: 900px;
@@ -98,7 +120,7 @@ a.thumbnail {
 }
 
 span.username {
-  font-size: 36px;
+  font-size: 34px;
   float: left;
 }
 

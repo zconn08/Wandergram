@@ -1,5 +1,6 @@
 Wandergram.Views.UserHeader = Backbone.View.extend({
   template: JST['user_header'],
+  className: "user-header-container",
 
   events: {
     "click .following-btn": "toggleFollow",

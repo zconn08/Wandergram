@@ -80,6 +80,10 @@ body, html, #main-content, .userShow, div.user-show-container, .post-index-conta
   height: 100%;
 }
 
+.user-show-container {
+  margin-right: 0px;
+}
+
 .container-fluid {
   margin: auto;
   width: 640px;
@@ -94,9 +98,14 @@ li.inactive {
 }
 
 .post-index {
-  padding-top: 20px;
   position: absolute;
   right: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.panel.panel-default {
+  margin-top: 20px;
 }
 
 .container-fluid.show {

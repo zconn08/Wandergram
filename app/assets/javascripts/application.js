@@ -17,6 +17,7 @@
 //= require serialize_json
 //= require bootstrap
 //= require wandergram
+//= require jquery.geocomplete
 //= require_tree ./utils
 //= require_tree ../templates
 //= require_tree ./models

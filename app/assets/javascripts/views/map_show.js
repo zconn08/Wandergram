@@ -33,7 +33,8 @@ Wandergram.Views.MapShow = Backbone.View.extend({
           position: { lat: post.get('lat'), lng: post.get('lng') },
           map: this._map,
           caption: caption,
-          img_url: post.get("image").url
+          img_url: post.get("image").url,
+          postId: post.get("id")
         });
 
         google.maps.event.addListener(marker, 'click', function (e) {
@@ -46,24 +47,26 @@ Wandergram.Views.MapShow = Backbone.View.extend({
 
   panToPost: function(marker){
     if(marker !== undefined){
-      this._map.setZoom(13);
+      this._map.setZoom(12);
       var contentString = "";
       if (marker.caption !== "") {
-        var contentString = '<div class="info-window-container-sm">' +
+        var contentString = '<div class="info-window-container-sm" id="info-window">' +
                             '<img src="' + marker.img_url + '">' +
                             '<br>'+ marker.caption +
                             "</div>";
       } else {
-        var contentString = '<div class="info-window-container-lg">' +
+        var contentString = '<div class="info-window-container-lg" id="info-window">' +
                             '<img src="' + marker.img_url + '">' +
                             "</div>";
       }
       this._map.panTo(marker.getPosition());
       this._infoWindow = new google.maps.InfoWindow({
-        content: contentString
+        content: contentString,
+        postId: marker.postId
       });
 
       this._infoWindow.open(this._map, marker);
+
     } else {
       this._map.setZoom(3);
     }
@@ -78,6 +81,10 @@ Wandergram.Views.MapShow = Backbone.View.extend({
 
   showMarkerInfo: function(e, marker){
     this.panToPost(marker);
+  },
+
+  scrollToPost: function(e, infoWindow){
+    Backbone.history.navigate("/#4", {trigger: true});
   }
 
 

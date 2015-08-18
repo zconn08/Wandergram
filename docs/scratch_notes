@@ -1,17 +1,23 @@
 ASK ABOUT:
 __________________
--Getting stuff going in heroku
+-Main content- padding: insane - scroll to top
+-Need to get markNotificationsAsRead to work - do on hover of a notification
+-how to do grids - no bootstrap, width 33%, height will work accordingly.
 - Maps
   - can you make image clickable to scroll to it? / show modal?
-- how to put do errors from backbone - handle errors from that (e.g. someone puts in nonsense) - how to put in errors div
+  -user post id info on attributes of info window. Scroll by id #4
+- How to get rid of add photos when you go to user show page
+  Idk
 - handle image cropping
+- infinite scrolling
 
+scrolling left?
+delete thumbnail_url?
 
 HIGH PRIORITY:
 __________________
 -Notifications
   -Should be limited to your last 3 notifications
-  -Need to get markNotificationsAsRead to work
 - Cloudinary on edit profile
 - Use bullet to get rid of extra queries
 -Get Styling Going
@@ -20,6 +26,9 @@ __________________
   -Rows for grid photos for user show
   -Make Info Window on map better
 - PanToPost when created
+-Getting stuff going in heroku - look at cloudinary demo
+-Good seed data
+
 
 LATER:
 __________________

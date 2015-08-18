@@ -10,6 +10,16 @@ Wandergram.Views.UserShow = Backbone.CompositeView.extend({
       this.addGridPhotoView(post);
     }.bind(this));
 
+
+    // posts.fetch({
+    //   success: function (posts) {
+    //     if posts
+    //     $('.add-photo-msg').html(
+    //       "Add a photo by clicking the camera at the top of the page!"
+    //     )
+    //   }
+    // });
+
     this.listenTo(this.model.posts(), "add", this.addGridPhotoView);
 
     this.listenTo(this.model, "add", this.addHeaderView);

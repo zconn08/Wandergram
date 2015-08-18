@@ -18,8 +18,14 @@ Wandergram.Views.ImageUpload = Backbone.View.extend({
   },
 
   initialize: function(){
+    $(document).on('keyup', this.checkForEnter.bind(this));
   },
 
+  checkForEnter: function (e){
+    if (e.keyCode === 13) {
+      this.shareImage(e);
+    }
+  },
 
   generateFilterUrls: function(url){
     var arrayOfUrls = [];
@@ -62,7 +68,7 @@ Wandergram.Views.ImageUpload = Backbone.View.extend({
             Backbone.history.navigate("", {trigger: true});
           }.bind(this),
           error: function(){
-            console.log("Please enter a valid location")
+            $(".location-error").html(" Please enter a valid location")
           }.bind(this)
         });
       }.bind(this)
