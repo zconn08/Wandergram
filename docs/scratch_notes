@@ -1,24 +1,28 @@
+ASK ABOUT:
+__________________
+-Getting stuff going in heroku
+- Maps
+  - can you make image clickable to scroll to it? / show modal?
+-how to put do errors from backbone - handle errors from that (e.g. someone puts in nonsense) - how to put in errors div
+
 HIGH PRIORITY:
 __________________
--Edit: make edit page backbone
 -Notifications
-  -Should be created when - following happens
+  -Add following notifications
   -Should be limited to your last 3 notifications
   -Should be a different color if read
-
-
--Modal Background CSS
--Create a home page / log in tour
--Set timer: someone likes your photo 10 seconds after login
-Geocomplete - handle errors from that (e.g. someone puts in nonsense) - how to put in errors div
+- Use bullet to get rid of extra queries
+-Getting stuff going in heroku
+-Styling
+  -better jquery on button press for following
+  -Modal Background CSS
+  -Rows for grid photos for user show
 
 PanToPost when created
 
-fix alignment of notifications - also fix the wrong image showing up
-install bullet and get rid of extra queries
-
 LATER:
 __________________
+-Set timer: someone likes your photo 10 seconds after login
 - Make Info Window on map better
 -Potentially allow people to turn panning off
 - Edge Cases
@@ -27,19 +31,10 @@ __________________
 - handle image cropping?
 - prevent anyone from editing a user profile by going to the url (e.g., redirect unless logged in)
 - add delete button for your comments
-- potentially remove current user id from window
 - When you go to a route (e.g., upload, make it active on nav)
 - Make feed only for people you are subscribed to?
 - Check in on Heroku
 
-ASK ABOUT:
-__________________
-
-Notification - how to get longer text to wrap
-- Speed / Caching info so it doesn't have to query for every comment, username
-  - places where I should be using include
-- Maps
-  - can you make image clickable to scroll to it? / show modal?
 
 Clean up
 __________________
@@ -54,7 +49,7 @@ Fix links on readme
 - add validation that user can only like a post one time at model level?
   - check edge case of liking from names to number
 - cleaner center on grid photo hover
--potentially different reaction for posts without location. Not super important as all seed data will have a location
+- potentially remove current user id from window
 
 
 _______________

@@ -122,10 +122,8 @@ Wandergram.Views.PostIndexItem = Backbone.CompositeView.extend({
       });
       notification.save({},{
         success: function(){
-          debugger;
         },
         error: function(){
-          debugger;
         }
       });
     }
