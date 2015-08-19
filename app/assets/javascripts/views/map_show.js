@@ -34,7 +34,8 @@ Wandergram.Views.MapShow = Backbone.View.extend({
           map: this._map,
           caption: caption,
           img_url: post.get("image").url,
-          postId: post.get("id")
+          postId: post.get("id"),
+          username: post.user().get("username")
         });
 
         google.maps.event.addListener(marker, 'click', function (e) {
@@ -51,12 +52,17 @@ Wandergram.Views.MapShow = Backbone.View.extend({
       this._map.setZoom(12);
       var contentString = "";
       if (marker.caption !== "") {
+        var shortened_caption = marker.caption.length < 30 ? marker.caption : (marker.caption.substr(0,27) + "...");
+
+
         var contentString = '<div class="info-window-container-sm" id="info-window">' +
+                            '<b>' + marker.username + '</b><br>' +
                             '<img src="' + marker.img_url + '">' +
-                            '<br>'+ marker.caption +
+                            '<br>'+ shortened_caption +
                             "</div>";
       } else {
         var contentString = '<div class="info-window-container-lg" id="info-window">' +
+                            '<b>' + marker.username + '</b><br>' +
                             '<img src="' + marker.img_url + '">' +
                             "</div>";
       }

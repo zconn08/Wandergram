@@ -51,7 +51,9 @@ body, html, #main-content, .userShow, div.user-show-container, .post-index-conta
 
 .notification-container {
   height: 40px;
-  width: 280px;
+  width: 310px;
+  padding-top: 10px;
+  padding-bottom: 45px;
 }
 
 .notification-container.unread {
@@ -75,9 +77,9 @@ body, html, #main-content, .userShow, div.user-show-container, .post-index-conta
 
 .notification-text {
   float: left;
-  width: 150px;
+  width: 180px;
   height: 40px;
-  margin-left: 5px;
+  margin-left: 10px;
   white-space: normal;
 }
 
@@ -97,6 +99,46 @@ body, html, #main-content, .userShow, div.user-show-container, .post-index-conta
 .navbar {
   margin-bottom: 0px;
   background-color: white;
+}
+
+// coloring text dark blue
+.navbar-default .navbar-nav > li > a, .navbar-default .navbar-brand, .name-location > a, .caption > a, .comments-container a, .num-likes a {
+  color: #05598a;
+  font-weight: 500;
+}
+
+.navbar-brand {
+  font-size: 20px;
+}
+
+.name-location > a:hover, .caption > a:hover, .comments-container a:hover, .num-likes a:hover {
+  text-decoration: none;
+}
+
+.navbar-default .navbar-brand:hover {
+  color: #333;
+}
+
+.badge {
+  background-color: #05598a
+}
+
+.glyphicon {
+  font-size: 22px;
+}
+
+.dropdown-menu {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.dropdown-menu > li.divider {
+  margin: 0;
+}
+
+.navbar-nav > .dropdown a, .navbar-brand.upload {
+  padding-bottom: 5px;
+  padding-top: 15px;
 }
 
 li.inactive {

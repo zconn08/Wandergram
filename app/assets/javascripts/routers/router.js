@@ -34,9 +34,13 @@ Wandergram.Routers.Router = Backbone.Router.extend({
   },
 
   userEdit: function(id){
-    var model = this.usersCollection.getOrFetch(id);
-    var view = new Wandergram.Views.UserEdit({model: model});
-    this.swapView(view);
+    if (parseInt(id) !== CURRENT_USER_ID) {
+      Backbone.history.navigate("", {trigger: true});
+    } else {
+      var model = this.usersCollection.getOrFetch(id);
+      var view = new Wandergram.Views.UserEdit({model: model});
+      this.swapView(view);
+    }
   },
 
   imageUpload: function(id){

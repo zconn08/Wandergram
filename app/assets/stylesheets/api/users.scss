@@ -3,29 +3,49 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .info-window-container-lg {
-  height: 100px;
-  width: 100px;
+  height: 135px;
+  width: 175px;
+  text-align: center;
 }
 
 .info-window-container-sm {
-  height: 100px;
-  width: 100px;
+  height: 135px;
+  width: 175px;
+  text-align: center;
 }
 
 .info-window-container-sm img {
-  width: 80%;
-  height: 80%;
+  width: 100px;
+  height: 100px;
 }
 
 .info-window-container-lg img {
-  width: 100%;
-  height: 100%;
+  width: 100px;
+  height: 100px;
 }
 
-#edit-btn, .following-btn {
+#edit-btn, .following-btn, #follow-btn {
   margin-top: 9px;
   margin-left: 15px;
-  width: 112px;
+  width: 115px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 4px;
+}
+
+#edit-btn {
+  background-color: rgba(0, 0, 0, 0);
+  font-family: 'freight-sans-pro', 'proxima-nova', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  color: rgb(129, 132, 136);
+  border: 1px solid rgb(129, 132, 136);
+}
+
+#follow-btn {
+  background-color: rgba(0, 0, 0, 0);
+  font-family: 'freight-sans-pro', 'proxima-nova', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  color: #4090db;
+  border: 1px solid #4090db;
 }
 
 .prof-pic-show {

@@ -20,6 +20,7 @@ Wandergram.Views.UserHeader = Backbone.View.extend({
     if (!this.model.isFollowed()) {
       this.model.follow().save({followee_id: this.model.id}, {
         success: function(){
+          this.model.set({ numFollowers: this.model.get('numFollowers') + 1 });
           var notification = new Wandergram.Models.Notification({
             body: CURRENT_USER_NAME + " is following you",
             user_id: this.model.id
@@ -33,6 +34,7 @@ Wandergram.Views.UserHeader = Backbone.View.extend({
         }.bind(this)
       });
     } else {
+      this.model.set({ numFollowers: this.model.get('numFollowers') - 1 });
       this.model.follow().destroy();
       this.model.follow().clear();
     }

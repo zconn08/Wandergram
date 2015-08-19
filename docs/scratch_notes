@@ -1,18 +1,25 @@
 ASK ABOUT:
 __________________
 -heroku + custom domain + sleeping / cloudinary heroku
+-heroku - need to figure out how to do default pics (e.g., prof, following image)
+- navbar styling
 
 HIGH PRIORITY:
 __________________
 - Vertically center landing content for modal and log in info
 - Make logo bigger in many places including landing page
 - Design navbar / make navbar stop shifting sizes
-- Make follow numbers update in real time
+
+
+Fix behavior of incorrect login info - flash at top currently
+Can make navbar hover darker blue
+Hover over globe or badge should change color of both.
+Fix notifications styling
+Bit more padding between icons and name
+
 - Potentially make "6 likes" something that I can expand into a likestring - "A, B, C, D and 2 others"
 - Potentially add white grid to grid photos
 - Add seed posts for columbus and whoever has last post
-- put username of poster in markers +  Sizing of info windows needs work with long captions
-- centering of post index items
 - Seed some likes and follows
 - Get rid of blue focus on upload cancel / share - maybe make it a button press
 -style edit profile / follow buttons
@@ -21,7 +28,6 @@ __________________
   -better jquery on button press for following
   -Notifications styling
   -Modal Background CSS: Modal doesn't go far enough down
-  -Make Info Window on map better
 - PanToPost when created
 - Getting stuff going in heroku - look at cloudinary demo
 - Good seed data
@@ -38,13 +44,12 @@ __________________
 - Edge Cases
   - Tall Image: stretches it
   - Small Image: ?
-- prevent anyone from editing a user profile by going to the url (e.g., redirect unless logged in)
 - add delete button for your comments
 - When you go to a route (e.g., upload, make it active on nav)
 - Make feed only for people you are subscribed to?
 - How to add text 'add photos' if no photos
-- Maps
-  - can you make image clickable show modal?
+- Maps: can you make image clickable show modal?
+Add ability to delete posts?
 
 
 Clean up
