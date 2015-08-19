@@ -1,16 +1,18 @@
 ASK ABOUT:
 __________________
--heroku / wandergramio
+-heroku / wandergram.io
  - sleeping
  - need to figure out how to do default pics (e.g., prof, following image) - appears to work
  - API not working for wandergram.io
 - Google Geocoding API error: over query limit.
+
 HIGH PRIORITY:
 __________________
 - navbar styling
   - Hover over bullhorn or badge should change color of both.
   - Fix behavior that bullhorn stays blue once visited
 
+-Potentially not as zoomed in. Except SF?
 - Potentially not force users to enter a location
 - Vertically center landing content for modal and log in info
 - Make logo bigger in many places including landing page

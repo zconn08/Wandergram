@@ -44,13 +44,11 @@ Wandergram.Views.Nav = Backbone.View.extend({
   },
 
   handleRoute: function(routeName, params){
-    // this.$el.find(".container-fluid").removeClass("show");
     this.$el.find(".logout-link").addClass("inactive");
-    this.$el.find(".#125688").removeClass("inactive");
-    if (routeName === "userShow" || routeName === "userHome" ) {
-      // this.$el.find(".container-fluid").addClass("show");
+    this.$el.find(".username-link").removeClass("inactive");
+    if ((routeName === "userShow" && parseInt(params[0]) === CURRENT_USER_ID) || (routeName === "userHome") ) {
       this.$el.find(".logout-link").removeClass("inactive");
-      this.$el.find(".#125688").addClass("inactive");
+      this.$el.find(".username-link").addClass("inactive");
     }
   },
 
