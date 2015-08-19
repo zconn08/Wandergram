@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 
   <% if Rails.env.production? %>
-    <% api_key = "key=#{ENV['GOOGLE_MAPS']}" %>
+    <% api_key = "key=#{ENV['GOOGLE_MAPS']}".html_safe %>
   <% else %>
     <% api_key = '' %>
   <% end %>
