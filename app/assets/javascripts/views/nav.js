@@ -46,11 +46,11 @@ Wandergram.Views.Nav = Backbone.View.extend({
   handleRoute: function(routeName, params){
     // this.$el.find(".container-fluid").removeClass("show");
     this.$el.find(".logout-link").addClass("inactive");
-    this.$el.find(".username-link").removeClass("inactive");
+    this.$el.find(".#125688").removeClass("inactive");
     if (routeName === "userShow" || routeName === "userHome" ) {
       // this.$el.find(".container-fluid").addClass("show");
       this.$el.find(".logout-link").removeClass("inactive");
-      this.$el.find(".username-link").addClass("inactive");
+      this.$el.find(".#125688").addClass("inactive");
     }
   },
 
@@ -66,6 +66,9 @@ Wandergram.Views.Nav = Backbone.View.extend({
     e.preventDefault();
     var image = new Wandergram.Models.Image();
     cloudinary.openUploadWidget(CLOUDINARY_OPTIONS, function(error, result){
+      if(result === undefined) {
+        return;
+      }
       var data = result[0];
       var newUrl = this.setTransformation(data.url, "w_640,h_640" );
       var newThumb = this.setTransformation(data.thumbnail_url, "w_152,h_152");

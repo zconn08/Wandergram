@@ -1,40 +1,34 @@
 ASK ABOUT:
 __________________
--heroku + custom domain + sleeping / cloudinary heroku
--heroku - need to figure out how to do default pics (e.g., prof, following image)
-- navbar styling
-
+-heroku / wandergramio
+ - sleeping
+ - need to figure out how to do default pics (e.g., prof, following image) - appears to work
+ - API not working for wandergram.io
+- Google Geocoding API error: over query limit.
 HIGH PRIORITY:
 __________________
+- navbar styling
+  - Hover over bullhorn or badge should change color of both.
+  - Fix behavior that bullhorn stays blue once visited
+
+- Potentially not force users to enter a location
 - Vertically center landing content for modal and log in info
 - Make logo bigger in many places including landing page
-- Design navbar / make navbar stop shifting sizes
+- Fix behavior of incorrect login info - flash at top currently
 
-
-Fix behavior of incorrect login info - flash at top currently
-Can make navbar hover darker blue
-Hover over globe or badge should change color of both.
-Fix notifications styling
-Bit more padding between icons and name
 
 - Potentially make "6 likes" something that I can expand into a likestring - "A, B, C, D and 2 others"
 - Potentially add white grid to grid photos
 - Add seed posts for columbus and whoever has last post
 - Seed some likes and follows
 - Get rid of blue focus on upload cancel / share - maybe make it a button press
--style edit profile / follow buttons
 - font
--Get Styling Going
-  -better jquery on button press for following
-  -Notifications styling
-  -Modal Background CSS: Modal doesn't go far enough down
+-better jquery on button press for following
 - PanToPost when created
-- Getting stuff going in heroku - look at cloudinary demo
 - Good seed data
 - Potentially allow people to turn panning off
 - infinite scrolling
 - handle image cropping - look at Eric's source code (jcrop)
-
 
 LATER:
 __________________

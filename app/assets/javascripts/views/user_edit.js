@@ -1,6 +1,8 @@
 Wandergram.Views.UserEdit = Backbone.View.extend({
   template: JST["user_edit"],
 
+  className: "editContainer",
+
   events: {
     "click .change_profile_picture" : "uploadNewProfilePicture",
     "submit form" : "submitNewInfo"

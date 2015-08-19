@@ -5,6 +5,8 @@
 .log-in {
   border: 1px solid gray;
   background-color: white;
+  border-radius: 3px;
+  font-family: 'freight-sans-pro', 'proxima-nova', 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 
 .edit-profile-picture {
@@ -17,13 +19,17 @@
   width: 100%;
 }
 
+.editContainer {
+  height: 100%;
+}
+
 .edit.btn-success {
   width: 70%;
   margin-left: 10%;
 }
 
 .page-container {
-  background-color: whitesmoke;
+  background-color: #FAFAFA;
   height: 100%;
 }
 
@@ -36,10 +42,10 @@
 .form-header {
   text-align: center;
   font-size: 26px;
-  background: lightblue;
-  font-family: pacifco;
+  background: #125688;
   height: 50px;
-  width: 400px;
+  color: white;
+  padding-top: 5px;
 }
 
 .log-in-footer {
