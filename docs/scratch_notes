@@ -1,13 +1,14 @@
-Users / Images
-Potential Users
-3. Mark Twain
-5. Meriwether Lewis
-6. CWilliam Clark
-8. Ferdinand Magellan
-9. Ernest Hemingway
-10. James Cook.
-4. Santa Claus (X)
+Other Potential Users: Mark Twain, Meriwether Lewis, William Clark, Ferdinand Magellan, Ernest Hemingway, James Cook, Santa Claus
 
+
+Columbus (1) - Lombard, Cabo
+Waldo (2) -  Finland, Cacti
+Grylls (3) - Kenya, Amazon, plant - relate it to amazon, Madagascar
+Obama (4) - Fishermans Wharf, Sydney, Glacier NZ, Vegas
+Musk (5) - GG Bridge, Rainer, mountains
+Zuckerburg (6) - Palace of Fine Arts, Alcatraz
+
+Only worries today are the portion size for room service
 
 ASK ABOUT:
 __________________
@@ -17,6 +18,15 @@ __________________
 
 HIGH PRIORITY:
 __________________
+- Seed some likes and follows
+- Update images on landing page
+- Make logo bigger in many places including landing page
+- Design navbar / make navbar stop shifting sizes
+- Make follow numbers update in real time
+- Potentially make "6 likes" something that I can expand into a likestring - "A, B, C, D and 2 others"
+- Potentially add white grid to grid photos
+- Add seed posts for columbus and whoever has last post
+- put username of poster in markers +  Sizing of info windows needs work with long captions
 - centering of post index items
 - Get rid of blue focus on upload cancel / share - maybe make it a button press
 -style edit profile / follow buttons
@@ -24,7 +34,7 @@ __________________
 -Get Styling Going
   -better jquery on button press for following
   -Notifications styling
-  -Modal Background CSS
+  -Modal Background CSS: Modal doesn't go far enough down
   -Make Info Window on map better
 - PanToPost when created
 - Getting stuff going in heroku - look at cloudinary demo

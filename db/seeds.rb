@@ -26,56 +26,69 @@ User.create(username: "ManMusk", password: "password", image_id: 7, bio: "Tesla,
 Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439950274/sjfxeez4cud3h5kftord.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439950274/sjfxeez4cud3h5kftord.jpg")
 User.create(username: "Zuckerberg", password: "password", image_id: 8, bio: "You may not know me but I know you")
 
-# User.create(username: "zconn", password: "password", image_id: 9, bio: "Working on an instagram clone")
-# Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/v1439578313/vacqotwbigohicyhjfp0.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/v1439578313/vacqotwbigohicyhjfp0.jpg")
-
 #Posts
-#cabo
-Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439515263/gxrjv8aqyfenx5afs7bl.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439515263/gxrjv8aqyfenx5afs7bl.jpg")
-Post.create(user_id: 1, image_id: 3, caption: "Beach Life", location: "Cabo San Lucas, Mexico", lat: 22.883754, lng: -109.905928)
-
-#cacti
-Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439515575/ino9pihxezbhu4bpna0c.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439515575/ino9pihxezbhu4bpna0c.jpg")
-#amazon
-Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439515599/vxzhyfqlkkwsooxad61o.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439515599/vxzhyfqlkkwsooxad61o.jpg")
-#mountains sepia
-Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_sepia,w_640,h_640/v1439515630/yeyjxf95rwdn5dxyn74t.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_sepia,w_640,h_640/v1439515630/yeyjxf95rwdn5dxyn74t.jpg")
-#sunset on a mountain
-Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_oil_paint,w_640,h_640/v1439515706/jz50ihure223pxs5zpjz.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_oil_paint,w_640,h_640/v1439515706/jz50ihure223pxs5zpjz.jpg")
-#plant
-Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_oil_paint,w_640,h_640/v1439515756/v1va7wrgmb7bamz5abio.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_oil_paint,w_640,h_640/v1439515756/v1va7wrgmb7bamz5abio.jpg")
-#Alcatraz (The Rock)
-Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439950997/g7rcug314pgxdjctr6er.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439950997/g7rcug314pgxdjctr6er.jpg")
-#Kenya / Elephant / Amboseli
-Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439951185/tvmhddvv57dcb1gtgaac.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439951185/tvmhddvv57dcb1gtgaac.jpg")
-#Franz Glacier New Zealand
-Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439951386/nbiylzxw9x554uv22rbj.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439951386/nbiylzxw9x554uv22rbj.jpg")
-#Lapland Finland
-Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_oil_paint,w_640,h_640/v1439951466/c4airoa12rmhaikqpz5u.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_oil_paint,w_640,h_640/v1439951466/c4airoa12rmhaikqpz5u.jpg")
 #Lombard SF / Black and white
 Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_grayscale,w_640,h_640/v1439951539/dciiekvjbrpe4dqbwabe.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_grayscale,w_640,h_640/v1439951539/dciiekvjbrpe4dqbwabe.jpg")
+Post.create(user_id: 1, image_id: 9, caption: "The streets don't look like this in Spain", location: "Lombard Street", lat: 37.802139, lng: -122.418740)
+#cabo
+Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439515263/gxrjv8aqyfenx5afs7bl.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439515263/gxrjv8aqyfenx5afs7bl.jpg")
+Post.create(user_id: 1, image_id: 10, caption: "A new land full of tequila", location: "Cabo San Lucas, Mexico", lat: 22.883754, lng: -109.905928)
+
+#Lapland Finland
+Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_oil_paint,w_640,h_640/v1439951466/c4airoa12rmhaikqpz5u.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_oil_paint,w_640,h_640/v1439951466/c4airoa12rmhaikqpz5u.jpg")
+Post.create(user_id: 2, image_id: 11, caption: "Ice ice baby. Remote living suits me best.", location: "Lapland, Finland", lat: 67.922230, lng: 26.504644)
+#cacti
+Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439515575/ino9pihxezbhu4bpna0c.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439515575/ino9pihxezbhu4bpna0c.jpg")
+Post.create(user_id: 2, image_id: 12, caption: "Anyone seen Heisenberg?", location: "Albuquerque, NM, United States", lat: 35.085334, lng: -106.605553)
+
+#Kenya / Elephant / Amboseli
+Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439951185/tvmhddvv57dcb1gtgaac.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439951185/tvmhddvv57dcb1gtgaac.jpg")
+Post.create(user_id: 3, image_id: 13, caption: "No match for me. I might have him for dinner.", location: "Nairobi, Kenya", lat: -1.292066, lng: 36.821946)
 #Madagascar
 Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439951605/irl2fegptlh2vmitkoj6.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439951605/irl2fegptlh2vmitkoj6.jpg")
-#Mount Rainer
-Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439951667/vbvebhfq9c6tcrdgyh9p.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439951667/vbvebhfq9c6tcrdgyh9p.jpg")
-#North Bondi Sdydney
-Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_oil_paint,w_640,h_640/v1439951738/yv1dcuqk9c1znmsqzk1s.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_oil_paint,w_640,h_640/v1439951738/yv1dcuqk9c1znmsqzk1s.jpg")
+Post.create(user_id: 3, image_id: 14, caption: "Favorite place to be", location: "Madagascar", lat: -18.766947, lng: 46.869107)
+
+#amazon
+Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439515599/vxzhyfqlkkwsooxad61o.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439515599/vxzhyfqlkkwsooxad61o.jpg")
+Post.create(user_id: 3, image_id: 15, caption: "New challenges every day. Barely avoided a rattlesnake today.", location: "Amazon River", lat: -2.165109, lng: -55.115513)
+#plant
+Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_oil_paint,w_640,h_640/v1439515756/v1va7wrgmb7bamz5abio.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_oil_paint,w_640,h_640/v1439515756/v1va7wrgmb7bamz5abio.jpg")
+Post.create(user_id: 3, image_id: 16, caption: "Unparalleled beauty", location: "Arapixuna, Brasil", lat: -2.235882, lng: -54.833573)
+
 #Sepia Fishermans Wharf
 Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_sepia,w_640,h_640/v1439951843/lckds6eh6ml9obqt2xag.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_sepia,w_640,h_640/v1439951843/lckds6eh6ml9obqt2xag.jpg")
+Post.create(user_id: 4, image_id: 17, caption: "Presidents can be tourists too", location: "Fisherman's Wharf, San Francisco, CA, United States", lat: 37.808000, lng: -122.417743)
+
+#North Bondi Sdydney
+Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_oil_paint,w_640,h_640/v1439951738/yv1dcuqk9c1znmsqzk1s.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_oil_paint,w_640,h_640/v1439951738/yv1dcuqk9c1znmsqzk1s.jpg")
+Post.create(user_id: 4, image_id: 18, caption: "Getting artsy with the oil paint filter", location: "North Bondi, New South Wales, Australia", lat: -33.885194, lng: 151.274680)
+#Franz Glacier New Zealand
+Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439951386/nbiylzxw9x554uv22rbj.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439951386/nbiylzxw9x554uv22rbj.jpg")
+Post.create(user_id: 4, image_id: 19, caption: "Looking for a way out lol", location: "Franz Josef Glacier, West Coast, New Zealand", lat: -43.387329, lng: 170.183288)
+#vegas
+Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439958931/xlkbfxsgef9fcxcsstpi.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439958931/xlkbfxsgef9fcxcsstpi.jpg")
+Post.create(user_id: 4, image_id: 20, caption: "Boys trip. Don't tell Michelle", location: "The Strip, Las Vegas, NV, United States", lat: 36.114706, lng: -115.172848)
+
+#Mount Rainer
+Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439951667/vbvebhfq9c6tcrdgyh9p.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439951667/vbvebhfq9c6tcrdgyh9p.jpg")
+Post.create(user_id: 5, image_id: 21, caption: "Good spot for our next dealership", location: "Mount Rainier, Pierce County, WA, United States", lat: 46.879966, lng: -121.726909)
+#mountains sepia
+Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_sepia,w_640,h_640/v1439515630/yeyjxf95rwdn5dxyn74t.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_sepia,w_640,h_640/v1439515630/yeyjxf95rwdn5dxyn74t.jpg")
+Post.create(user_id: 5, image_id: 22, caption: "It feels good at the top", location: "Liberty Cap, Pierce County, WA, United States", lat: 46.862922, lng: -121.774825)
+#GG Bridge From Sausalito
+Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439954186/qnnikqsnrq6jbu7270pl.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439954186/qnnikqsnrq6jbu7270pl.jpg")
+Post.create(user_id: 5, image_id: 23, caption: "Saucy view", location: "Sausalito, CA, United States", lat: 37.859094, lng: -122.485251)
+
+
 #Palace of Fine Arts
 Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439952069/om1hsz18sadar7aatngc.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439952069/om1hsz18sadar7aatngc.jpg")
+Post.create(user_id: 6, image_id: 24, caption: "Reflections. Life is good", location: "Palace of Fine Arts", lat: 37.801456, lng: -122.448053)
+#Alcatraz (The Rock)
+Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439950997/g7rcug314pgxdjctr6er.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439950997/g7rcug314pgxdjctr6er.jpg")
+Post.create(user_id: 6, image_id: 25, caption: "Fun fact - MySpace remains are buried here", location: "Alcatraz Island, San Francisco, CA, United States", lat: 37.826977, lng: -122.422956)
 
 
 
-
-
-
-Post.create(user_id: 1, image_id: 4, caption: "Cacti at Sunset", location: "Albuquerque, New Mexico", lat: 35.085334, lng: -106.605553)
-Post.create(user_id: 1, image_id: 5, caption: "River Living", location: "Amazon River, Brazil", lat: -2.165109, lng: -55.115513)
-Post.create(user_id: 1, image_id: 6)
-
-Post.create(user_id: 2, image_id: 7, location: "Mid Market", lat: 37.787912, lng: -122.401943)
-Post.create(user_id: 2, image_id: 8, location: "Crissy Fields, San Francisco", lat: 37.803682, lng: -122.468513)
 
 Like.create(user_id: 2, post_id: 1)
 Like.create(user_id: 3, post_id: 1)
@@ -86,6 +99,28 @@ Like.create(user_id: 3, post_id: 6)
 Like.create(user_id: 2, post_id: 6)
 Like.create(user_id: 1, post_id: 6)
 
+Like.create(user_id: 1, post_id: 12)
+Like.create(user_id: 2, post_id: 12)
+Like.create(user_id: 3, post_id: 12)
+Like.create(user_id: 4, post_id: 12)
+Like.create(user_id: 5, post_id: 12)
+Like.create(user_id: 6, post_id: 12)
+
 
 Following.create(follower_id: 1, followee_id: 2)
+Following.create(follower_id: 1, followee_id: 3)
+Following.create(follower_id: 1, followee_id: 4)
+Following.create(follower_id: 1, followee_id: 6)
 Following.create(follower_id: 3, followee_id: 1)
+
+# User.create(username: "zconn", password: "password", image_id: 9, bio: "Working on an instagram clone")
+# Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/v1439578313/vacqotwbigohicyhjfp0.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/v1439578313/vacqotwbigohicyhjfp0.jpg")
+# #sunset on a mountain
+# Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_oil_paint,w_640,h_640/v1439515706/jz50ihure223pxs5zpjz.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_oil_paint,w_640,h_640/v1439515706/jz50ihure223pxs5zpjz.jpg")
+
+# Post.create(user_id: 1, image_id: 4, caption: "Cacti at Sunset", location: "Albuquerque, New Mexico", lat: 35.085334, lng: -106.605553)
+# Post.create(user_id: 1, image_id: 5, caption: "River Living", location: "Amazon River, Brazil", lat: -2.165109, lng: -55.115513)
+# Post.create(user_id: 1, image_id: 6)
+#
+# Post.create(user_id: 2, image_id: 7, location: "Mid Market", lat: 37.787912, lng: -122.401943)
+# Post.create(user_id: 2, image_id: 8, location: "Crissy Fields, San Francisco", lat: 37.803682, lng: -122.468513)
