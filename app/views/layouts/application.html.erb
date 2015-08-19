@@ -7,13 +7,13 @@
   <%= csrf_meta_tags %>
 
   <% if Rails.env.production? %>
-    <% api_key = "AIzaSyDyW4ftajHP13POcZIKbGSDGo0l3HtVTac" %>
+    <% api_key = "key=#{ENV['GOOGLE_MAPS']}" %>
   <% else %>
     <% api_key = '' %>
   <% end %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="http://widget.cloudinary.com/global/all.js" type="text/javascript" charset="utf-8"></script>
-  <script src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+  <script src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false&key=<%= api_key %>"></script>
   <script>
     window.CLOUDINARY_OPTIONS = {
       cloud_name: "<%= ENV['CLOUD_NAME'] %>",
