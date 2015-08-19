@@ -1,25 +1,10 @@
-Other Potential Users: Mark Twain, Meriwether Lewis, William Clark, Ferdinand Magellan, Ernest Hemingway, James Cook, Santa Claus
-
-
-Columbus (1) - Lombard, Cabo
-Waldo (2) -  Finland, Cacti
-Grylls (3) - Kenya, Amazon, plant - relate it to amazon, Madagascar
-Obama (4) - Fishermans Wharf, Sydney, Glacier NZ, Vegas
-Musk (5) - GG Bridge, Rainer, mountains
-Zuckerburg (6) - Palace of Fine Arts, Alcatraz
-
-Only worries today are the portion size for room service
-
 ASK ABOUT:
 __________________
--how to vertically center post-index-item in modal
--bullet - help with second level associations
--heroku + custom domain + sleeping
+-heroku + custom domain + sleeping / cloudinary heroku
 
 HIGH PRIORITY:
 __________________
-- Seed some likes and follows
-- Update images on landing page
+- Vertically center landing content for modal and log in info
 - Make logo bigger in many places including landing page
 - Design navbar / make navbar stop shifting sizes
 - Make follow numbers update in real time
@@ -28,6 +13,7 @@ __________________
 - Add seed posts for columbus and whoever has last post
 - put username of poster in markers +  Sizing of info windows needs work with long captions
 - centering of post index items
+- Seed some likes and follows
 - Get rid of blue focus on upload cancel / share - maybe make it a button press
 -style edit profile / follow buttons
 - font
@@ -76,6 +62,18 @@ Fix links on readme
 - cleaner center on grid photo hover
 - potentially remove current user id from window
 -Additional thinking around limiting notifications. Can destroy them after closing dropdown potentially
+
+Other Potential Users: Mark Twain, Meriwether Lewis, William Clark, Ferdinand Magellan, Ernest Hemingway, James Cook, Santa Claus
+
+
+Columbus (1) - Lombard, Cabo
+Waldo (2) -  Finland, Cacti
+Grylls (3) - Kenya, Amazon, plant - relate it to amazon, Madagascar
+Obama (4) - Fishermans Wharf, Sydney, Glacier NZ, Vegas
+Musk (5) - GG Bridge, Rainer, mountains
+Zuckerburg (6) - Palace of Fine Arts, Alcatraz
+
+Only worries today are the portion size for room service
 
 _______________
 To add to set-up

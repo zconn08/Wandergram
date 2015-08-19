@@ -1,32 +1,94 @@
-<div class="page-container">
-  <div class="small-panel">
-    <div class="log-in">
-      <div class="form-header">
-        <div class="form-header-image">
-          <img src="/Images/Wandergram-logo.png" alt="" />
-        </div>
-      </div>
+<div class="landing-images-container">
+  <!-- 1 -->
+  <div class="landing-row group">
+    <div class="landing-image-photo">
+        <img src="http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439951605/irl2fegptlh2vmitkoj6.jpg">
+    </div>
+    <div class="landing-image-photo">
+        <img src="http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439950997/g7rcug314pgxdjctr6er.jpg">
+    </div>
+    <div class="landing-image-photo">
+        <img src="http://res.cloudinary.com/dmyvxexqn/image/upload/v1439515575/ino9pihxezbhu4bpna0c.jpg">
+    </div>
+    <div class="landing-image-photo">
+        <img src="http://res.cloudinary.com/dmyvxexqn/image/upload/v1439515599/vxzhyfqlkkwsooxad61o.jpg">
+    </div>
+  </div>
+  <!-- 2 -->
+  <div class="landing-row">
+    <div class="landing-image-photo">
+        <img src="http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439951185/tvmhddvv57dcb1gtgaac.jpg">
+    </div>
+    <div class="landing-image-photo">
+        <img src="http://res.cloudinary.com/dmyvxexqn/image/upload/e_oil_paint,w_640,h_640/v1439515706/jz50ihure223pxs5zpjz.jpg">
+    </div>
+    <div class="landing-image-photo">
+        <img src="http://res.cloudinary.com/dmyvxexqn/image/upload/e_oil_paint,w_640,h_640/v1439951466/c4airoa12rmhaikqpz5u.jpg">
+    </div>
+    <div class="landing-image-photo">
+        <img src="http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439951667/vbvebhfq9c6tcrdgyh9p.jpg">
+    </div>
+  </div>
+  <!-- 3 -->
+  <div class="landing-row">
+    <div class="landing-image-photo">
+        <img src="http://res.cloudinary.com/dmyvxexqn/image/upload/e_sepia,w_640,h_640/v1439951843/lckds6eh6ml9obqt2xag.jpg">
+    </div>
+    <div class="landing-image-photo">
+        <img src="http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439951386/nbiylzxw9x554uv22rbj.jpg">
+    </div>
+    <div class="landing-image-photo">
+        <img src="http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439958931/xlkbfxsgef9fcxcsstpi.jpg">
+    </div>
+    <div class="landing-image-photo">
+        <img src="http://res.cloudinary.com/dmyvxexqn/image/upload/v1439515263/gxrjv8aqyfenx5afs7bl.jpg">
+    </div>
+  </div>
+  <!-- 4 -->
+  <div class="landing-row">
+    <div class="landing-image-photo">
+        <img src="http://res.cloudinary.com/dmyvxexqn/image/upload/e_oil_paint,w_640,h_640/v1439951738/yv1dcuqk9c1znmsqzk1s.jpg">
+    </div>
+    <div class="landing-image-photo">
+        <img src="http://res.cloudinary.com/dmyvxexqn/image/upload/e_sepia,w_640,h_640/v1439515630/yeyjxf95rwdn5dxyn74t.jpg">
+    </div>
+    <div class="landing-image-photo">
+        <img src="http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439954186/qnnikqsnrq6jbu7270pl.jpg">
+    </div>
+    <div class="landing-image-photo">
+        <img src="http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439952069/om1hsz18sadar7aatngc.jpg">
+    </div>
+  </div>
+</div>
+<div class="landing-background">
+</div>
+<div class="landing-content signup-landing">
+  <div class="landing-header">
+    <div class="welcome-logo">
+      <img src="/Images/Wandergram-logo.png" alt="" />
+    </div>
+  </div>
+  <div class="landing-form-container signin-landing-container">
+    <div class="sign-up-form">
       <div class="form-body">
         <form action="<%= users_url %>" method="post">
           <%= auth_token %>
-          <label for="user_username">Username</label><br>
-          <input type="text" name="user[username]" id="user_username">
+          <input class="landing-input" type="text" name="user[username]" id="user_username" placeholder="Username">
           <br><br>
-          <label for="user_password">Password</label><br>
-          <input type="password" name="user[password]" id="user_password">
+          <input class="landing-input" type="password" name="user[password]" id="user_password" placeholder="Password">
           <br><br>
-          <input type="submit" class="btn-success" value="Sign Up">
-
-          </form>
+          <input type="submit" class="btn-success signup" value="Sign Up">
+        </form>
 
       </div>
-
     </div>
-      <div class="log-in-footer">
-        <div class="form-footer-text">
-          Already have an account? <br>
-          <a href="<%= new_session_url %>">Click here to log in</a>
-        </div>
+    <div class="log-in-footer">
+      <div class="form-footer-text">
+        Already have an account? <br>
+        <a href="<%= new_session_url %>">Click here to log in</a>
       </div>
-  </div>
+    </div>
+    <div>
+    </div>
+
 </div>

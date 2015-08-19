@@ -4,7 +4,7 @@ class Api::UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = User.includes(posts: [:post_likers, :comments, :image]).where(id: params[:id])[0]
   end
 
   def update
@@ -17,7 +17,7 @@ class Api::UsersController < ApplicationController
   end
 
   def current_show
-    @user = current_user
+    @user = User.includes(posts: [:post_likers, :comments, :image]).where(id: current_user.id)[0]
     render :show
   end
 

@@ -107,6 +107,8 @@ li.inactive {
   position: absolute;
   right: 0px;
   padding-left: 0px;
+  padding-right: 0px;
+
   background-color: #FAFAFA;
 }
 
@@ -160,7 +162,7 @@ li.inactive {
 .landing-content {
   z-index: 2;
   position: absolute;
-  background-image: url("http://res.cloudinary.com/dmyvxexqn/image/upload/v1439515263/gxrjv8aqyfenx5afs7bl.jpg");
+  background-image: url("http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439951667/vbvebhfq9c6tcrdgyh9p.jpg");
   margin-left: auto;
   margin-right: auto;
   font-family: 'freight-sans-pro', 'proxima-nova', 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -172,18 +174,34 @@ li.inactive {
   border-radius: 1%;
   box-shadow: 0 0 8px rgba(0,0,0,0.3);
 }
+
+.landing-content.signin-landing {
+  background-image: url("http://res.cloudinary.com/dmyvxexqn/image/upload/e_oil_paint,w_400,h_300/v1439951466/c4airoa12rmhaikqpz5u.jpg");
+  width: 400px;
+  height: 300px;
+  top: 35%;
+}
+
+.landing-content.signup-landing {
+  background-image: url("http://res.cloudinary.com/dmyvxexqn/image/upload/e_oil_paint,w_400,h_300/v1439515756/v1va7wrgmb7bamz5abio.jpg");
+  width: 400px;
+  height: 300px;
+  top: 35%;
+}
+
 .landing-description {
   margin-top: 10px;
   margin-bottom: 20px;
   font-size: 20px;
   text-align: center;
+  color: white;
 }
 
 .landing-header {
   text-align: center;
   font-family: pacifco;
   height: 50px;
-  width: 600px;
+  width: 100%;
 }
 
 .separator {
@@ -207,6 +225,7 @@ li.inactive {
 
 .or {
   float: left;
+  color: white;
 }
 
 .btn-success.signup, .form-body .landing-input, .tour-button {
@@ -225,6 +244,11 @@ li.inactive {
   margin: 0 auto;
   text-align: center;
 }
+
+.landing-form-container.signin-landing-container {
+  width: 70%;
+}
+
 .btn-success.signup {
   margin-top: 0px;
   border-radius: 4px;
