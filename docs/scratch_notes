@@ -1,17 +1,12 @@
 Users / Images
-1. Christopher Columbus
-2. Waldo
+Potential Users
 3. Mark Twain
-4. Santa Claus
 5. Meriwether Lewis
 6. CWilliam Clark
-7. Bear Grylls
 8. Ferdinand Magellan
 9. Ernest Hemingway
 10. James Cook.
-
-10. Elon Musk
-11. Barak Obama
+4. Santa Claus (X)
 
 
 ASK ABOUT:
@@ -23,6 +18,8 @@ __________________
 HIGH PRIORITY:
 __________________
 - centering of post index items
+- Get rid of blue focus on upload cancel / share - maybe make it a button press
+-style edit profile / follow buttons
 - font
 -Get Styling Going
   -better jquery on button press for following
