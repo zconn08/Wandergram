@@ -4,7 +4,7 @@ Wandergram.Views.Nav = Backbone.View.extend({
   events: {
     "click .upload": "upload",
     "click .logout-link": "logOut",
-    // "click .dropdown": "markNotificationsAsRead"
+    "mouseenter .notification-container": "markNotificationAsRead"
   },
 
   initialize: function(options){
@@ -27,11 +27,15 @@ Wandergram.Views.Nav = Backbone.View.extend({
   },
 
   render: function(){
+    var expanded = this.$('.dropdown-toggle').attr('aria-expanded') === "true";
     var numberNotRead = this.collection.numberNotRead();
     this.$el.html(this.template({
       notifications: this.collection,
       numberNotRead: numberNotRead
     }));
+    if (expanded) {
+      this.$('.dropdown-toggle').dropdown('toggle');
+    }
     return this;
   },
 
@@ -78,9 +82,12 @@ Wandergram.Views.Nav = Backbone.View.extend({
     }.bind(this));
   },
 
-  markNotificationsAsRead: function(){
-    this.collection.each(function(notification){
-      notification.save({read: true});
-    });
+  markNotificationAsRead: function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    var notificationId = $(e.currentTarget).data("id");
+    var notification = this.collection.get(notificationId);
+    notification.set({read: true});
+    notification.save();
   }
 });

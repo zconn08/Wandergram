@@ -4,6 +4,7 @@
 
 .time {
   float: right;
+  color: rgb(165, 167, 170);
 }
 .name-location, .comment-form, .like-button {
   float: left;
@@ -76,12 +77,20 @@
   margin: 0 auto;
 }
 
+.inTheIndex {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .heart-image {
   width: 29px;
   height: 26px;
   background-repeat: no-repeat;
 }
 
+.separator.long-separator {
+  width: 608px;
+}
 
 .like-comments {
   margin-top: 10px;

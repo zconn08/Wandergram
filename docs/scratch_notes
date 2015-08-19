@@ -1,40 +1,47 @@
+Users / Images
+1. Christopher Columbus
+2. Waldo
+3. Mark Twain
+4. Santa Claus
+5. Meriwether Lewis
+6. CWilliam Clark
+7. Bear Grylls
+8. Ferdinand Magellan
+9. Ernest Hemingway
+10. James Cook.
+
+10. Elon Musk
+11. Barak Obama
+
+
 ASK ABOUT:
 __________________
--Main content- padding: insane - scroll to top
--Need to get markNotificationsAsRead to work - do on hover of a notification
--how to do grids - no bootstrap, width 33%, height will work accordingly.
-- Maps
-  - can you make image clickable to scroll to it? / show modal?
-  -user post id info on attributes of info window. Scroll by id #4
-- How to get rid of add photos when you go to user show page
-  Idk
-- handle image cropping
-- infinite scrolling
-
-scrolling left?
-delete thumbnail_url?
+-how to vertically center post-index-item in modal
+-bullet - help with second level associations
+-heroku + custom domain + sleeping
 
 HIGH PRIORITY:
 __________________
--Notifications
-  -Should be limited to your last 3 notifications
-- Cloudinary on edit profile
-- Use bullet to get rid of extra queries
+- centering of post index items
+- font
 -Get Styling Going
   -better jquery on button press for following
+  -Notifications styling
   -Modal Background CSS
-  -Rows for grid photos for user show
   -Make Info Window on map better
 - PanToPost when created
--Getting stuff going in heroku - look at cloudinary demo
--Good seed data
+- Getting stuff going in heroku - look at cloudinary demo
+- Good seed data
+- Potentially allow people to turn panning off
+- infinite scrolling
+- handle image cropping - look at Eric's source code (jcrop)
 
 
 LATER:
 __________________
+- delete thumbnail_url?
 - Set timer: someone likes your photo 10 seconds after login
 
-- Potentially allow people to turn panning off
 - Edge Cases
   - Tall Image: stretches it
   - Small Image: ?
@@ -42,6 +49,9 @@ __________________
 - add delete button for your comments
 - When you go to a route (e.g., upload, make it active on nav)
 - Make feed only for people you are subscribed to?
+- How to add text 'add photos' if no photos
+- Maps
+  - can you make image clickable show modal?
 
 
 Clean up
@@ -58,6 +68,7 @@ Fix links on readme
   - check edge case of liking from names to number
 - cleaner center on grid photo hover
 - potentially remove current user id from window
+-Additional thinking around limiting notifications. Can destroy them after closing dropdown potentially
 
 _______________
 To add to set-up

@@ -95,14 +95,15 @@
   margin-right: 5px;
 }
 
-.posts-grid {
+.posts-grid.row {
   padding-bottom: 20px;
+  border-top: 2px solid gray;
 }
 
 .prof-page-header {
   width: 100%;
   height: 250px;
-  font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'freight-sans-pro', 'proxima-nova', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: 300;
 }
 .large-panel {
@@ -154,7 +155,6 @@ span.username {
 .m-content {
   z-index: 2;
   position: absolute;
-  background-color: white;
   margin-left: auto;
   margin-right: auto;
   top: 3%;

@@ -46,6 +46,7 @@ Wandergram.Views.MapShow = Backbone.View.extend({
   },
 
   panToPost: function(marker){
+    this.removePostDetail();
     if(marker !== undefined){
       this._map.setZoom(12);
       var contentString = "";
@@ -62,9 +63,7 @@ Wandergram.Views.MapShow = Backbone.View.extend({
       this._map.panTo(marker.getPosition());
       this._infoWindow = new google.maps.InfoWindow({
         content: contentString,
-        postId: marker.postId
       });
-
       this._infoWindow.open(this._map, marker);
 
     } else {
@@ -81,11 +80,9 @@ Wandergram.Views.MapShow = Backbone.View.extend({
 
   showMarkerInfo: function(e, marker){
     this.panToPost(marker);
+    if ($("#" + marker.postId).length > 0) {
+      $('html, body').animate({scrollTop:$('#' + marker.postId ).position().top}, 'slow');
+    }
   },
-
-  scrollToPost: function(e, infoWindow){
-    Backbone.history.navigate("/#4", {trigger: true});
-  }
-
 
 });

@@ -1,6 +1,6 @@
 class Api::NotificationsController < ApplicationController
   def index
-    @notifications = Notification.all.where(user_id: current_user.id).order(id: :desc)
+    @notifications = Notification.where(user_id: current_user.id).order(id: :desc).limit(10).includes(:creator, :post, post: :image)
   end
 
   def create

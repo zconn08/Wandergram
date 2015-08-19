@@ -7,13 +7,13 @@
         </div>
       </div>
       <div class="form-body edit">
-        <form action="/users/<%= user.id %>" method="post">
-          <input type="hidden" name="_method" value="PATCH">
+        <form>
           <label for="user_username">Username</label><br>
-          <input type="text" name="user[username]" id="user_username" value="<%=user.username%>">
+          <input type="text" name="user[username]" id="user_username" value="<%=user.get("username")%>">
+          <input type="hidden" name="user[image_id]" class="image_id_input" value="<%=user.get("image_id")%>">
           <br><br>
           <label for="user_bio">Bio</label><br>
-          <textarea name="user[bio]" id="user_bio"><%=user.bio%></textarea>
+          <textarea name="user[bio]" id="user_bio"><%=user.get("bio")%></textarea>
           <br><br>
           <label for="profile_picture">Profile Picture</label><br>
           <% if (user.get("image") !== undefined) { %>

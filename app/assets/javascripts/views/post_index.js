@@ -10,7 +10,6 @@ Wandergram.Views.PostIndex = Backbone.CompositeView.extend({
   },
 
   initialize: function(){
-    // this.listenTo(this.collection, "sync", this.render);
     this.listenTo(this.collection, "add", this.addPostIndexItemView);
     this.listenTo(this.collection, "remove", this.removePostIndexItemView);
     this.collection.each(this.addPostIndexItemView.bind(this));
@@ -27,7 +26,7 @@ Wandergram.Views.PostIndex = Backbone.CompositeView.extend({
 
  addPostIndexItemView: function(postIndexItem){
    var subview = new Wandergram.Views.PostIndexItem(
-     {model: postIndexItem}
+     {model: postIndexItem, className: "inTheIndex"}
    );
    this.addSubview('.posts-container', subview, true);
  },

@@ -1,4 +1,4 @@
-json.extract! user, :id, :username, :bio
+json.extract! user, :id, :username, :bio, :image_id
 json.num_posts user.posts.length
 json.image user.image
 json.numFollowers user.followers.length

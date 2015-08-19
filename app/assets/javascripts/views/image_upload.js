@@ -22,7 +22,7 @@ Wandergram.Views.ImageUpload = Backbone.View.extend({
   },
 
   checkForEnter: function (e){
-    if (e.keyCode === 13) {
+    if ((e.keyCode === 13) && ($('.upload-form :focus').length === 0)) {
       this.shareImage(e);
     }
   },
