@@ -9,6 +9,7 @@ Wandergram.Views.MapShow = Backbone.View.extend({
     this.listenTo(this.collection, 'add', this.addMarker);
     this.listenTo(this.collection, 'remove', this.removeMarker);
     this._info_window = null;
+    this._DisabledPanning = false;
   },
 
   initMap: function () {
@@ -48,32 +49,38 @@ Wandergram.Views.MapShow = Backbone.View.extend({
 
   panToPost: function(marker){
     this.removePostDetail();
-    if(marker !== undefined){
-      this._map.setZoom(12);
-      var contentString = "";
-      if (marker.caption !== "") {
-        var shortened_caption = marker.caption.length < 30 ? marker.caption : (marker.caption.substr(0,27) + "...");
+    if (!this._DisabledPanning) {
+      if(marker !== undefined){
+        if (marker.position.G > 37 && marker.position.G < 38 && marker.position.K < -122 && marker.position.K > -123) {
+          this._map.setZoom(12);
+        } else {
+          this._map.setZoom(9);
+        }
+        var contentString = "";
+        if (marker.caption !== "") {
+          var shortened_caption = marker.caption.length < 30 ? marker.caption : (marker.caption.substr(0,27) + "...");
 
 
-        var contentString = '<div class="info-window-container-sm" id="info-window">' +
-                            '<b>' + marker.username + '</b><br>' +
-                            '<img src="' + marker.img_url + '">' +
-                            '<br>'+ shortened_caption +
-                            "</div>";
+          var contentString = '<div class="info-window-container-sm" id="info-window">' +
+                              '<b>' + marker.username + '</b><br>' +
+                              '<img src="' + marker.img_url + '">' +
+                              '<br>'+ shortened_caption +
+                              "</div>";
+        } else {
+          var contentString = '<div class="info-window-container-lg" id="info-window">' +
+                              '<b>' + marker.username + '</b><br>' +
+                              '<img src="' + marker.img_url + '">' +
+                              "</div>";
+        }
+          this._map.panTo(marker.getPosition());
+          this._infoWindow = new google.maps.InfoWindow({
+            content: contentString,
+          });
+          this._infoWindow.open(this._map, marker);
+
       } else {
-        var contentString = '<div class="info-window-container-lg" id="info-window">' +
-                            '<b>' + marker.username + '</b><br>' +
-                            '<img src="' + marker.img_url + '">' +
-                            "</div>";
+        this._map.setZoom(3);
       }
-      this._map.panTo(marker.getPosition());
-      this._infoWindow = new google.maps.InfoWindow({
-        content: contentString,
-      });
-      this._infoWindow.open(this._map, marker);
-
-    } else {
-      this._map.setZoom(3);
     }
   },
 

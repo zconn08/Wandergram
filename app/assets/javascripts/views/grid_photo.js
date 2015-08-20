@@ -42,6 +42,6 @@ Wandergram.Views.GridPhoto = Backbone.View.extend({
     this.$el.find(".image-detail").css("display", "none");
     setTimeout(function(){
       this.mapView.removePostDetail();
-    }, 0);
+    }.bind(this), 0);
   },
 });

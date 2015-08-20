@@ -7,6 +7,7 @@ Wandergram.Views.PostIndex = Backbone.CompositeView.extend({
     "click .like-button": "like",
     "mouseenter .post-image": "panToPost",
     "mouseleave .post-image": "removePostDetail",
+    "click .disable-panning": "togglePanning"
   },
 
   initialize: function(){
@@ -43,6 +44,16 @@ Wandergram.Views.PostIndex = Backbone.CompositeView.extend({
 
  removePostDetail: function(e){
    this.mapView.removePostDetail();
+ },
+
+ togglePanning: function(){
+   if (this.mapView._DisabledPanning) {
+    this.mapView._DisabledPanning = false;
+    this.$el.find(".disable-panning").text("Panning Enabled");
+   } else {
+    this.mapView._DisabledPanning = true;
+    this.$el.find(".disable-panning").text("Panning Disabled");
+   }
  }
 
 });

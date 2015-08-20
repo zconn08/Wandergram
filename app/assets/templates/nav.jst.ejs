@@ -33,13 +33,13 @@
                 <% } else { %>
                   <li class="notification-container unread group" data-id="<%= notification.get("id") %>">
                 <% } %>
-                  <a class="notification-link" href="#">
+                  <div class="notification-link">
                     <img class="notification-image prof-img" src="<%= notification.get("user_prof_pic").url %>" alt="" />
                       <div class="notification-text">
                         <%= notification.get("body") %>
                       </div>
                     <img class="notification-image post-img" src="<%= notification.get("post_image").url %>" alt="" />
-                  </a>
+                  </div>
                 </li>
                 <% if(idx !== (notifications.length-1)) { %>
                 <li role="separator" class="divider"></li>

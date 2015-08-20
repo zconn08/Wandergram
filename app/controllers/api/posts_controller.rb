@@ -1,6 +1,6 @@
 class Api::PostsController < ApplicationController
   def index
-    @posts = Post.includes(:post_likers, :comments, {:user => :image}, :image)
+    @posts = Post.includes(:post_likers, :comments, :image, user: :image, comments: :user )
   end
 
   def create
@@ -16,11 +16,7 @@ class Api::PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
-  end
-
-  def update
-
+    @post = Post.includes(comment: :user, user: :image).where(id: params[:id])[0]
   end
 
   def destroy

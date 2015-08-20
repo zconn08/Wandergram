@@ -2,8 +2,12 @@ Wandergram.Views.UserShow = Backbone.CompositeView.extend({
   template: JST["user_show"],
   className: "userShow",
 
+  events: {
+    "click .disable-panning": "togglePanning"
+  },
+
   initialize: function(){
-    
+
     window.scrollTo(0,0);
     this.listenTo(this.model, "sync", this.addHeaderView.bind(this, this.model));
     var posts = this.model.posts();
@@ -34,10 +38,12 @@ Wandergram.Views.UserShow = Backbone.CompositeView.extend({
   },
 
   addHeaderView: function(user){
-    var subview = new Wandergram.Views.UserHeader(
-      {model: user}
-    );
-    this.addSubview('.prof-page-header', subview);
+    if(!this.userHeader){
+      this.userHeader = new Wandergram.Views.UserHeader(
+        {model: user}
+      );
+      this.addSubview('.prof-page-header', this.userHeader);
+    }
   },
 
   removeHeaderView: function(user){
@@ -56,6 +62,16 @@ Wandergram.Views.UserShow = Backbone.CompositeView.extend({
   removeGridPhotoView: function(post){
     this.removeModelSubview('.posts-grid', post);
   },
+
+  togglePanning: function(){
+    if (this.mapView._DisabledPanning) {
+     this.mapView._DisabledPanning = false;
+     this.$el.find(".disable-panning").text("Panning Enabled");
+    } else {
+     this.mapView._DisabledPanning = true;
+     this.$el.find(".disable-panning").text("Panning Disabled");
+    }
+  }
 
 
 });

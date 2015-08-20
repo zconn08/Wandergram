@@ -1,49 +1,39 @@
 ASK ABOUT:
 __________________
--heroku
- - sleeping
- - need to figure out how to do default pics (e.g., prof, following image) - appears to work
+
+
 
 HIGH PRIORITY:
 __________________
-- Seeding
-  - More posts for each user.
-  - Seed some likes and follows
-- navbar styling
-  - Hover over bullhorn or badge should change color of both.
-  - Fix behavior that bullhorn stays blue once visited
-  - Potentially make camera a big upload button
+- Potentially make camera button bigger / more prominent.
+- Potentially add an index of users page
 
-- Google Geocoding API error: over query limit.
-- Is someone stealing your API key? Check geocoder. If so, reset it.
-  -Potentially buy more maploads $0.50 per 1,000 loads.
-  -Verify identity to google places - gets you 150K requests.
-
-- Potentially not as zoomed in. Except SF?
-- Potentially do not force users to enter a location
-- Vertically center landing content for modal and log in info
+- Make m background fixed
 - Fix behavior of incorrect login info - flash at top currently
 
+- Clean up upload page
 
 - Potentially make "6 likes" something that I can expand into a likestring - "A, B, C, D and 2 others"
-- Potentially add white grid to grid photos
-- Add seed posts for columbus and whoever has last post
-- Get rid of blue focus on upload cancel / share - maybe make it a button press
-- font
--better jquery on button press for following
-- PanToPost when created
-- Potentially allow people to turn panning off
-- infinite scrolling
-- handle image cropping - look at Eric's source code (jcrop)
+
+- Introduction to features
+- Seeding
+  - Add seed posts for columbus and whoever has last post
+  - Seed some likes, comments, notifications and follows
 
 LATER:
 __________________
+- handle image cropping - look at Eric's source code (jcrop)
+- Realtime for timestamps
+- Google Geocoding API error: over query limit.
+
+- PanToPost when created?
+- infinite scrolling
+- Potentially add white grid to grid photos
 - delete thumbnail_url?
 - Set timer: someone likes your photo 10 seconds after login
 
-- Edge Cases
-  - Tall Image: stretches it
-  - Small Image: ?
+Check bullet log
+Check to make sure default pics (e.g., profile pic, following) work on heroku
 - add delete button for your comments
 - When you go to a route (e.g., upload, make it active on nav)
 - Make feed only for people you are subscribed to?
@@ -67,6 +57,10 @@ Fix links on readme
 - cleaner center on grid photo hover
 - potentially remove current user id from window
 -Additional thinking around limiting notifications. Can destroy them after closing dropdown potentially
+- Is someone stealing your API key? Check geocoder. If so, reset it.
+  -Potentially buy more maploads $0.50 per 1,000 loads.
+  -Verify identity to google places - gets you 150K requests.
+
 
 Other Potential Users: Mark Twain, Meriwether Lewis, William Clark, Ferdinand Magellan, Ernest Hemingway, James Cook, Santa Claus
 

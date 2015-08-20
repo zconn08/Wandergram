@@ -160,21 +160,24 @@ span.username {
 
 .m-background {
   background: rgba(92, 88, 88, 0.97);
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
-  left: 0;
+  left: 41.667%;
   right: 0;
   z-index: 1;
+  height: 100vh;
 }
 
 .m-content {
   z-index: 2;
   position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  top: 3%;
-  left: 0;
+  top: 5vh;
+  left: 50%;
+  bottom: 0;
   right: 0;
   width: 642px;
+  height: 818px;
+  transform: translateX(-50%);
+  margin-bottom: 5vh;
 }

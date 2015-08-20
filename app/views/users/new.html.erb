@@ -84,8 +84,13 @@
     </div>
     <div class="log-in-footer">
       <div class="form-footer-text">
-        Already have an account? <br>
-        <a href="<%= new_session_url %>">Click here to log in</a>
+        <a href="<%= new_session_url %>">Log In</a>
+        <form action="<%= session_url %>" method="post">
+          <%= auth_token %>
+          <input type="hidden" name="user[username]" value="OceanBlue1492">
+          <input type="hidden" name="user[password]" value="password">
+          <input type="submit" class="signin-tour" value="Take a Tour">
+        </form>
       </div>
     </div>
     <div>

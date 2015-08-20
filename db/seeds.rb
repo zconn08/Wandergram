@@ -43,7 +43,7 @@ Post.create(user_id: 2, image_id: image_12.id, caption: "Anyone seen Heisenberg?
 
 #Kenya / Elephant / Amboseli
 image_13 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439951185/tvmhddvv57dcb1gtgaac.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439951185/tvmhddvv57dcb1gtgaac.jpg")
-Post.create(user_id: 3, image_id: image_13.id, caption: "No match for me. I might have him for dinner.", location: "Nairobi, Kenya", lat: -1.292066, lng: 36.821946)
+Post.create(user_id: 3, image_id: image_13.id, caption: "Born to be wild", location: "Nairobi, Kenya", lat: -1.292066, lng: 36.821946)
 #Madagascar
 image_14 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439951605/irl2fegptlh2vmitkoj6.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439951605/irl2fegptlh2vmitkoj6.jpg")
 Post.create(user_id: 3, image_id: image_14.id, caption: "Favorite place to be", location: "Madagascar", lat: -18.766947, lng: 46.869107)

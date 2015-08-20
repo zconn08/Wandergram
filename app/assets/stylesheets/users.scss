@@ -78,5 +78,21 @@
 }
 
 .form-footer-text {
-  color: white;
+  color: #125688;;
+}
+
+.signin-tour, .form-footer-text a {
+  background-color: Transparent;
+  padding: 0;
+  border: none;
+  color: #125688;
+  font-weight: 500px;
+}
+
+.form-footer-text a:hover, .form-footer-text a:active, .form-footer-text a:focus:active {
+  text-decoration: none;
+}
+
+.signin-tour:focus  {
+  outline: none;
 }

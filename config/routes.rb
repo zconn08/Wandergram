@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resource :session, only: [:new, :create, :destroy]
   namespace :api, defaults: { format: :json } do
     get "users/current_show", to: "users#current_show"
-    resources :posts, only: [:index, :create, :show, :destroy, :update]
+    resources :posts, only: [:index, :create, :show, :destroy]
     resources :users, only: [:index, :show, :update]
     resources :notifications, only: [:index, :create, :show, :update]
     resources :comments, only: [:index, :create, :show, :destroy, :update]

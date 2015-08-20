@@ -1,6 +1,8 @@
 Wandergram.Views.ImageUpload = Backbone.View.extend({
   template: JST["image_upload"],
 
+  className : "upload-container",
+
   events: {
     "click .gutter-image": "promoteImage",
     "click .btn-success": "shareImage",
@@ -19,6 +21,7 @@ Wandergram.Views.ImageUpload = Backbone.View.extend({
 
   initialize: function(){
     $(document).on('keyup', this.checkForEnter.bind(this));
+    this.listenTo(this.model, "sync", this.render);
   },
 
   checkForEnter: function (e){
@@ -28,6 +31,9 @@ Wandergram.Views.ImageUpload = Backbone.View.extend({
   },
 
   generateFilterUrls: function(url){
+    if (url === undefined) {
+      return [];
+    }
     var arrayOfUrls = [];
     var transformations = ["", "e_oil_paint,", "e_sepia,", "e_vignette,", "e_grayscale,", "e_negate,"]
     transformations.forEach(function(transformation){
@@ -50,6 +56,7 @@ Wandergram.Views.ImageUpload = Backbone.View.extend({
 
   shareImage: function(e){
     e.preventDefault();
+    $(document).off('keyup');
     var formData = this.$("form").serializeJSON();
     var url = this.$(".active-image img").attr("src");
 
