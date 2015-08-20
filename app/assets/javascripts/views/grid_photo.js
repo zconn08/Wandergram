@@ -30,12 +30,18 @@ Wandergram.Views.GridPhoto = Backbone.View.extend({
   },
 
   panToPost: function (e) {
-    var listingId = $(e.currentTarget).data('post-id');
-    var marker = this.mapView._markers[listingId];
-    this.mapView.panToPost(marker);
+    this.$el.find(".image-detail").css("display", "block");
+    setTimeout(function(){
+      var listingId = $(e.currentTarget).data('post-id');
+      var marker = this.mapView._markers[listingId];
+      this.mapView.panToPost(marker);
+    }.bind(this), 0);
   },
 
   removePostDetail: function(e){
-    this.mapView.removePostDetail();
+    this.$el.find(".image-detail").css("display", "none");
+    setTimeout(function(){
+      this.mapView.removePostDetail();
+    }, 0);
   },
 });
