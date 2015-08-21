@@ -87,7 +87,7 @@ alcatraz = Post.create(user_id: zuck.id, image_id: image_25.id, caption: "Breezy
 
 #Cable Car
 image_26 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_sepia,w_640,h_640/v1440119777/bckufk6ehagmpd2tx1rl.png", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_sepia,w_640,h_640/v1440119777/bckufk6ehagmpd2tx1rl.png")
-cable_car = Post.create(user_id: zuck.id, image_id: image_26.id, caption: "Blending in with the tourists", location: "Powell-Market Cable Car Turntable, San Francisco, CA 94102", lat: 37.784907, lng: -122.407645)
+cable_car = Post.create(user_id: zuck.id, image_id: image_26.id, caption: "Old school", location: "Powell-Market Cable Car Turntable, San Francisco, CA 94102", lat: 37.784907, lng: -122.407645)
 
 #Ghiradelli B & W
 image_27 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_grayscale,w_640,h_640/v1440119834/mylddyveswbnlsycn5ny.png", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_grayscale,w_640,h_640/v1440119834/mylddyveswbnlsycn5ny.png")
@@ -107,7 +107,7 @@ att = Post.create(user_id: musk.id, image_id: image_28.id, caption: "Go Giants!"
 
 # Coral Reef Maldives
 image_32 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121394/lzultme3bfkcucisb4xf.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_oil_paint,w_640,h_640/v1440121394/lzultme3bfkcucisb4xf.jpg")
-burj = Post.create(user_id: columbus.id, image_id: image_32.id, caption: "Literally swimming with the fishes", location: "Maldives", lat: 4.484262, lng: 73.393409)
+reef = Post.create(user_id: columbus.id, image_id: image_32.id, caption: "Literally swimming with the fishes", location: "Maldives", lat: 4.484262, lng: 73.393409)
 
 #Tiger Beach Bahamas
 image_34 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121875/k2osp6wxt041ykzoyyyz.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121875/k2osp6wxt041ykzoyyyz.jpg")
@@ -135,9 +135,6 @@ reindeer = Post.create(user_id: zuck.id, image_id: image_42.id, caption: "Santa 
 image_44 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121902/zwncb9hh1idexzzuwzs5.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121902/zwncb9hh1idexzzuwzs5.jpg")
 tulum = Post.create(user_id: bear.id, image_id: image_44.id, caption: "Cave Diving!!!", location: "Tulum, Mexico", lat: 20.211392, lng: -87.465288)
 
-#Manitoba Candada - fox
-image_37 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121610/xppwpndp2ucjsjdawmtu.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121610/xppwpndp2ucjsjdawmtu.jpg")
-manitoba = Post.create(user_id: obama.id, image_id: image_37.id, caption: "Michelle, can we keep him?", location: "Manitoba, Canada", lat: 4.840667, lng: 100.590032)
 #South Georgia Island
 image_41 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121786/igecqqfbbipzexnw65ov.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121786/igecqqfbbipzexnw65ov.jpg")
 georgia = Post.create(user_id: columbus.id, image_id: image_41.id, caption: "Suit up", location: "South Georgia Island", lat: -54.389131, lng: -36.650455)
@@ -147,6 +144,9 @@ georgia = Post.create(user_id: columbus.id, image_id: image_41.id, caption: "Sui
 image_39 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121723/bdtr4iyfkwsukw9hv1am.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121723/bdtr4iyfkwsukw9hv1am.jpg")
 meroe = Post.create(user_id: zuck.id, image_id: image_39.id, caption: "Fun fact - MySpace remains are buried here", location: "Pyramids of Meroe Shendi Sudan", lat: 16.941161, lng: 33.749494)
 
+#Manitoba Candada - fox
+image_37 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121610/xppwpndp2ucjsjdawmtu.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121610/xppwpndp2ucjsjdawmtu.jpg")
+manitoba = Post.create(user_id: obama.id, image_id: image_37.id, caption: "Michelle, can we keep him?", location: "Manitoba, Canada", lat: 4.840667, lng: 100.590032)
 #Palace of Fine Arts
 image_24 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439952069/om1hsz18sadar7aatngc.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439952069/om1hsz18sadar7aatngc.jpg")
 palace = Post.create(user_id: zuck.id, image_id: image_24.id, caption: "Reflections. Life is good", location: "Palace of Fine Arts", lat: 37.801456, lng: -122.448053)
@@ -169,9 +169,11 @@ tea_garden = Post.create(user_id: zuck.id, image_id: image_46.id, caption: "Sipp
 
 
 
-
+#Likes
 Like.create(user_id: waldo.id, post_id: lombard.id)
 Like.create(user_id: bear.id, post_id: lombard.id)
+
+Like.create(user_id: obama.id, post_id: cabo.id)
 
 Like.create(user_id: waldo.id, post_id: kenya.id)
 
@@ -189,17 +191,47 @@ Like.create(user_id: zuck.id, post_id: vegas.id)
 Like.create(user_id: waldo.id, post_id: tea_garden.id)
 Like.create(user_id: bear.id, post_id: tea_garden.id)
 Like.create(user_id: obama.id, post_id: tea_garden.id)
-Like.create(user_id: zuck.id, post_id: tea_garden.id)
+Like.create(user_id: columbus.id, post_id: tea_garden.id)
+
+Like.create(user_id: waldo.id, post_id: gg_bridge_sf.id)
+
+Like.create(user_id: zuck.id, post_id: lands_end.id)
+Like.create(user_id: bear.id, post_id: lands_end.id)
+
+Like.create(user_id: musk.id, post_id: palace.id)
+
+Like.create(user_id: musk.id, post_id: meroe.id)
+Like.create(user_id: waldo.id, post_id: meroe.id)
+
 
 Comment.create(user_id: musk.id, post_id: tea_garden.id, body: "We could use you at Tesla")
 
-
+#Follows
 Following.create(follower_id: columbus.id, followee_id: waldo.id)
 Following.create(follower_id: columbus.id, followee_id: bear.id)
 Following.create(follower_id: columbus.id, followee_id: obama.id)
 Following.create(follower_id: columbus.id, followee_id: zuck.id)
 Following.create(follower_id: columbus.id, followee_id: musk.id)
+
+Following.create(follower_id: waldo.id, followee_id: zuck.id)
+Following.create(follower_id: waldo.id, followee_id: obama.id)
+Following.create(follower_id: waldo.id, followee_id: columbus.id)
+
 Following.create(follower_id: bear.id, followee_id: columbus.id)
+Following.create(follower_id: bear.id, followee_id: musk.id)
+
+Following.create(follower_id: obama.id, followee_id: columbus.id)
+Following.create(follower_id: obama.id, followee_id: waldo.id)
+Following.create(follower_id: obama.id, followee_id: zuck.id)
+Following.create(follower_id: obama.id, followee_id: musk.id)
+
+Following.create(follower_id: musk.id, followee_id: zuck.id)
+
+Following.create(follower_id: zuck.id, followee_id: columbus.id)
+Following.create(follower_id: zuck.id, followee_id: waldo.id)
+Following.create(follower_id: zuck.id, followee_id: bear.id)
+Following.create(follower_id: zuck.id, followee_id: obama.id)
+Following.create(follower_id: zuck.id, followee_id: musk.id)
 
 
 

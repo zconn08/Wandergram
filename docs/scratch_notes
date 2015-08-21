@@ -1,36 +1,41 @@
 ASK ABOUT:
 __________________
 Introjs currently in gemfile. Shepherd may be better. Start with that. What is npm?
-Intro
+Intro (Home Page)
+  - Welcome to Wandergram.
   - Maps
     - clicking on a marker will give more info and scroll to the post in the feed.
   - Feed
     - Hovering will pan
     - Click disable panning to stop
+    - Click on the heart to like or unlike photos
+    - Write comments in the comment box and press enter to submit
+  - Click the camera button to upload a photo. Add a filter, caption and location.
+  - Check your notifications by clicking on the bullhorn
+  - Click on any username in dark blue to go to their profile
+  - Visit your own profile at anytime by clicking your username (that's you Columbus) in the top right corner
+  - The logo will take you back to your feed
+
+Intro (Show Page)
+
 introJs().start();
 data-intro='This is a panel header' data-step='1'
 data-intro='This is a panel footer' data-step='2'
-
-
-Cable Car
-#Ghiradelli B & W
-
-First 3 or 4 SF
 
 
 HIGH PRIORITY:
 __________________
 - Write intro tonight
 - Fix behavior of incorrect login info - flash at top currently
-
-- make unfollowing someone take them out of your newsfeed?
+- Want it to look the same for employers, even if one messes around with it (e.g., comments, uploads)
+- Unfollow someone takes them out of your newsfeed
 - Making image on upload page 640x640 (May want to take it out of a small panel)
 - Credit NG?
 - Potentially not let people change username and password for tour
 - Make user show posts come in reverse order too.
 - Seeding
-  - Add seed posts for columbus and whoever has last post
-  - Seed some likes, comments, notifications and follows
+  - Seed some likes, comments, notifications
+
 
 LATER:
 __________________
@@ -58,7 +63,6 @@ files to delete that may be making folder overweight
 Remove store images on rails
 Add below to set-up/readme
 Fix links on readme
--Additional thinking around limiting notifications. Can destroy them after closing dropdown potentially
 - Is someone stealing your API key? Check geocoder. If so, reset it.
   -Potentially buy more maploads $0.50 per 1,000 loads.
   -Verify identity to google places - gets you 150K requests.
@@ -74,6 +78,44 @@ Obama (4) - Fishermans Wharf, Sydney, Glacier NZ, Vegas
 Musk (5) - GG Bridge, Rainer, mountains
 Zuckerburg (6) - Palace of Fine Arts, Alcatraz
 
+Posts
+
+lombard
+cabo
+finland
+cacti
+kenya
+madagascar
+amazon
+plant
+wharf
+sydney
+glacier
+vegas
+rainer
+mountains
+bridge
+alcatraz
+cable_car
+ghiradelli
+burj
+lofoten
+att
+reef
+shark
+loch
+mangroves
+pomerania
+shanghai
+reindeer
+tulum
+georgia
+meroe
+manitoba
+palace
+lands_end
+gg_bridge_sf
+tea_garden
 
 
 _______________
