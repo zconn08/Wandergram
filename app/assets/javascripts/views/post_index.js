@@ -7,7 +7,8 @@ Wandergram.Views.PostIndex = Backbone.CompositeView.extend({
     "click .like-button": "like",
     "mouseenter .post-image": "panToPost",
     "mouseleave .post-image": "removePostDetail",
-    "click .disable-panning": "togglePanning"
+    "click .disable-panning": "togglePanning",
+    "click .start-tour" : "startTour"
   },
 
   initialize: function(){
@@ -15,7 +16,6 @@ Wandergram.Views.PostIndex = Backbone.CompositeView.extend({
     this.listenTo(this.collection, "remove", this.removePostIndexItemView);
     this.collection.each(this.addPostIndexItemView.bind(this));
     this.mapView = new Wandergram.Views.MapShow({collection: this.collection});
-
   },
 
   render: function(){
@@ -23,7 +23,6 @@ Wandergram.Views.PostIndex = Backbone.CompositeView.extend({
     this.attachSubviews();
     this.addSubview("#map-container", this.mapView);
     this.mapView.initMap();
-    this.startTour();
     return this;
   },
 
@@ -37,19 +36,22 @@ Wandergram.Views.PostIndex = Backbone.CompositeView.extend({
       }
     });
 
-    tour.addStep('map-step', {
-      text: 'Clicking on a marker will give more info and scroll to the post in the feed',
+    tour.addStep('intro-step', {
+      text: 'Welcome to Wandergram! Explore posts around the world on the map to your left...',
       attachTo: '#map-container right',
       buttons: [
         {
           text: 'Next',
           action: tour.next
+        }, {
+          text: 'Done',
+          action: tour.cancel
         }
       ]
     });
 
     tour.addStep('photo-step', {
-      text: 'Hovering over a photo will pan to its location on the map',
+      text: '...or the feed to your right',
       attachTo: '.first-picture left',
       buttons: [
         {
@@ -58,13 +60,16 @@ Wandergram.Views.PostIndex = Backbone.CompositeView.extend({
         }, {
           text: 'Next',
           action: tour.next
+        }, {
+          text: 'Done',
+          action: tour.cancel
         }
       ]
     });
 
-    tour.addStep('comments-like-step', {
-      text: 'Click on the heart to like or unlike photos. Write comments in the comment box and press enter to submit',
-      attachTo: '.first-like left',
+    tour.addStep('upload-step', {
+      text: 'Use the camera button at the top of the page to upload a photo',
+      attachTo: '.glyphicon-camera bottom',
       buttons: [
         {
           text: 'Back',
@@ -72,9 +77,37 @@ Wandergram.Views.PostIndex = Backbone.CompositeView.extend({
         }, {
           text: 'Next',
           action: tour.next
+        }, {
+          text: 'Done',
+          action: tour.cancel
         }
       ]
     });
+
+    tour.addStep('profile-step', {
+      text: 'Check out your notifications and profile here, Columbus. Have fun wandering!',
+      attachTo: '.navbar-right bottom',
+      buttons: [
+        {
+          text: 'Done',
+          action: tour.cancel
+        }
+      ]
+    });
+
+    // tour.addStep('comments-like-step', {
+    //   text: 'Click on the heart to like or unlike photos. Write comments in the comment box and press enter to submit',
+    //   attachTo: '.first-like left',
+    //   buttons: [
+    //     {
+    //       text: 'Back',
+    //       action: tour.back
+    //     }, {
+    //       text: 'Next',
+    //       action: tour.next
+    //     }
+    //   ]
+    // });
 
 
 

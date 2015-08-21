@@ -28,8 +28,8 @@ Wandergram.Views.UserShow = Backbone.CompositeView.extend({
 
     this._info_window = null;
     setTimeout(function(){
-      $(".add-photo-msg").css("display", "block");
-    }, 500);
+      $(".add-photo-msg").fadeIn("slow");
+    }, 2000);
   },
 
   render: function(){

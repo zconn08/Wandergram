@@ -121,8 +121,19 @@
   color: white;
 }
 
-.btn-default.disable-panning:active, .btn-default.disable-panning:focus, .btn-default.disable-panning:visited, .btn-default.disable-panning:active:focus  {
+.btn-default.disable-panning:active, .btn-default.disable-panning:focus, .btn-default.disable-panning:visited, .btn-default.disable-panning:active:focus, .btn-default.start-tour-button:active, .btn-default.start-tour-button:focus, .btn-default.start-tour-button:visited, .btn-default.disable-panning:active:focus  {
   background-color: #0d3c5f;
   color: white;
   outline: none;
+}
+
+.btn-default.start-tour-button {
+  position: fixed;
+  bottom: 10px;
+  background-color: #125688;
+  color: white;
+  right: 1%;
+  border-radius: 50%;
+  border: 5px solid white;
+  font-size: 16px;
 }

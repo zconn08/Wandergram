@@ -4,7 +4,7 @@
       <img src="<%= image.escape("url") %>" alt="" />
     </div>
   </div>
-  <div class="thumbnail-images">
+  <div class="thumbnail-images row">
     <% transformedUrls.forEach(function(transformedUrl){ %>
       <div class="gutter-image col-xs-2 col-md-2">
         <img src="<%= transformedUrl %>" alt="" />
@@ -12,9 +12,11 @@
     <%  }) %>
   </div>
   <form class="upload-form">
-    <input type="text" name="caption" placeholder="Add a caption..."><br><br>
-    <input type="text" name="location" class="location-entry" placeholder="Add a location...">
-    <div class="location-error">
+    <div class="upload-inputs">
+      <input type="text" name="caption" placeholder="Add a caption..."><br><br>
+      <input type="text" name="location" class="location-entry" placeholder="Add a location...">
+      <div class="location-error">
+      </div>
     </div>
     <br>
     <div class="upload-decision-buttons">

@@ -374,3 +374,14 @@ li.inactive {
   height: 100vh;
   background-color: #FAFAFA;
 }
+
+.error-bullet {
+  color: white;
+  list-style-type: none;
+  font-size: 10px;
+}
+
+.errors-list {
+  padding-left: 0px;
+  margin-bottom: 3px;
+}

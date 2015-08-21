@@ -206,7 +206,42 @@ Like.create(user_id: zuck.id, post_id: rainer.id)
 Like.create(user_id: musk.id, post_id: alcatraz.id)
 Like.create(user_id: bear.id, post_id: alcatraz.id)
 
+Like.create(user_id: bear.id, post_id: cable_car.id)
 
+Like.create(user_id: bear.id, post_id: ghiradelli.id)
+Like.create(user_id: waldo.id, post_id: ghiradelli.id)
+Like.create(user_id: zuck.id, post_id: ghiradelli.id)
+
+Like.create(user_id: musk.id, post_id: burj.id)
+Like.create(user_id: columbus.id, post_id: burj.id)
+
+Like.create(user_id: columbus.id, post_id: att.id)
+
+Like.create(user_id: obama.id, post_id: reef.id)
+Like.create(user_id: zuck.id, post_id: reef.id)
+
+Like.create(user_id: waldo.id, post_id: shark.id)
+Like.create(user_id: zuck.id, post_id: shark.id)
+
+Like.create(user_id: obama.id, post_id: loch.id)
+Like.create(user_id: musk.id, post_id: loch.id)
+Like.create(user_id: waldo.id, post_id: loch.id)
+Like.create(user_id: bear.id, post_id: loch.id)
+
+Like.create(user_id: musk.id, post_id: pomerania.id)
+
+Like.create(user_id: obama.id, post_id: shanghai.id)
+Like.create(user_id: musk.id, post_id: shanghai.id)
+Like.create(user_id: columbus.id, post_id: shanghai.id)
+
+Like.create(user_id: musk.id, post_id: reindeer.id)
+
+Like.create(user_id: obama.id, post_id: tulum.id)
+
+Like.create(user_id: obama.id, post_id: georgia.id)
+Like.create(user_id: musk.id, post_id: georgia.id)
+Like.create(user_id: waldo.id, post_id: georgia.id)
+Like.create(user_id: bear.id, post_id: georgia.id)
 
 
 
@@ -225,8 +260,62 @@ Like.create(user_id: musk.id, post_id: palace.id)
 Like.create(user_id: musk.id, post_id: meroe.id)
 Like.create(user_id: waldo.id, post_id: meroe.id)
 
-
+#Comments
 Comment.create(user_id: musk.id, post_id: tea_garden.id, body: "We could use you at Tesla")
+Comment.create(user_id: obama.id, post_id: tea_garden.id, body: "Or in congress")
+Comment.create(user_id: zuck.id, post_id: tea_garden.id, body: "Give it up guys")
+
+Comment.create(user_id: bear.id, post_id: gg_bridge_sf.id, body: "I don't think they thought it was worth it")
+Comment.create(user_id: musk.id, post_id: gg_bridge_sf.id, body: "lol")
+
+Comment.create(user_id: musk.id, post_id: meroe.id, body: "Harsh")
+
+Comment.create(user_id: obama.id, post_id: georgia.id, body: "Awwww")
+
+Comment.create(user_id: zuck.id, post_id: vegas.id, body: "Stay out of trouble!")
+
+Comment.create(user_id: musk.id, post_id: manitoba.id, body: "You should totally keep him!")
+
+Comment.create(user_id: musk.id, post_id: burj.id, body: "How was it?")
+Comment.create(user_id: zuck.id, post_id: burj.id, body: "Fantastic. You have to try it.")
+
+Comment.create(user_id: bear.id, post_id: alcatraz.id, body: "Do the audio tour!")
+
+Comment.create(user_id: obama.id, post_id: reef.id, body: "Amazing")
+
+Comment.create(user_id: waldo.id, post_id: ghiradelli.id, body: "Which chocolates did you get?")
+Comment.create(user_id: columbus.id, post_id: ghiradelli.id, body: "Ended up getting a hot fudge Sundae")
+
+
+
+#Notifications
+Notification.create(user_id: columbus.id,
+                    post_id: lands_end.id,
+                    body: "Man > Wild likes your photo",
+                    creator_id: bear.id,
+                    read: true
+                    )
+Notification.create(user_id: columbus.id,
+                    post_id: lands_end.id,
+                    body: "Zuckerberg likes your photo",
+                    creator_id: zuck.id
+                    )
+
+Notification.create(user_id: columbus.id,
+                    post_id: gg_bridge_sf.id,
+                    body: "Waldo likes your photo",
+                    creator_id: waldo.id
+                    )
+Notification.create(user_id: columbus.id,
+                    post_id: gg_bridge_sf.id,
+                    body: "Man > Wild commented on your photo",
+                    creator_id: bear.id
+                    )
+Notification.create(user_id: columbus.id,
+                    post_id: gg_bridge_sf.id,
+                    body: "ManMusk commented on your photo",
+                    creator_id: musk.id
+                    )
 
 #Follows
 Following.create(follower_id: columbus.id, followee_id: waldo.id)

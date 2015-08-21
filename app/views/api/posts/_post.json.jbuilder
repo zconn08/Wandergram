@@ -21,10 +21,10 @@ json.comments do
   end
 end
 
-like = post.likes.find_by(user_id: current_user)
+current_user_likes = post.likes.select { |like| like.user_id == current_user.id }
 
-if like
+unless current_user_likes.empty?
   json.isLiked do
-    json.extract! like, :id
+    json.extract! current_user_likes[0], :id
   end
 end
