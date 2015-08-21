@@ -81,9 +81,6 @@ mountains = Post.create(user_id: musk.id, image_id: image_22.id, caption: "It fe
 image_23 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439954186/qnnikqsnrq6jbu7270pl.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439954186/qnnikqsnrq6jbu7270pl.jpg")
 bridge = Post.create(user_id: musk.id, image_id: image_23.id, caption: "Saucy view", location: "Sausalito, CA, United States", lat: 37.859094, lng: -122.485251)
 
-#Palace of Fine Arts
-image_24 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439952069/om1hsz18sadar7aatngc.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439952069/om1hsz18sadar7aatngc.jpg")
-palace = Post.create(user_id: zuck.id, image_id: image_24.id, caption: "Reflections. Life is good", location: "Palace of Fine Arts", lat: 37.801456, lng: -122.448053)
 #Alcatraz (The Rock)
 image_25 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439950997/g7rcug314pgxdjctr6er.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439950997/g7rcug314pgxdjctr6er.jpg")
 alcatraz = Post.create(user_id: zuck.id, image_id: image_25.id, caption: "Breezy day out on The Rock", location: "Alcatraz Island, San Francisco, CA, United States", lat: 37.826977, lng: -122.422956)
@@ -96,68 +93,75 @@ cable_car = Post.create(user_id: zuck.id, image_id: image_26.id, caption: "Blend
 image_27 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_grayscale,w_640,h_640/v1440119834/mylddyveswbnlsycn5ny.png", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_grayscale,w_640,h_640/v1440119834/mylddyveswbnlsycn5ny.png")
 ghiradelli = Post.create(user_id: columbus.id, image_id: image_27.id, caption: "Sweet Tooth", location: "Ghirardelli Square, North Point Street, San Francisco, CA", lat: 37.806068, lng: -122.423007)
 
-
-#ATT
-image_28 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440119982/g0lxenq8wbfrjhdbyzsu.png", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440119982/g0lxenq8wbfrjhdbyzsu.png")
-att = Post.create(user_id: zuck.id, image_id: image_28.id, caption: "", location: "AT&T Park, Willie Mays Plaza, San Francisco, CA", lat: 37.778765, lng: -122.389243)
-#Lands End
-image_29 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440120034/yzwawx4lddjvgrfunl8t.png", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440120034/yzwawx4lddjvgrfunl8t.png")
-lands_end = Post.create(user_id: columbus.id, image_id: image_29.id, caption: "Trying to decipher the patterns of the natives", location: "Lands End, Point Lobos Avenue, San Francisco, CA", lat: 37.785511, lng: -122.505681)
-#Johor Malyasisa
-image_30 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_oil_paint,w_640,h_640/v1440120135/m26cnxpzhhbuk82qbllf.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_oil_paint,w_640,h_640/v1440120135/m26cnxpzhhbuk82qbllf.jpg")
-johor = Post.create(user_id: zuck.id, image_id: image_30.id, caption: "Stunning", location: "Johor Malyasisa", lat: 1.463769, lng: 103.775482)
-
-
 #Burj Khalifa Dubai
 image_31 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121345/ycsoeolsiffjv8tge5rz.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121345/ycsoeolsiffjv8tge5rz.jpg")
 burj = Post.create(user_id: zuck.id, image_id: image_31.id, caption: "Only worries today are the portion size for room service", location: "Burj Khalifa - Downtown Dubai - Dubai - United Arab Emirates", lat: 25.197090, lng: 55.275058)
+
+#Lofoten Island Norway
+image_35 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121520/klesvysugpl9yx3cifa4.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121520/klesvysugpl9yx3cifa4.jpg")
+lofoten = Post.create(user_id: waldo.id, image_id: image_35.id, caption: "Pretty Colors", location: "Lofoten, Norway", lat: 68.140324, lng: 13.365638)
+
+#ATT
+image_28 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440119982/g0lxenq8wbfrjhdbyzsu.png", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440119982/g0lxenq8wbfrjhdbyzsu.png")
+att = Post.create(user_id: musk.id, image_id: image_28.id, caption: "Go Giants!", location: "AT&T Park, Willie Mays Plaza, San Francisco, CA", lat: 37.778765, lng: -122.389243)
+
 # Coral Reef Maldives
-image_32 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_oil_paint,w_640,h_640/v1440121394/lzultme3bfkcucisb4xf.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_oil_paint,w_640,h_640/v1440121394/lzultme3bfkcucisb4xf.jpg")
+image_32 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121394/lzultme3bfkcucisb4xf.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_oil_paint,w_640,h_640/v1440121394/lzultme3bfkcucisb4xf.jpg")
 burj = Post.create(user_id: columbus.id, image_id: image_32.id, caption: "Literally swimming with the fishes", location: "Maldives", lat: 4.484262, lng: 73.393409)
+
+#Tiger Beach Bahamas
+image_34 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121875/k2osp6wxt041ykzoyyyz.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121875/k2osp6wxt041ykzoyyyz.jpg")
+shark = Post.create(user_id: bear.id, image_id: image_34.id, caption: "Once in a lifetime! Look at the size of this Tiger Shark!", location: "Nassau, New Providence, The Bahamas", lat: 25.086601, lng: -77.336236)
+
+#Loch Scotland
+image_34 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_oil_paint,w_640,h_640/v1440121490/trapuvzjj99yckgfo6om.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_oil_paint,w_640,h_640/v1440121490/trapuvzjj99yckgfo6om.jpg")
+loch = Post.create(user_id: columbus.id, image_id: image_34.id, caption: "The only monster out here is the lack of a proper shower", location: "Loch, Scotland, United Kingdom", lat: 56.645536, lng: -4.759635)
+
+#Mangroves peninsular Malyasisa
+image_36 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121573/tsqa2znyfs2ewacfrh9d.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121573/tsqa2znyfs2ewacfrh9d.jpg")
+mangroves = Post.create(user_id: columbus.id, image_id: image_36.id, caption: "Slow down everyone, you're moving too fast", location: "Sungai Sangga Besar, Malyasisa", lat: 4.840667, lng: 100.590032)
+
+#Pomerania Poland
+image_38 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121650/cyszc65lps7xii99oron.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121650/cyszc65lps7xii99oron.jpg")
+pomerania = Post.create(user_id: zuck.id, image_id: image_38.id, caption: "Quick vacay in Poland", location: "Pomerania, Poland", lat: 53.814399, lng: 17.557642)
+#Shanghai
+image_40 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121759/k1yucfnj79gzfkcexdjx.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121759/k1yucfnj79gzfkcexdjx.jpg")
+shanghai = Post.create(user_id: bear.id, image_id: image_40.id, caption: "Roughing it in the Four Seasons", location: "Shanghai China", lat: 31.224349, lng: 121.481559)
+
+#Sweden Reindeer
+image_42 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121819/b25u0uu9gmv42wvgetjj.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_oil_paint,w_640,h_640/v1440121819/b25u0uu9gmv42wvgetjj.jpg")
+reindeer = Post.create(user_id: zuck.id, image_id: image_42.id, caption: "Santa I think you forgot something", location: "Öravan, Sweden", lat: 64.628493, lng: 18.074503)
+#Tulum Mexico
+image_44 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121902/zwncb9hh1idexzzuwzs5.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121902/zwncb9hh1idexzzuwzs5.jpg")
+tulum = Post.create(user_id: bear.id, image_id: image_44.id, caption: "Cave Diving!!!", location: "Tulum, Mexico", lat: 20.211392, lng: -87.465288)
+
+#Manitoba Candada - fox
+image_37 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121610/xppwpndp2ucjsjdawmtu.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121610/xppwpndp2ucjsjdawmtu.jpg")
+manitoba = Post.create(user_id: obama.id, image_id: image_37.id, caption: "Michelle, can we keep him?", location: "Manitoba, Canada", lat: 4.840667, lng: 100.590032)
+#South Georgia Island
+image_41 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121786/igecqqfbbipzexnw65ov.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121786/igecqqfbbipzexnw65ov.jpg")
+georgia = Post.create(user_id: columbus.id, image_id: image_41.id, caption: "Suit up", location: "South Georgia Island", lat: -54.389131, lng: -36.650455)
+
+
+#Meroe Sudan
+image_39 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121723/bdtr4iyfkwsukw9hv1am.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121723/bdtr4iyfkwsukw9hv1am.jpg")
+meroe = Post.create(user_id: zuck.id, image_id: image_39.id, caption: "Fun fact - MySpace remains are buried here", location: "Pyramids of Meroe Shendi Sudan", lat: 16.941161, lng: 33.749494)
+
+#Palace of Fine Arts
+image_24 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439952069/om1hsz18sadar7aatngc.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439952069/om1hsz18sadar7aatngc.jpg")
+palace = Post.create(user_id: zuck.id, image_id: image_24.id, caption: "Reflections. Life is good", location: "Palace of Fine Arts", lat: 37.801456, lng: -122.448053)
+#Lands End
+image_29 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440120034/yzwawx4lddjvgrfunl8t.png", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440120034/yzwawx4lddjvgrfunl8t.png")
+lands_end = Post.create(user_id: columbus.id, image_id: image_29.id, caption: "Trying to decipher the patterns of the natives", location: "Lands End, Point Lobos Avenue, San Francisco, CA", lat: 37.785511, lng: -122.505681)
 
 #GG Bridge SF Side
 image_33 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121434/tjwbozhwy8dosaqdoaor.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121434/tjwbozhwy8dosaqdoaor.jpg")
 gg_bridge_sf = Post.create(user_id: columbus.id, image_id: image_33.id, caption: "Lost two men sailing here but the view was worth it", location: "Battery to Bluffs Trail, San Francisco, CA", lat: 37.802371, lng: -122.479353)
 
-#Loch Scotland
-image_34 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_oil_paint,w_640,h_640/v1440121490/trapuvzjj99yckgfo6om.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_oil_paint,w_640,h_640/v1440121490/trapuvzjj99yckgfo6om.jpg")
-loch = Post.create(user_id: columbus.id, image_id: image_34.id, caption: "The only monster out here is the lack of a proper shower", location: "Battery to Bluffs Trail, San Francisco, CA", lat: 56.645536, lng: -4.759635)
 
-#Lofoten Island Norway
-image_35 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121520/klesvysugpl9yx3cifa4.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121520/klesvysugpl9yx3cifa4.jpg")
-lofoten = Post.create(user_id: waldo.id, image_id: image_35.id, caption: "Pretty Colors", location: "Lofoten, Norway", lat: 68.140324, lng: 13.365638)
-#Mangroves peninsular Malyasisa
-image_36 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121573/tsqa2znyfs2ewacfrh9d.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121573/tsqa2znyfs2ewacfrh9d.jpg")
-mangroves = Post.create(user_id: columbus.id, image_id: image_36.id, caption: "Slow down everyone, you're moving too fast", location: "Sungai Sangga Besar, Malyasisa", lat: 4.840667, lng: 100.590032)
-#Manitoba Candada - fox
-image_37 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121610/xppwpndp2ucjsjdawmtu.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121610/xppwpndp2ucjsjdawmtu.jpg")
-manitoba = Post.create(user_id: obama.id, image_id: image_37.id, caption: "Michelle, can we keep him?", location: "Manitoba, Canada", lat: 4.840667, lng: 100.590032)
-
-#Pomerania Poland
-image_38 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121650/cyszc65lps7xii99oron.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121650/cyszc65lps7xii99oron.jpg")
-pomerania = Post.create(user_id: zuck.id, image_id: image_38.id, caption: "Quick vacay in Poland", location: "Pomerania, Poland", lat: 53.814399, lng: 17.557642)
-#Meroe Sudan
-image_39 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121723/bdtr4iyfkwsukw9hv1am.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121723/bdtr4iyfkwsukw9hv1am.jpg")
-meroe = Post.create(user_id: zuck.id, image_id: image_39.id, caption: "Fun fact - MySpace remains are buried here", location: "Pyramids of Meroe Shendi Sudan", lat: 16.941161, lng: 33.749494)
-#Shanghai
-image_40 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121759/k1yucfnj79gzfkcexdjx.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121759/k1yucfnj79gzfkcexdjx.jpg")
-shanghai = Post.create(user_id: bear.id, image_id: image_40.id, caption: "Roughing it in the Four Seasons", location: "Shanghai China", lat: 31.224349, lng: 121.481559)
-
-#South Georgia Island
-image_41 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121786/igecqqfbbipzexnw65ov.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121786/igecqqfbbipzexnw65ov.jpg")
-georgia = Post.create(user_id: columbus.id, image_id: image_41.id, caption: "Suit up", location: "South Georgia Island", lat: -54.389131, lng: -36.650455)
-#Sweden Reindeer
-image_42 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_oil_paint,w_640,h_640/v1440121819/b25u0uu9gmv42wvgetjj.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_oil_paint,w_640,h_640/v1440121819/b25u0uu9gmv42wvgetjj.jpg")
-reindeer = Post.create(user_id: zuck.id, image_id: image_42.id, caption: "Santa I think you forgot something", location: "Öravan, Sweden", lat: 64.628493, lng: 18.074503)
-#Tiger Beach Bahamas
-image_43 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121875/k2osp6wxt041ykzoyyyz.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121875/k2osp6wxt041ykzoyyyz.jpg")
-shark = Post.create(user_id: bear.id, image_id: image_43.id, caption: "Once in a lifetime! Look at the size of this Tiger Shark!", location: "Nassau, New Providence, The Bahamas", lat: 25.086601, lng: -77.336236)
-#Tulum Mexico
-image_44 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121902/zwncb9hh1idexzzuwzs5.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121902/zwncb9hh1idexzzuwzs5.jpg")
-tulum = Post.create(user_id: bear.id, image_id: image_44.id, caption: "Cave Diving!!!", location: "Tulum, Mexico", lat: 20.211392, lng: -87.465288)
-
-#Versailles
-# image_45 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121935/wy9799g1zymj80yltbpe.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121935/wy9799g1zymj80yltbpe.jpg")
+#Tea Garden
+image_46 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440126755/lhoqcjncqibkhmxrpr7c.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440126755/lhoqcjncqibkhmxrpr7c.jpg")
+tea_garden = Post.create(user_id: zuck.id, image_id: image_46.id, caption: "Sipping some tea while I plot my next move", location: "Japanese Tea Garden, Hagiwara Tea Garden Drive, San Francisco, CA", lat: 37.770264, lng: -122.469681)
 
 
 
@@ -182,9 +186,22 @@ Like.create(user_id: obama.id, post_id: vegas.id)
 Like.create(user_id: musk.id, post_id: vegas.id)
 Like.create(user_id: zuck.id, post_id: vegas.id)
 
+Like.create(user_id: waldo.id, post_id: tea_garden.id)
+Like.create(user_id: bear.id, post_id: tea_garden.id)
+Like.create(user_id: obama.id, post_id: tea_garden.id)
+Like.create(user_id: zuck.id, post_id: tea_garden.id)
+
+Comment.create(user_id: musk.id, post_id: tea_garden.id, body: "We could use you at Tesla")
+
 
 Following.create(follower_id: columbus.id, followee_id: waldo.id)
 Following.create(follower_id: columbus.id, followee_id: bear.id)
 Following.create(follower_id: columbus.id, followee_id: obama.id)
 Following.create(follower_id: columbus.id, followee_id: zuck.id)
+Following.create(follower_id: columbus.id, followee_id: musk.id)
 Following.create(follower_id: bear.id, followee_id: columbus.id)
+
+
+
+#Versailles
+# image_45 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121935/wy9799g1zymj80yltbpe.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121935/wy9799g1zymj80yltbpe.jpg")

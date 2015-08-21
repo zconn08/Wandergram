@@ -11,6 +11,13 @@ introJs().start();
 data-intro='This is a panel header' data-step='1'
 data-intro='This is a panel footer' data-step='2'
 
+
+Cable Car
+#Ghiradelli B & W
+
+First 3 or 4 SF
+
+
 HIGH PRIORITY:
 __________________
 - Write intro tonight
@@ -19,7 +26,8 @@ __________________
 - make unfollowing someone take them out of your newsfeed?
 - Making image on upload page 640x640 (May want to take it out of a small panel)
 - Credit NG?
-
+- Potentially not let people change username and password for tour
+- Make user show posts come in reverse order too.
 - Seeding
   - Add seed posts for columbus and whoever has last post
   - Seed some likes, comments, notifications and follows
@@ -66,7 +74,7 @@ Obama (4) - Fishermans Wharf, Sydney, Glacier NZ, Vegas
 Musk (5) - GG Bridge, Rainer, mountains
 Zuckerburg (6) - Palace of Fine Arts, Alcatraz
 
-Only worries today are the portion size for room service
+
 
 _______________
 To add to set-up
