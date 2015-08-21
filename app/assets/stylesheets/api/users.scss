@@ -171,9 +171,9 @@ span.username {
 
 .m-content {
   z-index: 2;
-  position: absolute;
-  top: 5vh;
-  left: 50%;
+  position: fixed;
+  top: calc(50px + 2vh);
+  left: 71.4%;
   bottom: 0;
   right: 0;
   width: 642px;
@@ -181,3 +181,10 @@ span.username {
   transform: translateX(-50%);
   margin-bottom: 5vh;
 }
+
+// @media only screen and (max-width: 500px) {
+//   .m-content {
+//     height: 200px;
+//     background-color: red;
+//   }
+// }

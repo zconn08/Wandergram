@@ -18,6 +18,7 @@
 //= require bootstrap
 //= require wandergram
 //= require jquery.geocomplete
+//= require introjs
 //= require_tree ./utils
 //= require_tree ../templates
 //= require_tree ./models

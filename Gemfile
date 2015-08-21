@@ -32,6 +32,7 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'newrelic_rpm'
 
 gem 'figaro'
+gem 'introjs-rails'
 
 
 # Use Unicorn as the app server

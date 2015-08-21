@@ -1,43 +1,44 @@
 ASK ABOUT:
 __________________
-
-
+Introjs currently in gemfile. Shepherd may be better. Start with that. What is npm?
+Intro
+  - Maps
+    - clicking on a marker will give more info and scroll to the post in the feed.
+  - Feed
+    - Hovering will pan
+    - Click disable panning to stop
+introJs().start();
+data-intro='This is a panel header' data-step='1'
+data-intro='This is a panel footer' data-step='2'
 
 HIGH PRIORITY:
 __________________
-- Potentially make camera button bigger / more prominent.
-- Potentially add an index of users page
+- Write intro tonight
+- take a tour on sign in page broken
 
 - Make m background fixed
 - Fix behavior of incorrect login info - flash at top currently
 
-- Clean up upload page
+- How to add text 'add photos' if no photos
 
-- Potentially make "6 likes" something that I can expand into a likestring - "A, B, C, D and 2 others"
 
-- Introduction to features
 - Seeding
   - Add seed posts for columbus and whoever has last post
   - Seed some likes, comments, notifications and follows
 
 LATER:
 __________________
+- Potentially add an index of users page
 - handle image cropping - look at Eric's source code (jcrop)
 - Realtime for timestamps
 - Google Geocoding API error: over query limit.
 
-- PanToPost when created?
-- infinite scrolling
-- Potentially add white grid to grid photos
 - delete thumbnail_url?
 - Set timer: someone likes your photo 10 seconds after login
 
 Check bullet log
 Check to make sure default pics (e.g., profile pic, following) work on heroku
 - add delete button for your comments
-- When you go to a route (e.g., upload, make it active on nav)
-- Make feed only for people you are subscribed to?
-- How to add text 'add photos' if no photos
 - Maps: can you make image clickable show modal?
 Add ability to delete posts?
 
@@ -48,14 +49,9 @@ __________________
 Make schema.md reflect actual database
 Clean up routes file
 files to delete that may be making folder overweight
-Remove login details
 Remove store images on rails
 Add below to set-up/readme
 Fix links on readme
-- add validation that user can only like a post one time at model level?
-  - check edge case of liking from names to number
-- cleaner center on grid photo hover
-- potentially remove current user id from window
 -Additional thinking around limiting notifications. Can destroy them after closing dropdown potentially
 - Is someone stealing your API key? Check geocoder. If so, reset it.
   -Potentially buy more maploads $0.50 per 1,000 loads.

@@ -22,6 +22,7 @@ Wandergram.Views.PostIndex = Backbone.CompositeView.extend({
     this.attachSubviews();
     this.addSubview("#map-container", this.mapView);
     this.mapView.initMap();
+
     return this;
   },
 

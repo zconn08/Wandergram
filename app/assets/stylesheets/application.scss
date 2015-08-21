@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require introjs
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -146,7 +147,7 @@ body, html, #main-content, .userShow, div.user-show-container, .post-index-conta
 }
 
 .glyphicon-camera {
-  font-size: 28px;
+  font-size: 40px;
 }
 
 
@@ -155,7 +156,7 @@ body, html, #main-content, .userShow, div.user-show-container, .post-index-conta
 }
 
 .navbar-middle .navbar-brand.upload {
-  padding-top: 12px;
+  padding-top: 5px;
 }
 .dropdown-menu {
   padding-top: 0px;
