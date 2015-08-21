@@ -27,6 +27,9 @@ Wandergram.Views.UserShow = Backbone.CompositeView.extend({
     });
 
     this._info_window = null;
+    setTimeout(function(){
+      $(".add-photo-msg").css("display", "block");
+    }, 500);
   },
 
   render: function(){
@@ -52,6 +55,9 @@ Wandergram.Views.UserShow = Backbone.CompositeView.extend({
 
   addGridPhotoView: function(post){
     this.$el.find(".add-photo-msg").empty();
+    this.$el.find(".add-photo-msg").css("padding-left", "0");
+    this.$el.find(".add-photo-msg").css("padding-top", "0");
+
     var subview = new Wandergram.Views.GridPhoto({
       model: post,
       map: this.mapView

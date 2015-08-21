@@ -14,13 +14,11 @@ data-intro='This is a panel footer' data-step='2'
 HIGH PRIORITY:
 __________________
 - Write intro tonight
-- take a tour on sign in page broken
-
-- Make m background fixed
 - Fix behavior of incorrect login info - flash at top currently
 
-- How to add text 'add photos' if no photos
-
+- make unfollowing someone take them out of your newsfeed?
+- Making image on upload page 640x640 (May want to take it out of a small panel)
+- Credit NG?
 
 - Seeding
   - Add seed posts for columbus and whoever has last post
@@ -36,7 +34,7 @@ __________________
 - delete thumbnail_url?
 - Set timer: someone likes your photo 10 seconds after login
 
-Check bullet log
+Check bullet log (when uploading)
 Check to make sure default pics (e.g., profile pic, following) work on heroku
 - add delete button for your comments
 - Maps: can you make image clickable show modal?
