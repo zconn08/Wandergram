@@ -175,11 +175,23 @@ Like.create(user_id: bear.id, post_id: lombard.id)
 
 Like.create(user_id: obama.id, post_id: cabo.id)
 
+Like.create(user_id: zuck.id, post_id: finland.id)
+Like.create(user_id: columbus.id, post_id: finland.id)
+
+Like.create(user_id: musk.id, post_id: cacti.id)
+
 Like.create(user_id: waldo.id, post_id: kenya.id)
 
-Like.create(user_id: bear.id, post_id: madagascar.id)
+Like.create(user_id: obama.id, post_id: madagascar.id)
 Like.create(user_id: waldo.id, post_id: madagascar.id)
 Like.create(user_id: columbus.id, post_id: madagascar.id)
+
+Like.create(user_id: bear.id, post_id: wharf.id)
+
+Like.create(user_id: bear.id, post_id: glacier.id)
+Like.create(user_id: musk.id, post_id: glacier.id)
+Like.create(user_id: zuck.id, post_id: glacier.id)
+Like.create(user_id: columbus.id, post_id: glacier.id)
 
 Like.create(user_id: columbus.id, post_id: vegas.id)
 Like.create(user_id: waldo.id, post_id: vegas.id)
@@ -187,6 +199,16 @@ Like.create(user_id: bear.id, post_id: vegas.id)
 Like.create(user_id: obama.id, post_id: vegas.id)
 Like.create(user_id: musk.id, post_id: vegas.id)
 Like.create(user_id: zuck.id, post_id: vegas.id)
+
+Like.create(user_id: waldo.id, post_id: rainer.id)
+Like.create(user_id: zuck.id, post_id: rainer.id)
+
+Like.create(user_id: musk.id, post_id: alcatraz.id)
+Like.create(user_id: bear.id, post_id: alcatraz.id)
+
+
+
+
 
 Like.create(user_id: waldo.id, post_id: tea_garden.id)
 Like.create(user_id: bear.id, post_id: tea_garden.id)
@@ -226,6 +248,7 @@ Following.create(follower_id: obama.id, followee_id: zuck.id)
 Following.create(follower_id: obama.id, followee_id: musk.id)
 
 Following.create(follower_id: musk.id, followee_id: zuck.id)
+Following.create(follower_id: musk.id, followee_id: obama.id)
 
 Following.create(follower_id: zuck.id, followee_id: columbus.id)
 Following.create(follower_id: zuck.id, followee_id: waldo.id)

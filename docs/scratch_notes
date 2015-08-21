@@ -18,21 +18,18 @@ Intro (Home Page)
 
 Intro (Show Page)
 
-introJs().start();
-data-intro='This is a panel header' data-step='1'
-data-intro='This is a panel footer' data-step='2'
+
 
 
 HIGH PRIORITY:
 __________________
-- Write intro tonight
-- Fix behavior of incorrect login info - flash at top currently
-- Want it to look the same for employers, even if one messes around with it (e.g., comments, uploads)
-- Unfollow someone takes them out of your newsfeed
 - Making image on upload page 640x640 (May want to take it out of a small panel)
-- Credit NG?
-- Potentially not let people change username and password for tour
 - Make user show posts come in reverse order too.
+- Intro
+- Fix behavior of incorrect login info - flash at top currently
+  - Want it to look the same for employers, even if one messes around with it (e.g., comments, uploads)
+  - Potentially not let people change username and password for tour
+- Unfollow someone takes them out of your newsfeed
 - Seeding
   - Seed some likes, comments, notifications
 

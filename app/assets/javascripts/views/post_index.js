@@ -15,6 +15,7 @@ Wandergram.Views.PostIndex = Backbone.CompositeView.extend({
     this.listenTo(this.collection, "remove", this.removePostIndexItemView);
     this.collection.each(this.addPostIndexItemView.bind(this));
     this.mapView = new Wandergram.Views.MapShow({collection: this.collection});
+
   },
 
   render: function(){
@@ -22,14 +23,70 @@ Wandergram.Views.PostIndex = Backbone.CompositeView.extend({
     this.attachSubviews();
     this.addSubview("#map-container", this.mapView);
     this.mapView.initMap();
-
+    this.startTour();
     return this;
   },
 
+  startTour: function(){
+    var tour;
+
+    tour = new Shepherd.Tour({
+      defaults: {
+        classes: 'shepherd-theme-arrows',
+        scrollTo: true
+      }
+    });
+
+    tour.addStep('map-step', {
+      text: 'Clicking on a marker will give more info and scroll to the post in the feed',
+      attachTo: '#map-container right',
+      buttons: [
+        {
+          text: 'Next',
+          action: tour.next
+        }
+      ]
+    });
+
+    tour.addStep('photo-step', {
+      text: 'Hovering over a photo will pan to its location on the map',
+      attachTo: '.first-picture left',
+      buttons: [
+        {
+          text: 'Back',
+          action: tour.back
+        }, {
+          text: 'Next',
+          action: tour.next
+        }
+      ]
+    });
+
+    tour.addStep('comments-like-step', {
+      text: 'Click on the heart to like or unlike photos. Write comments in the comment box and press enter to submit',
+      attachTo: '.first-like left',
+      buttons: [
+        {
+          text: 'Back',
+          action: tour.back
+        }, {
+          text: 'Next',
+          action: tour.next
+        }
+      ]
+    });
+
+
+
+    tour.start();
+  },
+
  addPostIndexItemView: function(postIndexItem){
-   var subview = new Wandergram.Views.PostIndexItem(
-     {model: postIndexItem, className: "inTheIndex"}
-   );
+   var collectionLength = this.collection.length;
+   var subview = new Wandergram.Views.PostIndexItem({
+     model: postIndexItem, className: "inTheIndex",
+     collectionLength: collectionLength
+   });
    this.addSubview('.posts-container', subview, true);
  },
 

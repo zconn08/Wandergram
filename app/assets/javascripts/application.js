@@ -15,10 +15,11 @@
 //= require underscore
 //= require backbone
 //= require serialize_json
+//= require tether
+//= require shepherd
 //= require bootstrap
 //= require wandergram
 //= require jquery.geocomplete
-//= require introjs
 //= require_tree ./utils
 //= require_tree ../templates
 //= require_tree ./models

@@ -6,7 +6,8 @@ Wandergram.Views.PostIndexItem = Backbone.CompositeView.extend({
     "click .like-button": "toggleLike"
   },
 
-  initialize: function(){
+  initialize: function(options){
+    this.collectionLength = options.collectionLength;
     this.listenTo(this.model, "sync", this.render);
     var comments = this.model.comments();
 
@@ -25,7 +26,8 @@ Wandergram.Views.PostIndexItem = Backbone.CompositeView.extend({
     var likeString = this.composeLikeString();
     this.$el.html(this.template({
       post: this.model,
-      likeString: likeString
+      likeString: likeString,
+      collectionLength: this.collectionLength
     }));
     this.attachSubviews();
     return this;

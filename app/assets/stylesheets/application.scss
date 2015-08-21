@@ -11,8 +11,10 @@
  * file per style scope.
  *
  *= require_tree .
+ *= require shepherd-theme-arrows
  *= require_self
- *= require introjs
+
+
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";

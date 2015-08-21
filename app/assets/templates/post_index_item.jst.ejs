@@ -1,4 +1,8 @@
+<% if(post.get("id") === collectionLength ) { %>
+<div class="panel panel-default first-picture" id="<%= post.get("id") %>">
+<% } else { %>
 <div class="panel panel-default" id="<%= post.get("id") %>">
+<% } %>
     <div class="panel-heading group">
       <div class="prof-pic">
           <img src="<%= post.user().get("image").url %>" alt="Profile Picture" />
@@ -39,7 +43,11 @@
     <div class="separator long-separator">
 
     </div>
+    <% if(post.get("id") === collectionLength ) { %>
+    <div class="like-comments group first-like">
+    <% } else { %>
     <div class="like-comments group">
+    <% } %>
       <button class="like-button" data-post-id="<%= post.get("id") %>">
         <% if(post.isLiked()){ %>
           <div class="heart-image" style="background-image: url(Images/red-outline-heart.png)"></div>
