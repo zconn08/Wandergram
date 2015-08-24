@@ -37,7 +37,7 @@ Wandergram.Views.PostIndex = Backbone.CompositeView.extend({
     });
 
     tour.addStep('intro-step', {
-      text: 'Welcome to Wandergram! Explore posts around the world on the map to your left...',
+      text: 'Welcome to Wandergram!<br>Explore posts around the world on the map to your left...',
       attachTo: '#map-container right',
       buttons: [
         {
@@ -85,7 +85,7 @@ Wandergram.Views.PostIndex = Backbone.CompositeView.extend({
     });
 
     tour.addStep('profile-step', {
-      text: 'Check out your notifications and profile here, Columbus. Have fun wandering!',
+      text: 'Check out your notifications and profile here, Columbus.<br>Have fun wandering!',
       attachTo: '.navbar-right bottom',
       buttons: [
         {
@@ -94,22 +94,6 @@ Wandergram.Views.PostIndex = Backbone.CompositeView.extend({
         }
       ]
     });
-
-    // tour.addStep('comments-like-step', {
-    //   text: 'Click on the heart to like or unlike photos. Write comments in the comment box and press enter to submit',
-    //   attachTo: '.first-like left',
-    //   buttons: [
-    //     {
-    //       text: 'Back',
-    //       action: tour.back
-    //     }, {
-    //       text: 'Next',
-    //       action: tour.next
-    //     }
-    //   ]
-    // });
-
-
 
     tour.start();
   },

@@ -130,7 +130,7 @@ shanghai = Post.create(user_id: bear.id, image_id: image_40.id, caption: "Roughi
 
 #Sweden Reindeer
 image_42 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121819/b25u0uu9gmv42wvgetjj.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_oil_paint,w_640,h_640/v1440121819/b25u0uu9gmv42wvgetjj.jpg")
-reindeer = Post.create(user_id: zuck.id, image_id: image_42.id, caption: "Santa I think you forgot something", location: "Öravan, Sweden", lat: 64.628493, lng: 18.074503)
+reindeer = Post.create(user_id: zuck.id, image_id: image_42.id, caption: "Santa, I think you forgot something", location: "Öravan, Sweden", lat: 64.628493, lng: 18.074503)
 #Tulum Mexico
 image_44 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121902/zwncb9hh1idexzzuwzs5.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121902/zwncb9hh1idexzzuwzs5.jpg")
 tulum = Post.create(user_id: bear.id, image_id: image_44.id, caption: "Cave Diving!!!", location: "Tulum, Mexico", lat: 20.211392, lng: -87.465288)

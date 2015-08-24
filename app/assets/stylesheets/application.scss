@@ -385,3 +385,12 @@ li.inactive {
   padding-left: 0px;
   margin-bottom: 3px;
 }
+
+.shepherd-theme-arrows {
+  text-align: center;
+  z-index: 2000;
+}
+
+.navbar-nav > li > a.dropdown-toggle:focus {
+  color: #125688;
+}
