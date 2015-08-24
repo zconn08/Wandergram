@@ -1,9 +1,9 @@
 # Wandergram
 
-[heroku]: http://wandergram.herokuapp.com
+[heroku]: http://www.wandergram.io/
 
 ## Minimum Viable Product
-Wandergram is a photo sharing app for travelers that allows users to display beautiful photos of their journeys around the world. It is a clone of Instagram built on Rails and Backbone. Users can:
+Wandergram is a photo sharing app for travelers that allows users to display beautiful photos of their journeys around the world. It is a map-focused version of Instagram built on Rails and Backbone. Users can:
 
 <!-- This is a Markdown checklist. Use it to keep track of your progress! -->
 
@@ -14,9 +14,9 @@ Wandergram is a photo sharing app for travelers that allows users to display bea
 - [X] View a profile
 - [X] Like posts
 - [X] Comment on posts
-- [X] Clicking on a post creates modal
-- [X] Like posts from user modal
-- [X] Comment on posts from user modal
+- [X] View posts in detail from user page
+- [X] Like posts from user page
+- [X] Comment on posts from user page
 - [X] Create posts / Upload images
 - [X] Read notifications
 - [X] Add filters to images
@@ -24,19 +24,19 @@ Wandergram is a photo sharing app for travelers that allows users to display bea
 - [X] Tag locations of their pictures
 - [X] Have a map with all pictures with tagged locations
 - [X] Have profile pictures
-- [ ] Be introduced to features on site
+- [X] Be introduced to features on site
 
 ## Design Docs
-* [View Wireframes][views]
 * [DB schema][schema]
+* [Wireframes][views]
 
-[views]: ./docs/views.md
 [schema]: ./docs/schema.md
+[views]: ./docs/wireframes
 
 ## Implementation Timeline
 
 ### Phase 1: User Authentication, Feed Creation (~2 days)
-I will allow users to sign up and sign in. Additionally I will create the home page (feed) that has a nav bar, and posts. I'll start by adding a `feed` route that uses the `current_user`'s `followed_users` association to serve a list of posts ordered chronologically. On the Backbone side, I'll make a `FeedShow` view whose `posts` collection fetches from the new route.
+I will allow users to sign up and sign in. Additionally I will create the home page (feed) that has a nav bar, and posts. I'll start by adding a `feed` route to serve a list of posts ordered chronologically. On the Backbone side, I'll make a `Post Index` view whose `posts` collection fetches from the new route.
 
 
 ### Phase 2: Viewing Profiles (~2 days)
@@ -48,20 +48,21 @@ I will add liking and commenting ability at this stage. Users will be able to li
 
 
 ### Phase 4: Create Posts (~1-2 days)
-I also plan to integrate Filepicker for file upload so
-users can upload images. Users should be able to add filters to images.
+I also plan to integrate Cloudinary for file upload so
+users can upload images. Users should be able to add filters and captions to images. Users will be forced to select a location to integrate with the map.
 
 
 ### Phase 5: Mapping Capability (~2 days)
-Users should be able to tag locations of their posts. Additionally users should be able to see a map of all posts with pins at locations.
+Users should be able to tag locations of their posts. Additionally users should be able to see a map of all posts with pins at locations. I will take advantage of the Google Maps and Google Places API. I will implement interaction between posts (e.g., hovering) and the map. This will be implemented as view in both the feed and user profile page.
 
 
-### Phase 6: Additional Details (~2 days)
-Add the ability for users to edit their profiles and upload profile pictures. Additionally, add notifications. Finally, add the functionality of a site walkthrough and infinite scroll.
+### Phase 6: Additional Details (~3 days)
+Add the ability for users to edit their profiles and upload profile pictures. Additionally, add notifications. Add a disable panning button. Finally, add the functionality of a site walkthrough.
 
 
 ### Bonus Features (TBD)
-- [ ] Add Image Cropping
+- [ ] Add image cropping
+- [ ] Add user index page
 - [ ] Create hashtags / tag posts
 - [ ] Be able to tag users you are with
 - [ ] Search for users by username

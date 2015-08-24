@@ -125,9 +125,11 @@ Wandergram.Views.PostIndex = Backbone.CompositeView.extend({
    if (this.mapView._DisabledPanning) {
     this.mapView._DisabledPanning = false;
     this.$el.find(".disable-panning").text("Panning Enabled");
+    this.$el.find(".disable-panning").css("background-color","#125688");
    } else {
     this.mapView._DisabledPanning = true;
     this.$el.find(".disable-panning").text("Panning Disabled");
+    this.$el.find(".disable-panning").css("background-color","#0d3c5f");
    }
  }
 

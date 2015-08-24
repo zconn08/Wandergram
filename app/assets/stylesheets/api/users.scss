@@ -171,12 +171,10 @@ span.username {
 
 .m-content {
   z-index: 2;
-  position: fixed;
-  top: calc(50px + 2vh);
-  left: 71.4%;
-  bottom: 0;
-  right: 0;
-  width: 642px;
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  width: 542px;
   height: 818px;
   transform: translateX(-50%);
   margin-bottom: 5vh;
@@ -188,10 +186,3 @@ span.username {
   display: none;
   font-size: 20px;
 }
-
-// @media only screen and (max-width: 500px) {
-//   .m-content {
-//     height: 200px;
-//     background-color: red;
-//   }
-// }

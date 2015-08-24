@@ -13,6 +13,7 @@ Wandergram.Views.Modal = Backbone.CompositeView.extend({
     this.marker = options.marker
 
     this.addSubview('.m-content', subview);
+    window.scrollTo(0,0);
   },
 
   render: function(){

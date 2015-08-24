@@ -71,7 +71,6 @@ Wandergram.Views.Nav = Backbone.View.extend({
       var newUrl = this.setTransformation(data.url, "w_640,h_640" );
       var newThumb = this.setTransformation(data.thumbnail_url, "w_152,h_152");
       image.set({url: newUrl, thumbnail_url: newThumb});
-      console.log(data.url)
       if (error === null) {
         image.save({}, {
           success: function(){

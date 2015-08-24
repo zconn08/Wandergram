@@ -19,10 +19,6 @@ class Api::PostsController < ApplicationController
     @post = Post.includes(comment: :user, user: :image).where(id: params[:id])[0]
   end
 
-  def destroy
-
-  end
-
   private
   def post_params
     params.require(:post).permit(:caption, :location, :image_id)

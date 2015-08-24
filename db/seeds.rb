@@ -31,7 +31,7 @@ zuck = User.create(username: "Zuckerberg", password: "password", image_id: image
 #Posts
 #Lombard SF / Black and white
 image_9 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_grayscale,w_640,h_640/v1439951539/dciiekvjbrpe4dqbwabe.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_grayscale,w_640,h_640/v1439951539/dciiekvjbrpe4dqbwabe.jpg")
-lombard = Post.create(user_id: columbus.id, image_id: image_9.id, caption: "The streets don't look like this in Spain", location: "Lombard Street", lat: 37.802139, lng: -122.418740)
+lombard = Post.create(user_id: columbus.id, image_id: image_9.id, caption: "The streets don't look like this in Spain", location: "Lombard Street, San Francisco", lat: 37.802139, lng: -122.418740)
 #cabo
 image_10 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439515263/gxrjv8aqyfenx5afs7bl.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1439515263/gxrjv8aqyfenx5afs7bl.jpg")
 cabo = Post.create(user_id: columbus.id, image_id: image_10.id, caption: "A new land full of tequila", location: "Cabo San Lucas, Mexico", lat: 22.883754, lng: -109.905928)
@@ -87,7 +87,7 @@ alcatraz = Post.create(user_id: zuck.id, image_id: image_25.id, caption: "Breezy
 
 #Cable Car
 image_26 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_sepia,w_640,h_640/v1440119777/bckufk6ehagmpd2tx1rl.png", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_sepia,w_640,h_640/v1440119777/bckufk6ehagmpd2tx1rl.png")
-cable_car = Post.create(user_id: zuck.id, image_id: image_26.id, caption: "Old school", location: "Powell-Market Cable Car Turntable, San Francisco, CA 94102", lat: 37.784907, lng: -122.407645)
+cable_car = Post.create(user_id: zuck.id, image_id: image_26.id, caption: "Old school", location: "Powell-Market Cable Car Turntable, San Francisco", lat: 37.784907, lng: -122.407645)
 
 #Ghiradelli B & W
 image_27 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_grayscale,w_640,h_640/v1440119834/mylddyveswbnlsycn5ny.png", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/e_grayscale,w_640,h_640/v1440119834/mylddyveswbnlsycn5ny.png")
@@ -95,7 +95,7 @@ ghiradelli = Post.create(user_id: columbus.id, image_id: image_27.id, caption: "
 
 #Burj Khalifa Dubai
 image_31 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121345/ycsoeolsiffjv8tge5rz.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121345/ycsoeolsiffjv8tge5rz.jpg")
-burj = Post.create(user_id: zuck.id, image_id: image_31.id, caption: "Only worries today are the portion size for room service", location: "Burj Khalifa - Downtown Dubai - Dubai - United Arab Emirates", lat: 25.197090, lng: 55.275058)
+burj = Post.create(user_id: zuck.id, image_id: image_31.id, caption: "Only worries today are the portion size for room service", location: "Burj Khalifa - Downtown Dubai - United Arab Emirates", lat: 25.197090, lng: 55.275058)
 
 #Lofoten Island Norway
 image_35 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121520/klesvysugpl9yx3cifa4.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440121520/klesvysugpl9yx3cifa4.jpg")
@@ -161,7 +161,7 @@ gg_bridge_sf = Post.create(user_id: columbus.id, image_id: image_33.id, caption:
 
 #Tea Garden
 image_46 = Image.create(url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440126755/lhoqcjncqibkhmxrpr7c.jpg", thumbnail_url: "http://res.cloudinary.com/dmyvxexqn/image/upload/w_640,h_640/v1440126755/lhoqcjncqibkhmxrpr7c.jpg")
-tea_garden = Post.create(user_id: zuck.id, image_id: image_46.id, caption: "Sipping some tea while I plot my next move", location: "Japanese Tea Garden, Hagiwara Tea Garden Drive, San Francisco, CA", lat: 37.770264, lng: -122.469681)
+tea_garden = Post.create(user_id: zuck.id, image_id: image_46.id, caption: "Sipping some tea while I plot my next move", location: "Japanese Tea Garden, San Francisco, CA", lat: 37.770264, lng: -122.469681)
 
 
 
