@@ -85,7 +85,7 @@ Wandergram.Views.PostIndex = Backbone.CompositeView.extend({
     });
 
     tour.addStep('profile-step', {
-      text: 'Check out your notifications and profile here, Columbus.<br>Have fun wandering!',
+      text: 'Check out your notifications and profile here.<br>Have fun wandering!',
       attachTo: '.navbar-right bottom',
       buttons: [
         {
