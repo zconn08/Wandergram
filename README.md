@@ -3,7 +3,16 @@
 [heroku]: http://www.wandergram.io/
 
 ## Minimum Viable Product
-Wandergram is a photo sharing app for travelers that allows users to display beautiful photos of their journeys around the world. It is a map-focused version of Instagram built on Rails and Backbone. Users can:
+Wandergram is a photo sharing app for travelers that allows users to display beautiful photos of their journeys around the world. It is a map-focused version of Instagram built on Rails and Backbone.
+
+Home Screen:
+
+Take a Tour:
+
+![hovering]
+
+
+Users can:
 
 <!-- This is a Markdown checklist. Use it to keep track of your progress! -->
 
@@ -70,3 +79,5 @@ Add the ability for users to edit their profiles and upload profile pictures. Ad
 - [ ] Additional Post types (video posts etc...)
 - [ ] Typeahead search bar
 - [ ] Multiple sessions/session management
+
+[hovering]: ./app/assets/images/hovering.gif
