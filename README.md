@@ -109,7 +109,7 @@ Add the ability for users to edit their profiles and upload profile pictures. Ad
 [home_page]: ./app/assets/images/home_page.png
 [tour]: ./app/assets/images/tour.png
 [scroll_to_feed]: ./app/assets/images/scroll_to_feed.gif
-[like_comment]: ./app/assets/images/likecomment.gif
+[likecomment]: ./app/assets/images/likecomment.gif
 [hovering]: ./app/assets/images/hovering.gif
 [notifications]: ./app/assets/images/notifications.gif
 [modal]: ./app/assets/images/modal.gif
