@@ -183,7 +183,6 @@ li.inactive {
   right: 0px;
   padding-left: 0px;
   padding-right: 0px;
-  height: 100%;
   background-color: #FAFAFA;
 }
 
@@ -267,7 +266,7 @@ li.inactive {
 .landing-description {
   margin-top: 10px;
   margin-bottom: 20px;
-  font-size: 20px;
+  font-size: 22px;
   text-align: center;
   color: white;
 }
@@ -318,7 +317,7 @@ li.inactive {
 }
 
 .welcome-logo {
-  height: 50px;
+  height: 55px;
 }
 
 .welcome-logo img{
@@ -372,7 +371,6 @@ li.inactive {
 }
 
 .upload-container {
-  height: 100vh;
   background-color: #FAFAFA;
 }
 
@@ -394,4 +392,12 @@ li.inactive {
 
 .navbar-nav > li > a.dropdown-toggle:focus {
   color: #125688;
+}
+
+.body-in-tour {
+  background-color: black;
+}
+
+.main-in-tour {
+  opacity: 0.5;
 }

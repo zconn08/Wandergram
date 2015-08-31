@@ -2,27 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.info-window-container-lg {
+.info-window-container {
   height: 135px;
   width: 175px;
+  padding-left: 20px;
   text-align: center;
 }
 
-.info-window-container-sm {
-  height: 135px;
-  width: 175px;
-  text-align: center;
-}
-
-.info-window-container-sm img {
+.info-window-container img {
   width: 100px;
   height: 100px;
 }
 
-.info-window-container-lg img {
-  width: 100px;
-  height: 100px;
-}
 
 #edit-btn, .following-btn, #follow-btn {
   margin-top: 9px;

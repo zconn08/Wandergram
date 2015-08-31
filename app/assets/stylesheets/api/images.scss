@@ -4,11 +4,16 @@
 
 .upload-image-panel {
   font-size: 18px;
+  border: 5px solid black;
+  border-radius: 5px;
+  box-sizing: content-box;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .gutter-image img {
   height: 100%;
   width: 100%;
-  border: 1px solid gray;
 }
 
 .gutter-image.col-md-2 {
@@ -29,7 +34,7 @@
 .uploaded-image-main img {
   height: 100%;
   width: 100%;
-  border: 5px solid black;
+  border-radius: 5px;
 }
 
 .thumbnail-images {
@@ -50,6 +55,11 @@
   margin-top: 20px;
 }
 
+.upload-container {
+  padding: 15px;
+  height: 810px;
+}
+
 .upload-inputs {
   width: 50%;
   margin: 0 auto;
@@ -59,7 +69,6 @@
   width: 100%;
   margin: 0 auto;
   text-align: center;
-  border-radius: 3px;
 }
 
 .thumbnail-images.row {

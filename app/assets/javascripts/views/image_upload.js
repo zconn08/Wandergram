@@ -71,11 +71,11 @@ Wandergram.Views.ImageUpload = Backbone.View.extend({
         var newPost = new Wandergram.Models.Post();
         newPost.save(formData, {
           success: function(model){
-            this.collection.add(newPost)
+            this.collection.add(newPost);
             Backbone.history.navigate("", {trigger: true});
           }.bind(this),
           error: function(){
-            $(".location-error").html(" Please enter a valid location")
+            $(".location-error").html(" Please enter a valid location");
           }.bind(this)
         });
       }.bind(this)

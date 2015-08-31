@@ -8,14 +8,15 @@ Wandergram.Views.PostIndex = Backbone.CompositeView.extend({
     "mouseenter .post-image": "panToPost",
     "mouseleave .post-image": "removePostDetail",
     "click .disable-panning": "togglePanning",
-    "click .start-tour" : "startTour"
+    "click .start-tour" : "startTour",
   },
 
-  initialize: function(){
+  initialize: function(options){
     this.listenTo(this.collection, "add", this.addPostIndexItemView);
     this.listenTo(this.collection, "remove", this.removePostIndexItemView);
     this.collection.each(this.addPostIndexItemView.bind(this));
     this.mapView = new Wandergram.Views.MapShow({collection: this.collection});
+    this.timesVisitedIndex = options.timesVisitedIndex;
   },
 
   render: function(){
@@ -23,79 +24,90 @@ Wandergram.Views.PostIndex = Backbone.CompositeView.extend({
     this.attachSubviews();
     this.addSubview("#map-container", this.mapView);
     this.mapView.initMap();
+    this.tour = undefined;
+    if (this.timesVisitedIndex === 0 && CURRENT_USER_NAME === "OceanBlue1492") {
+      setTimeout(this.startTour, 500);
+    }
     return this;
   },
 
   startTour: function(){
-    var tour;
+    window.scrollTo(0,0);
+    $("#main-content").addClass("main-in-tour");
+    $("body").addClass("body-in-tour");
 
-    tour = new Shepherd.Tour({
+    this.tour = new Shepherd.Tour({
       defaults: {
         classes: 'shepherd-theme-arrows',
         scrollTo: true
       }
     });
 
-    tour.addStep('intro-step', {
+
+    this.tour.addStep('intro-step', {
       text: 'Welcome to Wandergram!<br>Explore posts around the world on the map to your left...',
       attachTo: '#map-container right',
       buttons: [
         {
           text: 'Next',
-          action: tour.next
+          action: this.tour.next
         }, {
           text: 'Done',
-          action: tour.cancel
+          action: this.tour.cancel
         }
       ]
     });
 
-    tour.addStep('photo-step', {
+    this.tour.addStep('photo-step', {
       text: '...or the feed to your right',
       attachTo: '.first-picture left',
       buttons: [
         {
           text: 'Back',
-          action: tour.back
+          action: this.tour.back
         }, {
           text: 'Next',
-          action: tour.next
+          action: this.tour.next
         }, {
           text: 'Done',
-          action: tour.cancel
+          action: this.tour.cancel,
         }
       ]
     });
 
-    tour.addStep('upload-step', {
+    this.tour.addStep('upload-step', {
       text: 'Use the camera button at the top of the page to upload a photo',
       attachTo: '.glyphicon-camera bottom',
       buttons: [
         {
           text: 'Back',
-          action: tour.back
+          action: this.tour.back
         }, {
           text: 'Next',
-          action: tour.next
+          action: this.tour.next
         }, {
           text: 'Done',
-          action: tour.cancel
+          action: this.tour.cancel
         }
       ]
     });
 
-    tour.addStep('profile-step', {
+    this.tour.addStep('profile-step', {
       text: 'Check out your notifications and profile here.<br>Have fun wandering!',
-      attachTo: '.navbar-right bottom',
+      attachTo: '.glyphicon-bullhorn bottom',
       buttons: [
         {
           text: 'Done',
-          action: tour.cancel
+          action: this.tour.cancel
         }
       ]
     });
 
-    tour.start();
+    this.tour.start();
+  },
+
+  endTour: function(){
+    this.tour && this.tour.cancel
   },
 
  addPostIndexItemView: function(postIndexItem){

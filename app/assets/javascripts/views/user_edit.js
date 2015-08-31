@@ -34,7 +34,7 @@ Wandergram.Views.UserEdit = Backbone.View.extend({
       var newUrl = this.setTransformation(data.url, "w_640,h_640" );
       var newThumb = this.setTransformation(data.thumbnail_url, "w_152,h_152");
       image.set({url: newUrl, thumbnail_url: newThumb});
-      var user = this.model
+      var user = this.model;
       if (error === null) {
         image.save({}, {
           success: function(){

@@ -3,6 +3,7 @@ Wandergram.Views.Modal = Backbone.CompositeView.extend({
 
   events: {
     'click .m-background': 'remove',
+    'document scroll': 'scrollChecker'
   },
 
   initialize: function(options){
@@ -10,7 +11,7 @@ Wandergram.Views.Modal = Backbone.CompositeView.extend({
     var subview = new Wandergram.Views.PostIndexItem(
       {model: this.model}
     );
-    this.marker = options.marker
+    this.marker = options.marker;
 
     this.addSubview('.m-content', subview);
     window.scrollTo(0,0);
@@ -27,6 +28,11 @@ Wandergram.Views.Modal = Backbone.CompositeView.extend({
       this.marker.setAnimation(null);
       this.remove();
     }
+  },
+
+  scrollChecker: function() {
+    var scrollTop = $(window).scrollTop();
+    debugger;
   },
 
   remove: function(){

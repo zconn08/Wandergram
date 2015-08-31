@@ -48,15 +48,15 @@ Wandergram.Views.PostIndexItem = Backbone.CompositeView.extend({
     var arrayOfUsers = [];
     var likes = this.model.get("likes");
 
-    var numLikes = likes ? likes.length : 0
+    var numLikes = likes ? likes.length : 0;
 
     _(likes).each(function(like, idx){
       var htmlString = "<a href='#/users/" + like.id + "'>" + like.username + "</a>";
 
       if (idx < (numLikes - 2)) {
-        htmlString += ", "
+        htmlString += ", ";
       } else if (idx === (numLikes - 2)) {
-        htmlString += " and "
+        htmlString += " and ";
       }
 
       arrayOfUsers.push(htmlString);

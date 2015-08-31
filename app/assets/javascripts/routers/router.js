@@ -12,11 +12,16 @@ Wandergram.Routers.Router = Backbone.Router.extend({
     this.$rootEl = options.$rootEl;
     this.postsCollection = new Wandergram.Collections.Posts();
     this.usersCollection = new Wandergram.Collections.Users();
+    this.timesVisitedIndex = 0;
   },
 
   index: function(){
     this.postsCollection.fetch();
-    var view = new Wandergram.Views.PostIndex({collection: this.postsCollection});
+    var view = new Wandergram.Views.PostIndex({
+      collection: this.postsCollection,
+      timesVisitedIndex: this.timesVisitedIndex
+    });
+    this.timesVisitedIndex += 1;
     this.swapView(view);
   },
 

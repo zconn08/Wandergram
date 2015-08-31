@@ -27,8 +27,8 @@ Wandergram.Views.MapShow = Backbone.View.extend({
 
   addMarker: function(post) {
     if (post.get('lat') !== null) {
-      if (this._markers[post.id]) { return };
-        var caption = (post.get('caption') !== null) ? post.get('caption') : ""
+      if (this._markers[post.id]) { return; }
+        var caption = (post.get('caption') !== null) ? post.get('caption') : "";
 
         var marker = new google.maps.Marker({
           position: { lat: post.get('lat'), lng: post.get('lng') },
@@ -58,16 +58,16 @@ Wandergram.Views.MapShow = Backbone.View.extend({
         }
         var contentString = "";
         if (marker.caption !== "") {
-          var shortened_caption = marker.caption.length < 30 ? marker.caption : (marker.caption.substr(0,27) + "...");
+          var shortened_caption = marker.caption.length < 25 ? marker.caption : (marker.caption.substr(0,22) + "...");
 
 
-          var contentString = '<div class="info-window-container-sm" id="info-window">' +
+          contentString = '<div class="info-window-container" id="info-window">' +
                               '<b>' + marker.username + '</b><br>' +
                               '<img src="' + marker.img_url + '">' +
                               '<br>'+ shortened_caption +
                               "</div>";
         } else {
-          var contentString = '<div class="info-window-container-lg" id="info-window">' +
+          contentString = '<div class="info-window-container" id="info-window">' +
                               '<b>' + marker.username + '</b><br>' +
                               '<img src="' + marker.img_url + '">' +
                               "</div>";

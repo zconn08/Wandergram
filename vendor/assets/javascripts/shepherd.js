@@ -1844,6 +1844,8 @@ return this.Tether;
       if ((_ref1 = this.currentStep) != null) {
         _ref1.hide();
       }
+      $("#main-content").removeClass("main-in-tour");
+      $("body").removeClass("body-in-tour");
       this.trigger('cancel');
       return this.done();
     };
