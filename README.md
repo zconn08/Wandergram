@@ -5,11 +5,37 @@
 ## Minimum Viable Product
 Wandergram is a photo sharing app for travelers that allows users to display beautiful photos of their journeys around the world. It is a map-focused version of Instagram built on Rails and Backbone.
 
-Home Screen:
+Welcome to Wandergram
 
-Take a Tour:
+![home_page]
+
+Take a tour to get a feel for how to use the site
+
+![tour]
+
+Hover over photos in the feed to show their location in the map
 
 ![hovering]
+
+Click on markers on the map to scroll to the post in the feed
+
+![scroll_to_feed]
+
+Like and comment on photos in real time
+
+![likecomment]
+
+Check notifications and hover over them to mark as read
+
+![notifications]
+
+On a profile page, click on a photo to view it in a modal
+
+![modal]
+
+Upload a photo, add a custom filter, select a location and post it to the feed
+
+![upload]
 
 
 Users can:
@@ -80,4 +106,11 @@ Add the ability for users to edit their profiles and upload profile pictures. Ad
 - [ ] Typeahead search bar
 - [ ] Multiple sessions/session management
 
+[home_page]: ./app/assets/images/home_page.png
+[tour]: ./app/assets/images/tour.png
+[scroll_to_feed]: ./app/assets/images/scroll_to_feed.gif
+[like_comment]: ./app/assets/images/likecomment.gif
 [hovering]: ./app/assets/images/hovering.gif
+[notifications]: ./app/assets/images/notifications.gif
+[modal]: ./app/assets/images/modal.gif
+[upload]: ./app/assets/images/upload.gif
