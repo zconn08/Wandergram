@@ -77,6 +77,7 @@
   left: 50%;
   top: 45%;
   transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
 }
 
 .image-detail {
@@ -177,6 +178,7 @@ span.username {
   width: 542px;
   height: 818px;
   transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
   margin-bottom: 5vh;
 }
 
