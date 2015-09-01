@@ -29,7 +29,7 @@ Check notifications and hover over them to mark as read
 
 ![notifications]
 
-On a profile page, click on a photo to view it in a modal
+On a profile page, click on a photo to view it in detail
 
 ![modal]
 
@@ -52,7 +52,7 @@ Users can:
 - [X] View posts in detail from user page
 - [X] Like posts from user page
 - [X] Comment on posts from user page
-- [X] Create posts / Upload images
+- [X] Create posts / upload images
 - [X] Read notifications
 - [X] Add filters to images
 - [X] Edit their profile
@@ -83,8 +83,7 @@ I will add liking and commenting ability at this stage. Users will be able to li
 
 
 ### Phase 4: Create Posts (~1-2 days)
-I also plan to integrate Cloudinary for file upload so
-users can upload images. Users should be able to add filters and captions to images. Users will be forced to select a location to integrate with the map.
+I plan to integrate Cloudinary for file upload so users can upload images. Users should be able to add filters and captions to images. Users will be forced to select a location to integrate with the map.
 
 
 ### Phase 5: Mapping Capability (~2 days)
@@ -92,7 +91,7 @@ Users should be able to tag locations of their posts. Additionally users should 
 
 
 ### Phase 6: Additional Details (~3 days)
-Add the ability for users to edit their profiles and upload profile pictures. Additionally, add notifications. Add a disable panning button. Finally, add the functionality of a site walkthrough.
+Add the ability for users to edit their profiles and upload profile pictures. Additionally, add notifications. Add a disable panning button. Finally, add a site walkthrough.
 
 
 ### Bonus Features (TBD)
@@ -107,7 +106,7 @@ Add the ability for users to edit their profiles and upload profile pictures. Ad
 - [ ] Multiple sessions/session management
 
 [home_page]: ./app/assets/images/home_page.png
-[tour]: ./app/assets/images/tour.png
+[tour]: ./app/assets/images/Tour.gif
 [scroll_to_feed]: ./app/assets/images/scroll_to_feed.gif
 [likecomment]: ./app/assets/images/likecomment.gif
 [hovering]: ./app/assets/images/hovering.gif
