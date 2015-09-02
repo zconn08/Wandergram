@@ -62,7 +62,7 @@ Users can:
 - [X] Have a map with all pictures with tagged locations
 - [X] Have profile pictures
 - [X] Be introduced to features on site
-- [X] Multiple sessions/session management
+- [X] Log in from multiple devices (session management)
 
 ## Design Docs
 * [DB schema][schema]
