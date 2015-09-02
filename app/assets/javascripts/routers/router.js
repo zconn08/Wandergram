@@ -34,6 +34,7 @@ Wandergram.Routers.Router = Backbone.Router.extend({
 
   userShow: function(id){
     var model = this.usersCollection.getOrFetch(id);
+    model.fetch();
     var view = new Wandergram.Views.UserShow({model: model});
     this.swapView(view);
   },
