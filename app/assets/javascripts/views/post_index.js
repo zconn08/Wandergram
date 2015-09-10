@@ -35,6 +35,7 @@ Wandergram.Views.PostIndex = Backbone.CompositeView.extend({
     window.scrollTo(0,0);
     $("#main-content").addClass("main-in-tour");
     $("body").addClass("body-in-tour");
+    $(".disable-panning").click();
 
     this.tour = new Shepherd.Tour({
       defaults: {
@@ -53,7 +54,7 @@ Wandergram.Views.PostIndex = Backbone.CompositeView.extend({
           action: this.tour.next
         }, {
           text: 'Done',
-          action: this.tour.cancel
+          action: this.tour.cancel,
         }
       ]
     });

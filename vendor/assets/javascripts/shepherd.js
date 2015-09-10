@@ -1839,13 +1839,14 @@ return this.Tether;
       return this.show(index - 1);
     };
 
-    Tour.prototype.cancel = function() {
+    Tour.prototype.cancel = function(callback) {
       var _ref1;
       if ((_ref1 = this.currentStep) != null) {
         _ref1.hide();
       }
       $("#main-content").removeClass("main-in-tour");
       $("body").removeClass("body-in-tour");
+      $(".disable-panning").click();
       this.trigger('cancel');
       return this.done();
     };
