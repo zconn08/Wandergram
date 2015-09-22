@@ -99,7 +99,6 @@ body, html, #main-content, .userShow, div.user-show-container, .post-index-conta
   background-color: white;
 }
 
-// coloring text dark blue
 .navbar-default .navbar-nav > li > a, .navbar-default .navbar-brand, .name-location > a, .caption > a, .comments-container a, .num-likes a {
   color: #125688;
   font-weight: 500;
@@ -109,7 +108,6 @@ body, html, #main-content, .userShow, div.user-show-container, .post-index-conta
   color: #125688;
 }
 
-// Darker blue on hover
 .navbar-default .navbar-nav > li > a:hover, .navbar .glyphicon:hover, .navbar-default .navbar-nav > .open > a .glyphicon:hover, .name-location > a:hover, .caption > a:hover, .comments-container a:hover, .num-likes a:hover {
   color: #0d3c5f;
 }
