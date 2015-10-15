@@ -51,7 +51,7 @@ Wandergram.Views.MapShow = Backbone.View.extend({
     this.removePostDetail();
     if (!this._DisabledPanning) {
       if(marker !== undefined){
-        if (marker.position.J > 37 && marker.position.J < 38 && marker.position.M < -122 && marker.position.M > -123) {
+        if (marker.position.lat() > 37 && marker.position.lat() < 38 && marker.position.lng() < -122 && marker.position.lng() > -123) {
           this._map.setZoom(12);
         } else {
           this._map.setZoom(9);

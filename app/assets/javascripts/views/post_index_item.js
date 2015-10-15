@@ -89,6 +89,7 @@ Wandergram.Views.PostIndexItem = Backbone.CompositeView.extend({
     if (!this.model.isLiked()) {
       this.model.like().save({post_id: this.model.id}, {
         success: function(model){
+          debugger;
           var newLikes = this.model.get('likes').concat({id: CURRENT_USER_ID, username: CURRENT_USER_NAME});
           this.model.set({
             num_likes: this.model.get('num_likes') + 1,
