@@ -11,6 +11,7 @@ Wandergram.Views.Nav = Backbone.View.extend({
     this.router = options.router;
     this.collection.fetch();
     this.listenTo(this.collection, "sync", this.render);
+    this.listenTo(this.collection, "sync", this.handleRoute);
     this.listenTo(this.router, "route", this.handleRoute);
     this.listenTo(this.collection, "add remove change", this.updateNotificationsCount);
   },
@@ -46,7 +47,7 @@ Wandergram.Views.Nav = Backbone.View.extend({
   handleRoute: function(routeName, params){
     this.$el.find(".logout-link").addClass("inactive");
     this.$el.find(".username-link").removeClass("inactive");
-    if ((routeName === "userShow" && parseInt(params[0]) === CURRENT_USER_ID) || (routeName === "userHome") ) {
+    if ((routeName === "userShow" && parseInt(params[0]) === CURRENT_USER_ID) || (routeName === "userHome") || ((CURRENT_USER_NAME === "OceanBlue1492") && ($(".user-bio").length > 0) && ($(".user-bio").html().indexOf("Discovered a new land today. What did you do?") > 0))) {
       this.$el.find(".logout-link").removeClass("inactive");
       this.$el.find(".username-link").addClass("inactive");
     }
@@ -88,6 +89,9 @@ Wandergram.Views.Nav = Backbone.View.extend({
     var notificationId = $(e.currentTarget).data("id");
     var notification = this.collection.get(notificationId);
     notification.set({read: true});
-    notification.save();
+    notification.save({}, {
+      success: function(){
+      this.render();
+    }.bind(this)});
   }
 });
